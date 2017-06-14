@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionDetailTable">
+            <connections>
+                <outlet property="btn" destination="lNz-58-lvk" id="jP7-ZF-nEJ"/>
+                <outlet property="footView" destination="v2Z-dY-fCe" id="JYF-Sa-IFb"/>
+                <outlet property="frontLine" destination="xpO-4H-y5J" id="G5S-Qy-teq"/>
+                <outlet property="mainGrid" destination="nRB-KC-Ac7" id="6gK-1j-b2m"/>
+                <outlet property="view" destination="W3A-hk-fu4" id="KcE-sE-eez"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="W3A-hk-fu4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nRB-KC-Ac7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LcA-D2-PS1"/>
+                        <outlet property="delegate" destination="-1" id="g7X-Wh-Sma"/>
+                    </connections>
+                </tableView>
+                <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpO-4H-y5J">
+                    <rect key="frame" x="10" y="125" width="300" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="RsY-Au-QAK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-dY-fCe">
+                    <rect key="frame" x="0.0" y="126" width="320" height="43"/>
+                    <subviews>
+                        <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRi-dl-RKF">
+                            <rect key="frame" x="10" y="42" width="300" height="1"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="QUi-X9-cza"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNz-58-lvk">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="yCt-Ql-73J"/>
+                            </constraints>
+                            <state key="normal" image="ico_add">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnAddClick:" destination="-1" eventType="touchUpInside" id="zcA-FU-St9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="7FQ-Db-Zji"/>
+                        <constraint firstItem="lNz-58-lvk" firstAttribute="leading" secondItem="v2Z-dY-fCe" secondAttribute="leading" id="B7g-Sv-1Ju"/>
+                        <constraint firstAttribute="trailing" secondItem="lNz-58-lvk" secondAttribute="trailing" id="E9Z-FZ-N5h"/>
+                        <constraint firstItem="pRi-dl-RKF" firstAttribute="leading" secondItem="v2Z-dY-fCe" secondAttribute="leading" constant="10" id="ZZC-sf-2Do"/>
+                        <constraint firstAttribute="trailing" secondItem="pRi-dl-RKF" secondAttribute="trailing" constant="10" id="eRu-d3-ff6"/>
+                        <constraint firstAttribute="bottom" secondItem="lNz-58-lvk" secondAttribute="bottom" id="hj8-68-Xf0"/>
+                        <constraint firstAttribute="bottom" secondItem="pRi-dl-RKF" secondAttribute="bottom" id="tcd-GQ-y0B"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xpO-4H-y5J" firstAttribute="leading" secondItem="W3A-hk-fu4" secondAttribute="leading" constant="10" id="8jR-pl-c9A"/>
+                <constraint firstAttribute="trailing" secondItem="v2Z-dY-fCe" secondAttribute="trailing" id="Ee1-P5-zVw"/>
+                <constraint firstItem="nRB-KC-Ac7" firstAttribute="leading" secondItem="W3A-hk-fu4" secondAttribute="leading" id="LlX-G5-YWf"/>
+                <constraint firstItem="v2Z-dY-fCe" firstAttribute="top" secondItem="xpO-4H-y5J" secondAttribute="bottom" id="PGt-Vt-9Oc"/>
+                <constraint firstItem="v2Z-dY-fCe" firstAttribute="leading" secondItem="W3A-hk-fu4" secondAttribute="leading" id="SoG-ML-TZe"/>
+                <constraint firstItem="nRB-KC-Ac7" firstAttribute="leading" secondItem="W3A-hk-fu4" secondAttribute="leading" id="Xsj-pZ-fTP"/>
+                <constraint firstItem="nRB-KC-Ac7" firstAttribute="top" secondItem="W3A-hk-fu4" secondAttribute="top" id="Zb8-Rd-p9Z"/>
+                <constraint firstAttribute="trailing" secondItem="nRB-KC-Ac7" secondAttribute="trailing" id="ct8-2H-fAG"/>
+                <constraint firstAttribute="trailing" secondItem="xpO-4H-y5J" secondAttribute="trailing" constant="10" id="dRn-Ak-DFN"/>
+                <constraint firstAttribute="trailing" secondItem="nRB-KC-Ac7" secondAttribute="trailing" id="lbA-hB-RRX"/>
+                <constraint firstAttribute="bottom" secondItem="v2Z-dY-fCe" secondAttribute="bottom" constant="5" id="nAW-oB-9iR"/>
+                <constraint firstItem="v2Z-dY-fCe" firstAttribute="top" secondItem="nRB-KC-Ac7" secondAttribute="bottom" constant="2" id="qnD-c4-c3g"/>
+                <constraint firstItem="nRB-KC-Ac7" firstAttribute="top" secondItem="W3A-hk-fu4" secondAttribute="top" id="vsr-BI-KYv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_add" width="20" height="20"/>
+    </resources>
+</document>

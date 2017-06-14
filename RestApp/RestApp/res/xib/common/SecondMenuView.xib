@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondMenuView">
+            <connections>
+                <outlet property="tableSeMenus" destination="9qS-h3-I1X" id="Jc3-Ge-laP"/>
+                <outlet property="titleDiv" destination="iQ7-8P-gBj" id="bei-rv-W8i"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrE-oO-bkr">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-8P-gBj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="GBe-QE-qgZ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9qS-h3-I1X">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OxM-gQ-gZl"/>
+                        <outlet property="delegate" destination="-1" id="hJf-2F-reJ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9qS-h3-I1X" secondAttribute="bottom" id="2db-Pd-Rie"/>
+                <constraint firstItem="9qS-h3-I1X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Oa-u3-Mvd"/>
+                <constraint firstAttribute="bottom" secondItem="MrE-oO-bkr" secondAttribute="bottom" id="ANN-5b-FJf"/>
+                <constraint firstItem="iQ7-8P-gBj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FQJ-9c-GCF"/>
+                <constraint firstItem="iQ7-8P-gBj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kwy-e8-g4X"/>
+                <constraint firstItem="MrE-oO-bkr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RTV-S9-tWg"/>
+                <constraint firstAttribute="trailing" secondItem="9qS-h3-I1X" secondAttribute="trailing" id="Wyx-xz-I7V"/>
+                <constraint firstItem="9qS-h3-I1X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="YT8-qQ-br7"/>
+                <constraint firstAttribute="trailing" secondItem="iQ7-8P-gBj" secondAttribute="trailing" id="hvn-Ls-D8L"/>
+                <constraint firstItem="MrE-oO-bkr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lZb-5d-A52"/>
+                <constraint firstAttribute="trailing" secondItem="MrE-oO-bkr" secondAttribute="trailing" id="lvm-wS-IJD"/>
+            </constraints>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

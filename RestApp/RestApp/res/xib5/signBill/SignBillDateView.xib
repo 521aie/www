@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignBillDateView">
+            <connections>
+                <outlet property="endDateLst" destination="n0d-l2-5bF" id="sq8-1d-t3C"/>
+                <outlet property="startDateLst" destination="KzT-lR-DmD" id="N91-kI-L74"/>
+                <outlet property="view" destination="P41-5b-DIS" id="rof-Ou-fU4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="P41-5b-DIS">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-Xe-v05">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-lR-DmD" customClass="EditItemList">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="OPj-p2-2aL"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-l2-5bF" customClass="EditItemList">
+                    <rect key="frame" x="0.0" y="48" width="375" height="48"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Bez-dN-4Sm"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9Q-1F-IY9">
+                    <rect key="frame" x="5" y="109" width="365" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8qM-y1-Eyw"/>
+                    </constraints>
+                    <state key="normal" title="确定" backgroundImage="btn_full_r.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmBtnClick:" destination="-1" eventType="touchUpInside" id="Npr-ws-REg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="n0d-l2-5bF" firstAttribute="top" secondItem="KzT-lR-DmD" secondAttribute="bottom" id="1AW-zR-4Po"/>
+                <constraint firstItem="KzT-lR-DmD" firstAttribute="leading" secondItem="P41-5b-DIS" secondAttribute="leading" id="5nr-OG-6il"/>
+                <constraint firstItem="n0d-l2-5bF" firstAttribute="leading" secondItem="P41-5b-DIS" secondAttribute="leading" id="8Pr-GH-PTu"/>
+                <constraint firstItem="f9Q-1F-IY9" firstAttribute="top" secondItem="n0d-l2-5bF" secondAttribute="bottom" constant="13" id="FUa-nV-f7O"/>
+                <constraint firstItem="SWv-Xe-v05" firstAttribute="leading" secondItem="P41-5b-DIS" secondAttribute="leading" id="PlR-fb-Edg"/>
+                <constraint firstItem="n0d-l2-5bF" firstAttribute="top" secondItem="KzT-lR-DmD" secondAttribute="bottom" id="RIT-qJ-1po"/>
+                <constraint firstAttribute="trailing" secondItem="SWv-Xe-v05" secondAttribute="trailing" id="SbA-fX-B0z"/>
+                <constraint firstAttribute="trailing" secondItem="f9Q-1F-IY9" secondAttribute="trailing" constant="5" id="SgO-Kz-vAI"/>
+                <constraint firstAttribute="bottom" secondItem="SWv-Xe-v05" secondAttribute="bottom" id="ShA-HD-MfR"/>
+                <constraint firstItem="f9Q-1F-IY9" firstAttribute="leading" secondItem="P41-5b-DIS" secondAttribute="leading" constant="5" id="Ub5-3s-d7B"/>
+                <constraint firstAttribute="trailing" secondItem="KzT-lR-DmD" secondAttribute="trailing" id="ZVF-SS-flc"/>
+                <constraint firstAttribute="trailing" secondItem="n0d-l2-5bF" secondAttribute="trailing" id="aQD-C5-qV7"/>
+                <constraint firstItem="SWv-Xe-v05" firstAttribute="top" secondItem="P41-5b-DIS" secondAttribute="top" id="i9m-LB-a7O"/>
+                <constraint firstItem="KzT-lR-DmD" firstAttribute="top" secondItem="P41-5b-DIS" secondAttribute="top" id="tCD-ha-by5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="350" y="362"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_full_r.png" width="620" height="88"/>
+    </resources>
+</document>

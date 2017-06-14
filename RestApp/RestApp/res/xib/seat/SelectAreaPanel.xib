@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectAreaPanel">
+            <connections>
+                <outlet property="btnSelect" destination="CGB-nm-7bj" id="23U-GX-gFm"/>
+                <outlet property="mainGrid" destination="cbH-wm-NmV" id="w1u-8M-d1K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.92000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Uf-0Z-yAo">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="480"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGB-nm-7bj">
+                    <rect key="frame" x="110" y="20" width="131" height="34"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="131" id="9vj-v2-XaF"/>
+                        <constraint firstAttribute="height" constant="34" id="UQ5-gY-ONw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="-14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="  区域管理" image="ico_manage.png">
+                        <color key="titleColor" red="0.0" green="0.53333333329999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRoleManagerClick:" destination="-1" eventType="touchUpInside" id="YUN-vv-tql"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cbH-wm-NmV">
+                    <rect key="frame" x="0.0" y="62" width="250" height="418"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Wl2-UM-k54"/>
+                        <outlet property="delegate" destination="-1" id="W7R-Wo-vxS"/>
+                    </connections>
+                </tableView>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knm-8i-C5P" userLabel="line">
+                    <rect key="frame" x="0.0" y="62" width="250" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="xV7-gl-JtO"/>
+                    </constraints>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Knm-8i-C5P" secondAttribute="trailing" id="1Xh-0u-Dv5"/>
+                <constraint firstItem="5Uf-0Z-yAo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4EG-aj-BMI"/>
+                <constraint firstItem="cbH-wm-NmV" firstAttribute="top" secondItem="CGB-nm-7bj" secondAttribute="bottom" constant="8" id="7SS-Rv-hsR"/>
+                <constraint firstAttribute="trailing" secondItem="CGB-nm-7bj" secondAttribute="trailing" constant="9" id="Aap-vM-LLb"/>
+                <constraint firstItem="Knm-8i-C5P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FEX-Md-cjU"/>
+                <constraint firstAttribute="trailing" secondItem="5Uf-0Z-yAo" secondAttribute="trailing" id="Geb-zt-9CH"/>
+                <constraint firstAttribute="trailing" secondItem="cbH-wm-NmV" secondAttribute="trailing" id="JGP-hq-omq"/>
+                <constraint firstAttribute="bottom" secondItem="5Uf-0Z-yAo" secondAttribute="bottom" id="LvR-B8-Rr6"/>
+                <constraint firstItem="Knm-8i-C5P" firstAttribute="top" secondItem="CGB-nm-7bj" secondAttribute="bottom" constant="8" id="Lyn-D1-P0y"/>
+                <constraint firstItem="cbH-wm-NmV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PL6-yy-AHz"/>
+                <constraint firstAttribute="bottom" secondItem="cbH-wm-NmV" secondAttribute="bottom" id="V1D-mO-aVB"/>
+                <constraint firstItem="CGB-nm-7bj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="poA-9D-wOy"/>
+                <constraint firstItem="5Uf-0Z-yAo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vH4-Wy-g8F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="80" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_manage.png" width="44" height="44"/>
+    </resources>
+</document>

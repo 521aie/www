@@ -1,0 +1,112 @@
+fastlane_version "1.105.2"
+
+default_platform :ios
+
+platform :ios do
+    gym_output_path = "../Build/"
+    job_prefix = ""
+
+    is_enterprise = false
+
+    before_all do |lane, options|
+
+        debug = lane.to_s == "Release" ? true : options[:debug]
+
+        cocoapods(repo_update: true) if lane.to_s != "d"
+
+        is_enterprise = lane.to_s == "Enterprise"
+
+        if is_ci
+            job_prefix = "ZGiOS_"
+            setup_jenkins(result_bundle: false)
+            gym_output_path = "../Build/#{ENV['BUILD_NUMBER']}"
+        end
+
+        puts "Version: #{get_version_number}"
+        increment_build_number(build_number: "#{get_version_number}.#{ENV['BUILD_NUMBER']}")
+
+        weixin_id = is_enterprise ? "wxbc6632cd90329698" : "wx9ea214b5b0a4de1e"
+
+        bundleName = debug ? "#{ENV['JOB_NAME']}".delete("#{job_prefix}") : '${PRODUCT_NAME}'
+
+
+        preprocessor_definitions = {
+            "DEBUG" => (debug ? "1" : "0"),
+            "COCOAPODS" => "1",
+            "ARC_ENABLED" => "1",
+            "ENTERPRISE" => (lane.to_s == "Enterprise" ? "1" : "0")
+        }
+
+        pair_list = []
+
+        preprocessor_definitions.each {|key, value| pair_list.push("#{key}=#{value}")}
+
+        preprocessor_definitions_string = pair_list.join " "
+
+        xcargs = {
+            "ONLY_ACTIVE_ARCH" => (debug ? "YES" : "NO"),
+            "GCC_PREPROCESSOR_DEFINITIONS" => "\"#{preprocessor_definitions_string}\""
+        }
+
+        pair_list = []
+
+        xcargs.each {|key, value| pair_list.push("#{key}=#{value}")}
+
+        @xcargs = pair_list.join " "
+
+
+        update_info_plist(
+            plist_path: "./RestApp/RestApp-Info.plist",
+            block: lambda { |plist|
+                plist['CFBundleName'] = bundleName
+				urlScheme = plist["CFBundleURLTypes"].find{|scheme| scheme["CFBundleURLName"] == "weixin"}
+				urlScheme[:CFBundleURLSchemes] = ["#{weixin_id}"]
+            }
+        )
+
+    end
+
+    lane :d do 
+    end
+
+    lane :AdHoc do
+        match(type: "adhoc")
+
+        gym(scheme: "Release",
+            configuration: "AdHoc",
+            codesigning_identity: "iPhone Distribution: Hangzhou 2Dfire Technology Co., Ltd. (KRQB3E5X27)",
+            export_method: 'ad-hoc',
+            xcargs: "#{@xcargs}",
+            output_directory: gym_output_path)
+    end
+
+    desc "Deploy a new version to the App Store"
+    lane :Release do
+        match(type: "appstore")
+        #pem
+
+        gym(scheme: "Release",
+            codesigning_identity: "iPhone Distribution: Hangzhou 2Dfire Technology Co., Ltd. (KRQB3E5X27)",
+            archive_path: gym_output_path,
+            export_method: 'app-store',
+            output_directory: gym_output_path)
+        upload_symbols_to_crashlytics(api_token: "04401f2c28db86cf44d0c8b1b62305c9d1893ce6")
+        appstore(skip_screenshots: true, force: true)
+    end
+
+    lane :Enterprise do
+
+        gym(scheme: "Release",
+            codesigning_identity: "iPhone Distribution: Hangzhou 2Dfire Technology Co., Ltd.",
+            configuration: "Enterprise",
+            export_method: 'enterprise',
+            xcargs: "#{@xcargs}",
+            output_directory: gym_output_path)
+    end
+
+    after_all do |lane|
+    end
+
+    error do |lane, exception|
+    end
+end

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChainMenuFooterListView">
+            <connections>
+                <outlet property="btnAddMenu" destination="8tB-BK-2Mf" id="7x4-4g-eYf"/>
+                <outlet property="btnAddSuitMenul" destination="DGY-Yd-fDp" id="DtT-rU-XMK"/>
+                <outlet property="btnBatch" destination="Ra3-bc-DtE" id="Ccc-YK-KFP"/>
+                <outlet property="btnHelp" destination="G6a-Th-CiU" id="I1U-aZ-cQz"/>
+                <outlet property="btnSort" destination="D9D-Ss-xZp" id="GDT-GB-ybw"/>
+                <outlet property="imgAddMenu" destination="hPd-Ml-EZQ" id="W3d-8V-GLV"/>
+                <outlet property="imgAddSuitMenu" destination="oho-ns-nto" id="yO4-I8-3Es"/>
+                <outlet property="imgBatch" destination="vd5-FG-FcS" id="ncC-on-vxY"/>
+                <outlet property="imgHelp" destination="Ckz-0Q-VbF" id="gGW-W3-8MT"/>
+                <outlet property="imgSort" destination="Y45-CH-xZV" id="upa-rf-8t8"/>
+                <outlet property="view" destination="6Z5-QB-1I7" id="O3d-ut-QGx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6Z5-QB-1I7">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tB-BK-2Mf">
+                    <rect key="frame" x="201" y="5" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="qxv-ii-JMg"/>
+                        <constraint firstAttribute="height" constant="55" id="uMw-hQ-ihE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="22" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="商品" backgroundImage="ico_rnd_green.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onAddMenuClickEvent:" destination="-1" eventType="touchUpInside" id="cLR-fy-Rs4"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_new.png" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-Ml-EZQ">
+                    <rect key="frame" x="212" y="8" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Uda-vr-Cwj"/>
+                        <constraint firstAttribute="width" constant="32" id="oCl-ib-nVL"/>
+                    </constraints>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-Yd-fDp">
+                    <rect key="frame" x="265" y="5" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="BPC-Js-5rd"/>
+                        <constraint firstAttribute="width" constant="55" id="KGi-yM-May"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="22" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="套餐" backgroundImage="ico_rnd_green.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onAddSuitMenuClickEvent:" destination="-1" eventType="touchUpInside" id="0E9-nw-Pis"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_new.png" translatesAutoresizingMaskIntoConstraints="NO" id="oho-ns-nto">
+                    <rect key="frame" x="276" y="8" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="W1W-fI-Aqi"/>
+                        <constraint firstAttribute="width" constant="32" id="YBY-ac-Uy6"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_help.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ckz-0Q-VbF">
+                    <rect key="frame" x="14" y="17" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="CAk-Zi-HFa"/>
+                        <constraint firstAttribute="height" constant="32" id="sHw-Zw-mrx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6a-Th-CiU">
+                    <rect key="frame" x="2" y="5" width="57" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="57" id="Q8M-14-3qH"/>
+                        <constraint firstAttribute="height" constant="52" id="yUi-Va-T3h"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onHelpClickEvent:" destination="-1" eventType="touchUpInside" id="tGh-19-YC2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9D-Ss-xZp">
+                    <rect key="frame" x="138" y="5" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="48a-3d-c52"/>
+                        <constraint firstAttribute="width" constant="55" id="Agk-fJ-fE3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="22" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="排序" backgroundImage="ico_rnd_red2.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onSortClickEvent:" destination="-1" eventType="touchUpInside" id="6hR-Xc-moN"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_sort.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y45-CH-xZV">
+                    <rect key="frame" x="150" y="8" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="cdh-EF-AU0"/>
+                        <constraint firstAttribute="height" constant="32" id="n3g-FF-WsS"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-bc-DtE">
+                    <rect key="frame" x="75" y="5" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="N3p-IX-dbI"/>
+                        <constraint firstAttribute="width" constant="55" id="lzX-UI-whP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="22" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="批量" backgroundImage="ico_rnd_red2.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onBatchClickEvent:" destination="-1" eventType="touchUpInside" id="oh0-x3-hsf"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_bat.png" translatesAutoresizingMaskIntoConstraints="NO" id="vd5-FG-FcS">
+                    <rect key="frame" x="86" y="8" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Iyg-KS-dLd"/>
+                        <constraint firstAttribute="width" constant="32" id="LD1-RD-4XS"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G6a-Th-CiU" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="5" id="36z-uL-WS9"/>
+                <constraint firstItem="DGY-Yd-fDp" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="5" id="3jc-er-cXo"/>
+                <constraint firstItem="DGY-Yd-fDp" firstAttribute="leading" secondItem="hPd-Ml-EZQ" secondAttribute="trailing" constant="21" id="5I3-eC-dDv"/>
+                <constraint firstItem="8tB-BK-2Mf" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="5" id="K7k-ym-9Z9"/>
+                <constraint firstItem="8tB-BK-2Mf" firstAttribute="leading" secondItem="Y45-CH-xZV" secondAttribute="trailing" constant="19" id="N1v-zS-UD8"/>
+                <constraint firstItem="D9D-Ss-xZp" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="5" id="Psf-a7-O4G"/>
+                <constraint firstItem="DGY-Yd-fDp" firstAttribute="leading" secondItem="8tB-BK-2Mf" secondAttribute="trailing" constant="9" id="RdO-gp-HvX"/>
+                <constraint firstItem="vd5-FG-FcS" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="8" id="Vlu-kR-fyc"/>
+                <constraint firstItem="Y45-CH-xZV" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="8" id="Wga-MF-vUt"/>
+                <constraint firstItem="D9D-Ss-xZp" firstAttribute="leading" secondItem="Ra3-bc-DtE" secondAttribute="trailing" constant="8" id="Xpq-Sv-1w8"/>
+                <constraint firstItem="Ckz-0Q-VbF" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="17" id="Xyi-E6-tfl"/>
+                <constraint firstAttribute="trailing" secondItem="oho-ns-nto" secondAttribute="trailing" constant="12" id="nU7-WB-i2o"/>
+                <constraint firstAttribute="trailing" secondItem="DGY-Yd-fDp" secondAttribute="trailing" id="pRn-f3-u9u"/>
+                <constraint firstItem="hPd-Ml-EZQ" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="8" id="pj5-16-9V8"/>
+                <constraint firstItem="oho-ns-nto" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="8" id="qPS-50-tma"/>
+                <constraint firstItem="Ra3-bc-DtE" firstAttribute="top" secondItem="6Z5-QB-1I7" secondAttribute="top" constant="5" id="rOW-av-2EY"/>
+                <constraint firstItem="8tB-BK-2Mf" firstAttribute="leading" secondItem="D9D-Ss-xZp" secondAttribute="trailing" constant="8" id="seW-bF-2mc"/>
+                <constraint firstItem="Ckz-0Q-VbF" firstAttribute="leading" secondItem="6Z5-QB-1I7" secondAttribute="leading" constant="14" id="vKo-wM-9IM"/>
+                <constraint firstItem="G6a-Th-CiU" firstAttribute="leading" secondItem="6Z5-QB-1I7" secondAttribute="leading" constant="2" id="wqB-4z-pE2"/>
+                <constraint firstItem="D9D-Ss-xZp" firstAttribute="leading" secondItem="vd5-FG-FcS" secondAttribute="trailing" constant="20" id="yiU-VO-tnh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_bat.png" width="64" height="64"/>
+        <image name="ico_help.png" width="64" height="64"/>
+        <image name="ico_new.png" width="64" height="64"/>
+        <image name="ico_rnd_green.png" width="108" height="108"/>
+        <image name="ico_rnd_red2.png" width="108" height="108"/>
+        <image name="ico_sort.png" width="64" height="64"/>
+    </resources>
+</document>

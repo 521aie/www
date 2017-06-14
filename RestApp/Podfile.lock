@@ -1,0 +1,697 @@
+PODS:
+  - ActivityForRestApp (0.0.1)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AMapFrameworks (0.0.2)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaLumberjack (3.0.0):
+    - CocoaLumberjack/Default (= 3.0.0)
+    - CocoaLumberjack/Extensions (= 3.0.0)
+  - CocoaLumberjack/Default (3.0.0)
+  - CocoaLumberjack/Extensions (3.0.0):
+    - CocoaLumberjack/Default
+  - CocoaSecurity (1.2.4.1)
+  - CodePush (0.2.0):
+    - CodePush/Core (= 0.2.0)
+    - CodePush/SSZipArchive (= 0.2.0)
+    - React
+  - CodePush/Core (0.2.0):
+    - React
+  - CodePush/SSZipArchive (0.2.0):
+    - React
+  - Crashlytics (3.7.3):
+    - Fabric (~> 1.6.3)
+  - DACircularProgress (2.3.1)
+  - ESExchangeSkin (0.0.6):
+    - DACircularProgress
+    - HBHybridKit
+    - Masonry
+    - QRCodeGenerator
+    - RTLabel
+    - SDWebImage
+    - SVPullToRefresh
+    - TDFAPIKit
+    - TDFBatchOperation
+    - TDFComponents
+    - TDFCutCircleView
+    - TDFIssueCenterModule
+    - TDFLogger
+    - TDFLoginPod
+    - TDFMediatorKit
+    - TDFMemberPod
+    - TDFModuleRecharge
+    - TDFNetworkEnvironmentSwitcher
+    - TDFPickerProxy
+    - YYModel
+  - Fabric (1.6.7)
+  - FRWChart (0.1.0)
+  - GCDiscreetNotificationView (1.0.2)
+  - HBHybridKit (0.3.9):
+    - YYModel
+  - IQKeyboardManager (4.0.7)
+  - jastor (0.2.2)
+  - JPush-iOS-SDK (3.0.1)
+  - JSBadgeView (1.4.2)
+  - JSONKit (1.5.3)
+  - libextobjc (0.5):
+    - libextobjc/EXTADT (= 0.5)
+    - libextobjc/EXTConcreteProtocol (= 0.5)
+    - libextobjc/EXTCoroutine (= 0.5)
+    - libextobjc/EXTKeyPathCoding (= 0.5)
+    - libextobjc/EXTNil (= 0.5)
+    - libextobjc/EXTSafeCategory (= 0.5)
+    - libextobjc/EXTScope (= 0.5)
+    - libextobjc/EXTSelectorChecking.h (= 0.5)
+    - libextobjc/EXTSynthesize (= 0.5)
+    - libextobjc/NSInvocation+EXT (= 0.5)
+    - libextobjc/NSMethodSignature+EXT (= 0.5)
+    - libextobjc/RuntimeExtensions (= 0.5)
+    - libextobjc/UmbrellaHeader (= 0.5)
+  - libextobjc/EXTADT (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTCoroutine (0.5)
+  - libextobjc/EXTKeyPathCoding (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking.h (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.5)
+  - libextobjc/UmbrellaHeader (0.5)
+  - libqrencode (3.4.2)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - Masonry (1.0.1)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.8)
+  - Nimbus/Core (1.3.0)
+  - NSHash (1.1.0)
+  - NullSafe (1.2.2)
+  - OCTWebViewBridge (1.0.0)
+  - PinYin4Objc (1.1.1)
+  - QRCodeGenerator (0.0.1):
+    - libqrencode (~> 3.4.2)
+  - React (0.31.1):
+    - React/Core (= 0.31.1)
+  - React/Core (0.31.1):
+    - React/CSSLayout
+  - React/CSSLayout (0.31.1)
+  - React/RCTActionSheet (0.31.1):
+    - React/Core
+  - React/RCTAdSupport (0.31.1):
+    - React/Core
+  - React/RCTAnimation (0.31.1):
+    - React/Core
+  - React/RCTCameraRoll (0.31.1):
+    - React/Core
+    - React/RCTImage
+  - React/RCTImage (0.31.1):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.31.1):
+    - React/Core
+  - React/RCTNetwork (0.31.1):
+    - React/Core
+  - React/RCTPushNotification (0.31.1):
+    - React/Core
+  - React/RCTSettings (0.31.1):
+    - React/Core
+  - React/RCTText (0.31.1):
+    - React/Core
+  - React/RCTVibration (0.31.1):
+    - React/Core
+  - React/RCTWebSocket (0.31.1):
+    - React/Core
+  - ReactiveObjC (2.1.0)
+  - RegexKitLite (4.0)
+  - RTLabel (1.0.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SobotKit (2.2.3)
+  - SVPullToRefresh (0.4.1)
+  - SwipeView (1.3.2)
+  - TBXML (1.5)
+  - TDFAliPaySDK (0.0.1)
+  - TDFAPIHUDPresenter (1.0.2):
+    - Masonry
+    - MBProgressHUD (~> 1.0)
+    - TDFAPIKit (~> 1.0)
+  - TDFAPIKit (1.2.3):
+    - TDFCategories (~> 1.0)
+    - TDFNetworking
+  - TDFAppInitConfigServiceKit (0.0.4):
+    - TDFNetworking
+    - ZipArchive
+  - TDFAsync (0.0.5)
+  - TDFBaseSettingModule (1.0.6):
+    - Masonry
+    - TDFAPIHUDPresenter
+    - TDFAPIKit (~> 1.0)
+    - TDFBatchOperation (~> 1.0)
+    - TDFCategories
+    - TDFImageSourceManager (~> 1.0)
+    - TDFLogger
+    - TDFPickerProxy (~> 1.0)
+    - TDFPresentationController
+    - TDFProvinceManager
+    - YYModel
+  - TDFBatchOperation (1.1.0):
+    - TDFCoreProtocol (~> 1.0)
+  - TDFCategories (1.0.4)
+  - TDFCollectionCellKit (0.1.5)
+  - TDFCollectionViewKit (0.1.4)
+  - TDFComponents (1.4.0):
+    - TDFLoginPod
+  - TDFCore (1.0.3):
+    - jastor
+    - libextobjc
+    - MBProgressHUD (~> 1.0)
+    - RegexKitLite
+    - SDWebImage
+    - TDFCoreProtocol (~> 1.0)
+    - TDFNetworking (~> 0.3)
+    - TDFOldBaseUtil
+  - TDFCoreProtocol (1.0.0)
+  - TDFCutCircleView (0.3.7):
+    - Masonry
+  - TDFDataCenterKit (0.0.13)
+  - TDFDateFormatKit (1.0.0)
+  - TDFHistogramKit (0.1.5):
+    - Masonry
+    - SwipeView
+  - TDFHTTPDNSKit (0.0.5):
+    - TDFSecurityKit
+  - TDFImageSourceManager (1.0.0):
+    - ReactiveObjC
+    - TDFAPIHUDPresenter
+    - TDFAPIKit
+    - TDFCategories
+    - TDFDataCenterKit
+    - TDFMediatorKit
+  - TDFIssueCenterModule (0.0.12):
+    - libextobjc
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - TDFAPIKit
+    - TDFBatchOperation
+    - TDFComponents
+    - TDFDateFormatKit
+    - TDFLoginPod
+    - TDFMediatorKit
+    - TDFNetworkEnvironmentSwitcher
+    - TDFPickerProxy
+    - TDFPlateModule
+    - TDFResources
+    - UMengAnalytics-NO-IDFA
+    - YYModel
+  - TDFKeyboard (0.0.9)
+  - TDFLogger (0.0.3):
+    - CocoaLumberjack (= 3.0.0)
+  - TDFLoginAssistant (1.5.5):
+    - CocoaSecurity
+    - Masonry
+    - ReactiveObjC
+    - TDFAPIHUDPresenter (~> 1.0)
+    - TDFAPIKit (~> 1.0)
+    - TDFCategories
+    - TDFDataCenterKit
+    - TDFLogger
+    - TDFNetworkEnvironmentSwitcher
+    - YYModel
+  - TDFLoginModule (0.0.6):
+    - CocoaSecurity
+    - Crashlytics
+    - JPush-iOS-SDK
+    - JSONKit
+    - libextobjc
+    - Mantle
+    - TDFAPIHUDPresenter
+    - TDFAPIKit
+    - TDFComponents
+    - TDFCore
+    - TDFLoginPod
+    - TDFMediatorKit
+    - TDFNetworkEnvironmentSwitcher
+    - TDFOldBaseUtil
+    - TDFOldSystemService
+    - TDFPickerProxy
+    - TDFSobotChatModule
+    - UMengUShare/Social/AlipayShare
+    - UMengUShare/Social/ReducedQQ
+    - UMengUShare/Social/ReducedSina
+    - UMengUShare/Social/WeChat
+    - UMengUShare/UI
+  - TDFLoginPod (1.0.7):
+    - Masonry
+    - TDFCategories
+    - TDFCore
+    - TDFKeyboard
+    - TDFOldSystemService
+  - TDFMapLocationViewController (0.1.5):
+    - AMapFrameworks
+    - TDFCategories
+    - TDFLoginPod
+    - TDFMapLocationViewController/Categories (= 0.1.5)
+    - TDFMapLocationViewController/Locator (= 0.1.5)
+    - TDFMapLocationViewController/Model (= 0.1.5)
+    - TDFMapLocationViewController/View (= 0.1.5)
+    - TDFMapLocationViewController/ViewController (= 0.1.5)
+  - TDFMapLocationViewController/Categories (0.1.5):
+    - AMapFrameworks
+    - TDFCategories
+    - TDFLoginPod
+  - TDFMapLocationViewController/Locator (0.1.5):
+    - AMapFrameworks
+    - TDFCategories
+    - TDFLoginPod
+    - TDFMapLocationViewController/Categories
+  - TDFMapLocationViewController/Model (0.1.5):
+    - AMapFrameworks
+    - TDFCategories
+    - TDFLoginPod
+  - TDFMapLocationViewController/View (0.1.5):
+    - AMapFrameworks
+    - TDFCategories
+    - TDFLoginPod
+  - TDFMapLocationViewController/ViewController (0.1.5):
+    - AMapFrameworks
+    - TDFCategories
+    - TDFLoginPod
+    - TDFMapLocationViewController/Categories
+    - TDFMapLocationViewController/Locator
+    - TDFMapLocationViewController/Model
+    - TDFMapLocationViewController/View
+  - TDFMediatorKit (0.5.5)
+  - TDFMemberPod (0.2.5):
+    - DACircularProgress
+    - NullSafe
+    - QRCodeGenerator
+    - RTLabel
+    - SVPullToRefresh
+    - TDFAPIHUDPresenter
+    - TDFAPIKit
+    - TDFCategories
+    - TDFCutCircleView
+    - TDFDateFormatKit
+    - TDFIssueCenterModule
+    - TDFLoginModule
+    - TDFLoginPod
+    - TDFMediatorKit
+    - TDFModuleRecharge
+    - TDFNetworkActivityLogger
+    - TDFPagingDataLoader
+    - TDFPlateModule
+    - TDFResources/TDFMemberResources
+    - TDFSobotChatModule
+    - UMengAnalytics-NO-IDFA
+  - TDFModuleRecharge (0.2.0):
+    - MJRefresh
+    - TDFAliPaySDK
+    - TDFBatchOperation
+    - TDFComponents
+    - TDFMediatorKit
+    - TDFNetworkActivityLogger
+    - YYModel
+  - TDFNetworkActivityLogger (1.0.1):
+    - AFNetworking/NSURLSession
+  - TDFNetworkEnvironmentSwitcher (0.1.2)
+  - TDFNetworking (0.3.4):
+    - AFNetworking
+    - Nimbus/Core
+    - NSHash
+    - TDFDataCenterKit
+    - TDFHTTPDNSKit
+  - TDFOldBaseUtil (0.1.3):
+    - jastor
+    - JSONKit
+    - RegexKitLite
+    - SDWebImage
+    - TDFNetworking (~> 0.3)
+  - TDFOldSystemService (0.1.3):
+    - ReactiveObjC
+    - TBXML
+    - TDFCoreProtocol
+    - TDFDataCenterKit
+    - TDFOldBaseUtil
+  - TDFPagingDataLoader (1.0.5):
+    - MJRefresh (~> 3.0)
+    - TDFAPIKit (~> 1.0)
+    - TDFComponents
+    - TDFPagingDataLoader/Categories (= 1.0.5)
+    - TDFPagingDataLoader/Core (= 1.0.5)
+  - TDFPagingDataLoader/Categories (1.0.5):
+    - MJRefresh (~> 3.0)
+    - TDFAPIKit (~> 1.0)
+    - TDFComponents
+    - TDFPagingDataLoader/Core
+  - TDFPagingDataLoader/Core (1.0.5):
+    - MJRefresh (~> 3.0)
+    - TDFAPIKit (~> 1.0)
+    - TDFComponents
+  - TDFPickerProxy (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPickerProxy/AddressPicker (= 1.0.5)
+    - TDFPickerProxy/Categories (= 1.0.5)
+    - TDFPickerProxy/Core (= 1.0.5)
+    - TDFPickerProxy/DatePicker (= 1.0.5)
+    - TDFPickerProxy/GeneralPicker (= 1.0.5)
+    - TDFPickerProxy/OptionPicker (= 1.0.5)
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPickerProxy/AddressPicker (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPickerProxy/Core
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPickerProxy/Categories (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPickerProxy/Core (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPickerProxy/Categories
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPickerProxy/DatePicker (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPickerProxy/Core
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPickerProxy/GeneralPicker (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPickerProxy/Core
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPickerProxy/OptionPicker (1.0.5):
+    - Masonry
+    - TDFBatchOperation (~> 1.0)
+    - TDFPickerProxy/Core
+    - TDFPresentationController (~> 1.0)
+    - TDFProvinceManager
+  - TDFPlateModule (1.0.1):
+    - RTLabel
+    - TDFLoginModule
+    - TDFLoginPod
+    - TDFMediatorKit
+    - TDFModuleRecharge
+    - TDFOldBaseUtil
+    - TDFSobotChatModule
+  - TDFPresentationController (1.0.0)
+  - TDFProvinceManager (0.0.2):
+    - YYModel
+  - TDFReportWebViewKit (0.0.1):
+    - libextobjc
+    - Masonry
+    - TDFMediatorKit
+  - TDFResources (0.0.1):
+    - TDFResources/TDFBaseResources (= 0.0.1)
+    - TDFResources/TDFHealthCheckResources (= 0.0.1)
+    - TDFResources/TDFMemberResources (= 0.0.1)
+  - TDFResources/TDFBaseResources (0.0.1)
+  - TDFResources/TDFHealthCheckResources (0.0.1):
+    - TDFResources/TDFBaseResources
+  - TDFResources/TDFMemberResources (0.0.1):
+    - TDFResources/TDFBaseResources
+  - TDFSecurityKit (0.0.1)
+  - TDFSobotChatModule (0.0.7):
+    - IQKeyboardManager
+    - JSBadgeView
+    - Masonry
+    - SobotKit
+    - TDFCategories
+    - TDFLogger
+    - uidevice-extension
+  - uidevice-extension (0.0.7)
+  - UITableView+FDTemplateLayoutCell (1.6.beta)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+  - UMengUShare/Core (6.4.4):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.4)
+  - UMengUShare/Social/AlipayShare (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedQQ (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.4.4):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI (6.4.4):
+    - UMengUShare/Core
+  - UnitSettingForRestApp (0.0.1):
+    - Masonry
+    - TDFLoginPod
+  - YYModel (1.0.4)
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - ActivityForRestApp (from `git@git.2dfire-inc.com:2ye-iOS/ActivityForRestApp.git`, branch `feature/v0.0.1`)
+  - AMapFrameworks (= 0.0.2)
+  - CocoaAsyncSocket/RunLoop (= 7.4.3)
+  - CocoaSecurity
+  - CodePush (from `http://git.2dfire-inc.com/wangyou/CodePush/raw/master/CodePush.podspec`)
+  - DACircularProgress
+  - ESExchangeSkin (= 0.0.6)
+  - FRWChart (from `http://git.2dfire-inc.com/2ye-iOS/FRWChart.git`, branch `feature/0.1.0`)
+  - GCDiscreetNotificationView
+  - IQKeyboardManager
+  - JPush-iOS-SDK (= 3.0.1)
+  - JSBadgeView (= 1.4.2)
+  - JSONKit
+  - libextobjc
+  - Mantle
+  - Masonry
+  - MBProgressHUD
+  - MJRefresh
+  - NullSafe
+  - OCTWebViewBridge
+  - PinYin4Objc
+  - QRCodeGenerator
+  - React/Core (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTActionSheet (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTAdSupport (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTAnimation (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTCameraRoll (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTImage (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTLinkingIOS (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTNetwork (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTPushNotification (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTSettings (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTText (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTVibration (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - React/RCTWebSocket (from `http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec`)
+  - RegexKitLite
+  - RTLabel
+  - SDWebImage (= 4.0.0)
+  - SVPullToRefresh
+  - SwipeView
+  - TBXML
+  - TDFAPIHUDPresenter (= 1.0.2)
+  - TDFAppInitConfigServiceKit (= 0.0.4)
+  - TDFAsync
+  - TDFBaseSettingModule (= 1.0.6)
+  - TDFCollectionCellKit (= 0.1.5)
+  - TDFCollectionViewKit (= 0.1.4)
+  - TDFComponents (= 1.4.0)
+  - TDFCutCircleView (= 0.3.7)
+  - TDFDataCenterKit (= 0.0.13)
+  - TDFDateFormatKit (= 1.0.0)
+  - TDFHistogramKit (= 0.1.5)
+  - TDFIssueCenterModule (from `http://git.2dfire-inc.com/ios/TDFIssueCenterModule.git`, branch `master`)
+  - TDFKeyboard
+  - TDFLogger (= 0.0.3)
+  - TDFLoginAssistant (= 1.5.5)
+  - TDFLoginModule (from `http://git.2dfire-inc.com/ios/TDFLoginModule.git`, branch `master`)
+  - TDFLoginPod (= 1.0.7)
+  - TDFMapLocationViewController
+  - TDFMediatorKit (= 0.5.5)
+  - TDFMemberPod (from `http://git.2dfire-inc.com/ios/TDFMemberPod.git`, branch `feature/ActivityLottery`)
+  - TDFModuleRecharge (= 0.2.0)
+  - TDFNetworkActivityLogger
+  - TDFNetworkEnvironmentSwitcher (= 0.1.2)
+  - TDFNetworking (= 0.3.4)
+  - TDFOldBaseUtil (= 0.1.3)
+  - TDFOldSystemService (= 0.1.3)
+  - TDFPagingDataLoader (= 1.0.5)
+  - TDFPickerProxy (= 1.0.5)
+  - TDFReportWebViewKit (= 0.0.1)
+  - TDFResources
+  - UITableView+FDTemplateLayoutCell (~> 1.6.beta)
+  - UMengAnalytics-NO-IDFA
+  - UMengUShare/Social/AlipayShare
+  - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
+  - UnitSettingForRestApp (= 0.0.1)
+  - YYModel
+
+EXTERNAL SOURCES:
+  ActivityForRestApp:
+    :branch: feature/v0.0.1
+    :git: git@git.2dfire-inc.com:2ye-iOS/ActivityForRestApp.git
+  CodePush:
+    :podspec: http://git.2dfire-inc.com/wangyou/CodePush/raw/master/CodePush.podspec
+  FRWChart:
+    :branch: feature/0.1.0
+    :git: http://git.2dfire-inc.com/2ye-iOS/FRWChart.git
+  React:
+    :podspec: http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec
+  TDFIssueCenterModule:
+    :branch: master
+    :git: http://git.2dfire-inc.com/ios/TDFIssueCenterModule.git
+  TDFLoginModule:
+    :branch: master
+    :git: http://git.2dfire-inc.com/ios/TDFLoginModule.git
+  TDFMemberPod:
+    :branch: feature/ActivityLottery
+    :git: http://git.2dfire-inc.com/ios/TDFMemberPod.git
+
+CHECKOUT OPTIONS:
+  ActivityForRestApp:
+    :commit: 7da9deeb67dd64e955a317634daee78cac68e3cd
+    :git: git@git.2dfire-inc.com:2ye-iOS/ActivityForRestApp.git
+  FRWChart:
+    :commit: 37a776b0d671554191ccdd0baf4468216a200235
+    :git: http://git.2dfire-inc.com/2ye-iOS/FRWChart.git
+  TDFIssueCenterModule:
+    :commit: 110afc35455fbcb7ff77955beb9c594d29b29990
+    :git: http://git.2dfire-inc.com/ios/TDFIssueCenterModule.git
+  TDFLoginModule:
+    :commit: 93e3a4590d5220763b07d020893b9e6ef04aee05
+    :git: http://git.2dfire-inc.com/ios/TDFLoginModule.git
+  TDFMemberPod:
+    :commit: aa82517ef7c3029978304d89d1e243dccdf04727
+    :git: http://git.2dfire-inc.com/ios/TDFMemberPod.git
+
+SPEC CHECKSUMS:
+  ActivityForRestApp: 8c7aa53bed5c7eafe6b3cbf9d47d01aeb6f301c8
+  AFNetworking: fd1eba7a2d3d0eeaf22cfe23d73bddc0b9246021
+  AMapFrameworks: 0419951262bd5216e5744b1b6eabe00aca62578f
+  CocoaAsyncSocket: 9663ae7c5674bb0cc46a014dbcf1a68153b8f803
+  CocoaLumberjack: e65611e6b0b2fea1d9fa4278d2cc3b5c7e51cb72
+  CocoaSecurity: 230c3656b36b6b4e0e700560361ab53ae90d0b3e
+  CodePush: ddc0a2a3157cd82c7a03779a953b76ec30b43791
+  Crashlytics: 5e33099431c72bc8f0edc4006b7247350f4d0574
+  DACircularProgress: 0a5ba62f9f61b3cc078d047893512a68deda4fbe
+  ESExchangeSkin: b281913c6394e07c59ce059a18294c26d7f287ad
+  Fabric: 8e757be029113d6f13fd7e1de1cd76808a1634a3
+  FRWChart: 1f8209178d8270035774f82b18522d8a234c69d0
+  GCDiscreetNotificationView: d6a404d9aff0a32f4b3445472d6ac9a7d23b3224
+  HBHybridKit: 4092e56a2fc1053579a47a762c4923f688f29179
+  IQKeyboardManager: 987f6806b838af5b22043f99213fa54127ca93bd
+  jastor: 283846d1304fe01e5d22835a90d2bce57459b793
+  JPush-iOS-SDK: 62daf995f94b0dfe01106511f500bd0ddb425b61
+  JSBadgeView: fa8c18bac0ae2915b3402009a68542f7c9a7969a
+  JSONKit: 088af064caa95a0c761a00fe0508f8fb4f055e81
+  libextobjc: 1dac0c1683a93d11ed90b3de4a2354e0caf4b6e9
+  libqrencode: 48dca780123833f841c2cc5f106f038c9480d9aa
+  Mantle: 204f298ca5f007da2258996228c74c5d726a2c7f
+  Masonry: aed6e17183e57e15d1f00521c78f249c215c6b48
+  MBProgressHUD: e147dbfdacf243ad0523cf2fda8ddb66ec032697
+  MJRefresh: feb450cbcdc2336c36ce68a9e91c8a7c1261b5ef
+  Nimbus: 76f04cfdbd2ab192cb3f61b3e5cc4e09117b7595
+  NSHash: cce3448da1d200ad774abf37bd8ecaf61427c149
+  NullSafe: 25539c5d7f93814b54636d8e3e3857b254ed6550
+  OCTWebViewBridge: e809a3e03d70a20a44d57ce570e661510eac40ce
+  PinYin4Objc: 0e864596d267637cbdb1c222ba62a5182f0a6772
+  QRCodeGenerator: a02d97e0f510a9a407c4f3d006d7c19fb029ab82
+  React: e7d29d32dfe62a770e796572c7d428b0deb6ebd4
+  ReactiveObjC: 71e4c941756a17779b3580075c5b112d2bcbf550
+  RegexKitLite: 58b982393f205864df2df8ac2fafe811f59a214e
+  RTLabel: 40458082633cdcfe00f7fbab021d812f1d419a55
+  SDWebImage: 6026ff38f0158e879a11394cf734f7771da6aff7
+  SobotKit: af28c00118c9765fa3a63b132eaff6cece86789f
+  SVPullToRefresh: 8d86e80c991e7121eac6904becdff3597dbff522
+  SwipeView: f252471df3c7d5fa6bf0ac5c690ceb7838a3adc4
+  TBXML: 9cec25ec898d069fe0b9d2219eef5d039cf7b297
+  TDFAliPaySDK: 2f342dc451e55b804a8aa6924f6336482d6d0d0f
+  TDFAPIHUDPresenter: c212253e959682da7e5b89961d1b10763ab2c947
+  TDFAPIKit: 4f38d47b08ef5c88b7a71193a69d06c5ba6f27db
+  TDFAppInitConfigServiceKit: f936c1c3ed489c5aa6eb96af014c4642a876f64d
+  TDFAsync: 8040f661fd2125fc0982ee0faf3a5020ee3200db
+  TDFBaseSettingModule: f45289ccd0cc988a3829aa00cceac4dd4ad79030
+  TDFBatchOperation: 5edb18c106dad03ce59612773321d0261b7704ba
+  TDFCategories: 97c721291577bf9cd16f87f4f1a961fcfc57d0c1
+  TDFCollectionCellKit: a2823093176ba664e183d40a7fd007bad0f88d1d
+  TDFCollectionViewKit: 7afc79cf03dc4bea9116ad015780a599b423f0d1
+  TDFComponents: 1eaa78ecc6018732c5c733a5dfc93d386d51044d
+  TDFCore: c72ab1130b2311e27ed96e7023351620ab1386ad
+  TDFCoreProtocol: 0be32b27c4fefe21258e8bf70c5958345104ef83
+  TDFCutCircleView: cc7bc66c4dab87dc6a1f016a6056fef96df88c7f
+  TDFDataCenterKit: 7a2cca6aa2a8fab40e683e35d172f73fec3cf122
+  TDFDateFormatKit: 667280043dbea5554872eac219e26492f1aa01e5
+  TDFHistogramKit: 3b6cedabf9acf836fcf56b8140bbc0f24faf04f5
+  TDFHTTPDNSKit: dd45426f9aff78a1139d45facd4003761dfaf6df
+  TDFImageSourceManager: da06044cafab7b4ad0eaef71f6a365483ff84a45
+  TDFIssueCenterModule: e8cd3d598b9e18b86a6d5938cd426d5ce188871e
+  TDFKeyboard: f9e65118bde38b03402a3b2375248f78e2e357b7
+  TDFLogger: dc088631df76fe7f9fd5fb8c20ea1896abaad8b8
+  TDFLoginAssistant: 168fb504e92aee8e659e3125db66bb92b3d7e1d6
+  TDFLoginModule: 6fe0e0689ea554c622063e7c39863a262a49297d
+  TDFLoginPod: 93ff9cd312936c6d84bee369a4129c0cfa40fca8
+  TDFMapLocationViewController: 16def77fc1d19c62fd155dad0360629bcb9ce943
+  TDFMediatorKit: c4edddca602226011f62b810737305a1fe10b6b4
+  TDFMemberPod: 0d23427318109888a6b244a9bb4914d6b3850bce
+  TDFModuleRecharge: 4746b9896e51925442a52644b2d16e72a7eab63b
+  TDFNetworkActivityLogger: c3b226c9f60635783073bc5557e5f12732f9f6ea
+  TDFNetworkEnvironmentSwitcher: 1cecd797749ec8f6b69c61b638704b40e4b7db35
+  TDFNetworking: 1fe50b0a9067af5f4de02dd3758e7a76cf2a87a1
+  TDFOldBaseUtil: 62686eb6556cd0f6ea08ff50b1762e31269d4fa7
+  TDFOldSystemService: 4823624dfcd7144ec8d2227c09a844aae638d434
+  TDFPagingDataLoader: be3365b58610f29655281a61918b5f90c3205635
+  TDFPickerProxy: a1a2927705a5e934ea292e1bc46099d05d4c3249
+  TDFPlateModule: 240c160fd09e60c8fc20be8be46e75d4ad8cfd4a
+  TDFPresentationController: 2d01966c997e4c2adfb7294525761545f53eae9b
+  TDFProvinceManager: 6c28e3684c854873e6a20a81e41149eb6e6ab567
+  TDFReportWebViewKit: a8dc3c82a9ba283462730c9142ea9806ae46536e
+  TDFResources: dde6f1c6b810ad822a015194366f57197fc86313
+  TDFSecurityKit: f60aecf2c13f280a3df451139b5bdf7346afc7ea
+  TDFSobotChatModule: e69971618a358e6bd9e5c4b6f3ed06488b32f452
+  uidevice-extension: 96ac2431eb9bc251ae8414aebdfb8609296f4e7d
+  UITableView+FDTemplateLayoutCell: feff9474f64b348f1cec3322ace9089bc5fd6fea
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+  UMengUShare: cd54ae52958426b79aa9193a7b02058d6a6d9aa0
+  UnitSettingForRestApp: 367d6bdd5cc9fa83775878ec2f65de8f7aeed659
+  YYModel: 2a38f9959b97df40b48499b3149fabc3a49e7d90
+  ZipArchive: e4d67e26d477a77efb25b12407e41d413986600d
+
+PODFILE CHECKSUM: 57ab57bf5e759146adf652cbfea5614c14274b9b
+
+COCOAPODS: 1.2.0

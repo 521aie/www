@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="GridHeadIndentifier" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GridHead">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56i-U4-80O">
+                        <rect key="frame" x="45" y="8" width="230" height="24"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="qdS-fL-Fe7"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-LS-eqg">
+                        <rect key="frame" x="45" y="8" width="230" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_edit_w.png" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-tT-td1">
+                        <rect key="frame" x="253" y="9" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="FSL-Ct-zIE"/>
+                            <constraint firstAttribute="width" constant="22" id="bGY-OL-vWs"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enx-cE-Mjd">
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="btnEditClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6r7-n4-1bC"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_add_rb.png" translatesAutoresizingMaskIntoConstraints="NO" id="64Y-ce-Ujv">
+                        <rect key="frame" x="286" y="9" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="3Bl-6L-SrM"/>
+                            <constraint firstAttribute="width" constant="22" id="nKr-J7-jBE"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mu-cs-Xtd">
+                        <rect key="frame" x="280" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="CVd-b6-cu4"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="btnAddClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UPu-UZ-Auu"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="YPr-LS-eqg" firstAttribute="trailing" secondItem="56i-U4-80O" secondAttribute="trailing" id="4EL-I3-FMX"/>
+                    <constraint firstItem="xcu-tT-td1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AFK-e3-mlh"/>
+                    <constraint firstItem="YPr-LS-eqg" firstAttribute="leading" secondItem="56i-U4-80O" secondAttribute="leading" id="H6z-22-N0y"/>
+                    <constraint firstItem="8mu-cs-Xtd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qp4-Ck-8w9"/>
+                    <constraint firstItem="56i-U4-80O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="45" id="SeQ-D1-ggy"/>
+                    <constraint firstItem="enx-cE-Mjd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WZa-aX-3Ou"/>
+                    <constraint firstAttribute="bottom" secondItem="8mu-cs-Xtd" secondAttribute="bottom" id="X1W-Us-cWl"/>
+                    <constraint firstAttribute="bottom" secondItem="enx-cE-Mjd" secondAttribute="bottom" id="Xey-tc-Kpo"/>
+                    <constraint firstItem="xcu-tT-td1" firstAttribute="trailing" secondItem="56i-U4-80O" secondAttribute="trailing" id="bIB-OZ-cg1"/>
+                    <constraint firstAttribute="trailing" secondItem="64Y-ce-Ujv" secondAttribute="trailing" constant="12" id="fGw-Vc-P5c"/>
+                    <constraint firstItem="YPr-LS-eqg" firstAttribute="bottom" secondItem="56i-U4-80O" secondAttribute="bottom" id="jTg-WZ-3gr"/>
+                    <constraint firstItem="64Y-ce-Ujv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lfs-R6-y3g"/>
+                    <constraint firstAttribute="trailing" secondItem="8mu-cs-Xtd" secondAttribute="trailing" id="mVX-im-Ikg"/>
+                    <constraint firstItem="enx-cE-Mjd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pwp-lr-BbV"/>
+                    <constraint firstItem="YPr-LS-eqg" firstAttribute="top" secondItem="56i-U4-80O" secondAttribute="top" id="rJy-u6-7ML"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="56i-U4-80O" secondAttribute="trailing" constant="37" id="uXd-qW-YZU"/>
+                    <constraint firstItem="56i-U4-80O" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vgV-kF-fFZ"/>
+                    <constraint firstItem="enx-cE-Mjd" firstAttribute="trailing" secondItem="56i-U4-80O" secondAttribute="trailing" id="zds-Ph-1mx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="btnAdd" destination="8mu-cs-Xtd" id="XEJ-g7-Hkk"/>
+                <outlet property="btnEdit" destination="enx-cE-Mjd" id="CfP-rC-TPW"/>
+                <outlet property="imgAdd" destination="64Y-ce-Ujv" id="IDq-kr-x52"/>
+                <outlet property="imgEdit" destination="xcu-tT-td1" id="oTk-9Q-YHD"/>
+                <outlet property="lblName" destination="YPr-LS-eqg" id="vDm-An-SLd"/>
+                <outlet property="panel" destination="56i-U4-80O" id="mtW-Z9-AUn"/>
+            </connections>
+            <point key="canvasLocation" x="62" y="74"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_add_rb.png" width="44" height="44"/>
+        <image name="ico_edit_w.png" width="44" height="44"/>
+    </resources>
+</document>

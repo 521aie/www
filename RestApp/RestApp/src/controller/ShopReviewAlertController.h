@@ -1,0 +1,15 @@
+//
+//  ShopReviewAlertController.h
+//  RestApp
+//
+//  Created by Octree on 18/7/16.
+//  Copyright © 2016年 杭州迪火科技有限公司. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+@class ShopStatusVo;
+@interface ShopReviewAlertController : UIViewController
+@property (nonatomic , strong) NSDictionary *shopStatus;
+@property (nonatomic,strong)NSArray  *functionVO;
+@property (nonatomic,strong)NSArray *menues;
+@end

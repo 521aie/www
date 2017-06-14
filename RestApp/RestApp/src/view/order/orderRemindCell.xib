@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="orderRemindCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTv-MU-OKM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1cI-SL-QDB"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TwG-Hg-hen">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“点心”  点少提醒与推荐语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-V0-W2v">
+                                <rect key="frame" x="17" y="2.5" width="286" height="27"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="rI8-pc-O2i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vG7-V0-W2v" firstAttribute="centerY" secondItem="TwG-Hg-hen" secondAttribute="centerY" id="Dtg-dO-5af"/>
+                            <constraint firstItem="vG7-V0-W2v" firstAttribute="leading" secondItem="TwG-Hg-hen" secondAttribute="leading" constant="17" id="Jjv-vf-y9t"/>
+                            <constraint firstAttribute="trailing" secondItem="vG7-V0-W2v" secondAttribute="trailing" constant="17" id="Kfu-el-h9M"/>
+                            <constraint firstAttribute="height" constant="32" id="j0i-ab-fhu"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="您的冷盘点少了" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wDG-IY-1Rh">
+                        <rect key="frame" x="17" y="32" width="286" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="1Sh-Xk-9ao"/>
+                        </constraints>
+                        <color key="textColor" red="0.077901131770000007" green="0.48519918890000002" blue="0.8437583112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="269-et-Fim">
+                        <rect key="frame" x="0.0" y="62" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="YaT-kT-xIB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="wDG-IY-1Rh" firstAttribute="top" secondItem="TwG-Hg-hen" secondAttribute="bottom" id="8Lg-Mi-tST"/>
+                    <constraint firstItem="vTv-MU-OKM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DCU-KZ-V68"/>
+                    <constraint firstItem="TwG-Hg-hen" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OLn-lo-Js0"/>
+                    <constraint firstAttribute="trailing" secondItem="wDG-IY-1Rh" secondAttribute="trailing" constant="17" id="UpU-m5-xVP"/>
+                    <constraint firstItem="vTv-MU-OKM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iaK-b2-ADr"/>
+                    <constraint firstItem="wDG-IY-1Rh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="j1N-Fb-nAN"/>
+                    <constraint firstItem="TwG-Hg-hen" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jg4-V9-Qx2"/>
+                    <constraint firstAttribute="trailing" secondItem="TwG-Hg-hen" secondAttribute="trailing" id="l3l-U0-nL3"/>
+                    <constraint firstAttribute="trailing" secondItem="vTv-MU-OKM" secondAttribute="trailing" id="n17-Q1-Ocn"/>
+                    <constraint firstItem="269-et-Fim" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qyY-tQ-Qb0"/>
+                    <constraint firstAttribute="bottom" secondItem="269-et-Fim" secondAttribute="bottom" id="tyn-xE-hJs"/>
+                    <constraint firstAttribute="trailing" secondItem="269-et-Fim" secondAttribute="trailing" id="u1a-Ow-2yd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="headLine" destination="vTv-MU-OKM" id="VEL-Sb-lUZ"/>
+                <outlet property="textFild" destination="wDG-IY-1Rh" id="Ovc-Ea-fpv"/>
+                <outlet property="titleLbl" destination="vG7-V0-W2v" id="r87-nR-coR"/>
+            </connections>
+            <point key="canvasLocation" x="540" y="312.5"/>
+        </tableViewCell>
+    </objects>
+</document>

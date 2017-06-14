@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="OptionSelectCell44Identifier" selectionStyle="default" indentationWidth="10" id="t1d-qt-4GU" customClass="OptionSelectItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t1d-qt-4GU" id="6UE-O2-kIv">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhV-qt-IrX" userLabel="background">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gox-Au-4n1" userLabel="nameLbl">
+                        <rect key="frame" x="8" y="7" width="304" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="UiY-xi-yAp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txb-1v-gwi" userLabel="itemBtn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="itemBtnClick:" destination="t1d-qt-4GU" eventType="touchUpInside" id="id8-wf-zJ8"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="gox-Au-4n1" firstAttribute="centerY" secondItem="6UE-O2-kIv" secondAttribute="centerY" id="02Z-VF-ab5"/>
+                    <constraint firstItem="gox-Au-4n1" firstAttribute="leading" secondItem="6UE-O2-kIv" secondAttribute="leading" constant="8" id="1lv-Yd-obF"/>
+                    <constraint firstAttribute="bottom" secondItem="txb-1v-gwi" secondAttribute="bottom" id="8Z9-Oy-UCZ"/>
+                    <constraint firstAttribute="trailing" secondItem="HhV-qt-IrX" secondAttribute="trailing" id="D4d-Fh-LoR"/>
+                    <constraint firstAttribute="trailing" secondItem="txb-1v-gwi" secondAttribute="trailing" id="NFa-SF-enu"/>
+                    <constraint firstItem="HhV-qt-IrX" firstAttribute="top" secondItem="6UE-O2-kIv" secondAttribute="top" id="P83-zI-VuK"/>
+                    <constraint firstItem="txb-1v-gwi" firstAttribute="leading" secondItem="6UE-O2-kIv" secondAttribute="leading" id="cd1-sf-RBG"/>
+                    <constraint firstAttribute="trailing" secondItem="gox-Au-4n1" secondAttribute="trailing" constant="8" id="eVD-9j-4Ma"/>
+                    <constraint firstItem="HhV-qt-IrX" firstAttribute="leading" secondItem="6UE-O2-kIv" secondAttribute="leading" id="hJF-EG-7Xh"/>
+                    <constraint firstItem="gox-Au-4n1" firstAttribute="centerX" secondItem="6UE-O2-kIv" secondAttribute="centerX" id="nh5-7A-FFA"/>
+                    <constraint firstAttribute="bottom" secondItem="HhV-qt-IrX" secondAttribute="bottom" constant="1" id="oFs-3Q-UC4"/>
+                    <constraint firstItem="txb-1v-gwi" firstAttribute="top" secondItem="6UE-O2-kIv" secondAttribute="top" id="pnr-UG-J87"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="nameLbl" destination="gox-Au-4n1" id="Lcz-fo-Zxo"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

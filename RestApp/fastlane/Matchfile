@@ -1,0 +1,9 @@
+git_url "git@git.2dfire-inc.com:ios/iOS-certificates.git"
+
+type "development" # The default type, can be: appstore, adhoc or development
+
+app_identifier "com.2dfire.restapp" 
+username "zhaoguangjun518@gmail.com" # Your Apple Developer Portal username
+
+# For all available options run `match --help`
+# Remove the # in the beginning of the line to enable the other options

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="NoPrintMenuItemIndentifier" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NoPrintMenuItem">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-Az-2TP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEZ-1c-MZb">
+                        <rect key="frame" x="10" y="34.5" width="241" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4No-EX-GIe">
+                        <rect key="frame" x="261" y="0.0" width="59" height="88"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="btnChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6jn-JK-6rg"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_block.png" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-wg-IPL">
+                        <rect key="frame" x="282" y="32" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Rma-bD-Ad0"/>
+                            <constraint firstAttribute="width" constant="22" id="fTI-Ic-cQy"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="QWW-Az-2TP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0n2-GQ-5SQ"/>
+                    <constraint firstAttribute="trailing" secondItem="FLB-wg-IPL" secondAttribute="trailing" constant="16" id="3gZ-4C-EH2"/>
+                    <constraint firstItem="TEZ-1c-MZb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="5z7-pA-ONz"/>
+                    <constraint firstItem="4No-EX-GIe" firstAttribute="leading" secondItem="TEZ-1c-MZb" secondAttribute="trailing" constant="10" id="791-5R-fdh"/>
+                    <constraint firstItem="FLB-wg-IPL" firstAttribute="leading" secondItem="TEZ-1c-MZb" secondAttribute="trailing" constant="31" id="FPR-Qk-SC9"/>
+                    <constraint firstItem="QWW-Az-2TP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IDQ-kj-DxB"/>
+                    <constraint firstAttribute="bottom" secondItem="QWW-Az-2TP" secondAttribute="bottom" constant="1" id="QeX-1h-lBA"/>
+                    <constraint firstAttribute="trailing" secondItem="4No-EX-GIe" secondAttribute="trailing" id="blg-Gm-XwH"/>
+                    <constraint firstItem="TEZ-1c-MZb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e7M-OD-w9O"/>
+                    <constraint firstAttribute="trailing" secondItem="QWW-Az-2TP" secondAttribute="trailing" id="nLO-mE-Pnc"/>
+                    <constraint firstAttribute="bottom" secondItem="4No-EX-GIe" secondAttribute="bottom" id="ts9-yP-ZvV"/>
+                    <constraint firstItem="4No-EX-GIe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vsw-UD-NcZ"/>
+                    <constraint firstItem="FLB-wg-IPL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="z4d-NR-1Ys"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="lblName" destination="TEZ-1c-MZb" id="4im-q3-Ej8"/>
+            </connections>
+            <point key="canvasLocation" x="508" y="329"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_block.png" width="44" height="44"/>
+    </resources>
+</document>

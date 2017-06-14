@@ -1,0 +1,13 @@
+//
+//  TDFQueueSettingViewController.h
+//  RestApp
+//
+//  Created by Octree on 7/12/16.
+//  Copyright © 2016年 杭州迪火科技有限公司. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface TDFQueueSettingViewController : UIViewController
+
+@end

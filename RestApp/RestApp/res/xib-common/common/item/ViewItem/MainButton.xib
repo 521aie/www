@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainButton">
+            <connections>
+                <outlet property="badgeImageView" destination="Mpp-N7-EbM" id="bsH-YV-GAL"/>
+                <outlet property="btnImg" destination="CWQ-fp-YT5" id="ohy-jq-hng"/>
+                <outlet property="imgLock" destination="JZ7-gD-KDN" id="sGb-ri-XXe"/>
+                <outlet property="lblName" destination="tKT-4s-ihj" id="Afs-oy-Jem"/>
+                <outlet property="view" destination="zUy-a8-B3y" id="fza-KQ-EMR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zUy-a8-B3y">
+            <rect key="frame" x="0.0" y="0.0" width="74" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AX1-lA-Va7">
+                    <rect key="frame" x="0.0" y="0.0" width="74" height="80"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico_nav_shezhi.png" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-fp-YT5">
+                    <rect key="frame" x="5" y="-1" width="64" height="64"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico_pw_w.png" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-gD-KDN">
+                    <rect key="frame" x="58" y="2" width="15" height="15"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="营业" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKT-4s-ihj">
+                    <rect key="frame" x="0.0" y="57" width="74" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSl-xm-MNV">
+                    <rect key="frame" x="0.0" y="0.0" width="74" height="80"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnMenuClick:" destination="-1" eventType="touchUpInside" id="UYj-s3-6xv"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning_icon_red" translatesAutoresizingMaskIntoConstraints="NO" id="Mpp-N7-EbM">
+                    <rect key="frame" x="54" y="0.0" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="dt6-AW-W6l"/>
+                        <constraint firstAttribute="height" constant="20" id="zeB-U1-zhS"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Mpp-N7-EbM" firstAttribute="top" secondItem="zUy-a8-B3y" secondAttribute="top" id="b3R-Td-cAx"/>
+                <constraint firstAttribute="trailing" secondItem="Mpp-N7-EbM" secondAttribute="trailing" id="pkc-mL-H8x"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_nav_shezhi.png" width="128" height="128"/>
+        <image name="ico_pw_w.png" width="44" height="44"/>
+        <image name="warning_icon_red" width="20" height="20"/>
+    </resources>
+</document>

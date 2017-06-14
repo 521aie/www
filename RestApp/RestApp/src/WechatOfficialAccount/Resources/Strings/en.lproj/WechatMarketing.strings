@@ -1,0 +1,56 @@
+/*
+ WechatMarketing.strings
+ RestApp
+ 
+ Created by Octree on 9/1/17.
+ Copyright © 2017年 杭州迪火科技有限公司. All rights reserved.
+ */
+
+"WXOA_MARKETING" = "店家微信公众号运营";
+"WXOA_Pay_Trader_Title" = "微信支付特约商户";
+"WXOA_Pay_Trader_Detail" = "开通微信支付特约商户，即微信直连";
+"WXOA_Opened" = "开通";
+"WXOA_Not_Opened" = "未开通";
+"WXOA_Authed" = "已授权";
+"WXOA_Opened_Format" = "开通%zd个";
+"WXOA_Authed_Format" = "已授权%zd个";
+"WXOA_Not_Authed" = "未授权";
+"WXOA_Refund_Title" = "特约商户退款功能";
+"WXOA_Refund_Detail" = "向微信申请特约商户（直连）退款功能";
+"WXOA_Auto_Follow_Title" = "支付后关注公众号";
+"WXOA_Auto_Follow_Detail" = "开通自动关注店家公众号功能";
+"WXOA_Auth_Title" = "店家公众号授权";
+"WXOA_Auth_Detail" = "将微信公众号授权给二维火，可设置菜单、用公众号发消息等";
+"WXOA_Menu_Custom_Title" = "店家公众号菜单自定义";
+"WXOA_Menu_Custom_Detail" = "在微信公众号中加入菜单导航，如本店菜单、本店会员卡等";
+"WXOA_Notification_Title" = "店家公众号消息推送设置";
+"WXOA_Notification_Detail" = "通过店家公众号推送订单消息给顾客";
+"WXOA_QRCode_Title" = "店家公众号二维码";
+"WXOA_QRCode_Detail" = "顾客在线支付成功后可以看到此二维码";
+"WXOA_Trader_Apply_Date_Format" = "申请提交时间：%@";
+"WXOA_View_Profile" = "查看我提交的申请资料";
+"WXOA_WXPay_Trader_Retry" = "重新申请";
+"WXOA_Fail_Format" = "失败原因：%@";
+"WXOA_Wechat_Audit_Complete" = "我已完成以上步骤";
+"WXOA_Wechat_Audit_Prompt" = "请先完成以上步骤，完成后点击此按钮，7个工作日内即可开通特约商户";
+"WXOA_Audit_Success_Prompt" = "注：特约商户开通后，您的微信支付收款将切换到此特约商户下，您可点击以下链接查看结算账户。特约商户信息无法修改，如结算方式需要变更，请联系二维火在线客服。";
+"WXOA_WXPay_Introduce" = "微信支付特约商户即微信直连账户，开通后顾客使用微信支付成功后，钱款会直接进入您绑定的银行账号中，即时到账。";
+"WXOA_Apply_WXPay_Trader" = "申请开通微信支付特约商户";
+"WXOA_Trader_Introduce_Title" = "开通前需准备以下资料：";
+"WXOA_Trader_Introduce_Detail" = "1.商户特殊资质照片\n2.营业执照或个体工商户营业执照照片\n3.企业法人/经办人身份证正反面照片";
+"WXOA_WXPay_Introduce" = "微信支付特约商户即微信直连账户，开通后顾客使用微信支付成功后，钱款会直接进入您绑定的银行账号中，即时到账。";
+"WXOA_Apply_WXPay_Trader" = "申请开通微信支付特约商户";
+"WXOA_Trader_Introduce_Title" = "开通前需准备以下资料：";
+"WXOA_Trader_Introduce_Detail" = "1.商户特殊资质照片\n2.营业执照或个体工商户营业执照照片\n3.企业法人/经办人身份证正反面照片";
+"WXOA_Trader_Arrive_Title" ="即时到账";
+"WXOA_Trader_Arrive_Detail" ="顾客微信付款，即时到您的账户。（非特约商户钱款需要延后1日转到收款账户）";
+"WXOA_Trader_Refund_Title" ="随时退款";
+"WXOA_Trader_Refund_Detail" ="随时用收银机对微信支付进行退款。（非特约商户仅支持当天24点前退款）";
+"WXOA_Trader_Attract_Title" ="公众号吸粉";
+"WXOA_Trader_Attract_Detail" ="顾客使用微信支付完成后，自动关注店家公众号，公众号粉丝量暴增。";
+"WXOA_Trader_Advance_Title" ="特约商户的优势有哪些？";
+"WXOA_Order_State_Title" = "订单状态系统消息";
+"WXOA_Order_State_Detail" = "订单、排队等消息";
+"WXOA_Notification_Promotion_Title" = "定向推送卡/券/促销活动";
+"WXOA_Notification_Promotion_Detail" = "推送消息给微信粉丝";
+

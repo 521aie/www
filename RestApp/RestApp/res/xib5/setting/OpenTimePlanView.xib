@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpenTimePlanView">
+            <connections>
+                <outlet property="container" destination="gLT-LS-iee" id="erQ-9A-owM"/>
+                <outlet property="lblNote" destination="TAD-eO-3Bd" id="Iz4-xi-52U"/>
+                <outlet property="lsEndType" destination="zPm-Lu-iEM" id="DSY-p4-oMD"/>
+                <outlet property="scrollView" destination="MyW-st-Sgq" id="dC7-LH-Aa8"/>
+                <outlet property="view" destination="aJi-Sw-ddk" id="yc7-KE-YnD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aJi-Sw-ddk">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-Fl-6Ps">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyW-st-Sgq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-LS-iee">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPm-Lu-iEM" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                    <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="y15-U1-ffq"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAD-eO-3Bd">
+                                    <rect key="frame" x="10" y="68" width="355" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="TAD-eO-3Bd" firstAttribute="leading" secondItem="gLT-LS-iee" secondAttribute="leading" constant="10" id="2aG-PR-3eu"/>
+                                <constraint firstItem="zPm-Lu-iEM" firstAttribute="top" secondItem="gLT-LS-iee" secondAttribute="top" id="6py-2r-h79"/>
+                                <constraint firstItem="zPm-Lu-iEM" firstAttribute="leading" secondItem="gLT-LS-iee" secondAttribute="leading" id="F6C-RB-3vx"/>
+                                <constraint firstAttribute="trailing" secondItem="TAD-eO-3Bd" secondAttribute="trailing" constant="10" id="OgK-Di-9fh"/>
+                                <constraint firstAttribute="trailing" secondItem="zPm-Lu-iEM" secondAttribute="trailing" id="Z5Y-Zl-qXA"/>
+                                <constraint firstItem="TAD-eO-3Bd" firstAttribute="top" secondItem="zPm-Lu-iEM" secondAttribute="bottom" constant="20" id="bmD-CZ-n35"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="gLT-LS-iee" firstAttribute="top" secondItem="MyW-st-Sgq" secondAttribute="top" id="5zD-Dn-mkY"/>
+                        <constraint firstAttribute="trailing" secondItem="gLT-LS-iee" secondAttribute="trailing" id="91o-65-jl9"/>
+                        <constraint firstItem="gLT-LS-iee" firstAttribute="leading" secondItem="MyW-st-Sgq" secondAttribute="leading" id="Vhr-ko-RfS"/>
+                        <constraint firstItem="gLT-LS-iee" firstAttribute="centerX" secondItem="MyW-st-Sgq" secondAttribute="centerX" id="YzT-DP-i1A"/>
+                        <constraint firstItem="gLT-LS-iee" firstAttribute="centerY" secondItem="MyW-st-Sgq" secondAttribute="centerY" id="e5F-SF-SBV"/>
+                        <constraint firstAttribute="bottom" secondItem="gLT-LS-iee" secondAttribute="bottom" id="ou3-DF-nch"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mEQ-Fl-6Ps" firstAttribute="leading" secondItem="aJi-Sw-ddk" secondAttribute="leading" id="BvT-MZ-pSu"/>
+                <constraint firstAttribute="bottom" secondItem="mEQ-Fl-6Ps" secondAttribute="bottom" id="JV6-zo-7w4"/>
+                <constraint firstItem="MyW-st-Sgq" firstAttribute="leading" secondItem="aJi-Sw-ddk" secondAttribute="leading" id="KWq-oR-lHH"/>
+                <constraint firstAttribute="trailing" secondItem="mEQ-Fl-6Ps" secondAttribute="trailing" id="RU5-RC-fNR"/>
+                <constraint firstItem="MyW-st-Sgq" firstAttribute="top" secondItem="aJi-Sw-ddk" secondAttribute="top" id="Zge-AB-Nit"/>
+                <constraint firstItem="mEQ-Fl-6Ps" firstAttribute="top" secondItem="aJi-Sw-ddk" secondAttribute="top" id="bif-UL-8li"/>
+                <constraint firstAttribute="bottom" secondItem="MyW-st-Sgq" secondAttribute="bottom" constant="163" id="f8B-OF-4g9"/>
+                <constraint firstAttribute="trailing" secondItem="MyW-st-Sgq" secondAttribute="trailing" id="iDW-Vv-uQm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

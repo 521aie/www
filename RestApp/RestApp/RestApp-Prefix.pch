@@ -1,0 +1,869 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import "EXTScope.h"
+#import "RestHeader.h"
+#import "GlobeConstants.h"
+#import "TDFLogger.h"
+#import "TDFMemberPod-prefix.pch"
+
+#define URL_PATH @"http://10.1.50.61:8080"
+// 数据库文件名
+#define PRINT_TEST_FILE @"MobileCard.db"
+
+/** 公共 **/
+
+#define BUTTON_HEIGHT 44
+#define INNER_VIEW_WIDTH 300
+#define ITEM_RADIUS 6
+#define SMALL_ITEM_RADIUS 4
+#define PANEL_OUTTER_CORNER_RADIUS 6
+#define PANEL_INNER_CORNER_RADIUS 4
+#define BOX_CORNER_RADIUS 4
+#define BORDER_HEIGHT 5
+
+#define TAG_FRONTCERTID 10000   //前面身份证
+#define TAG_BACKCERTID 10001    //背面身份证.
+#define TAG_CERTID 10002        //照片
+
+#define VIEW_CANCEL_EVENT @"VIEW_CANCEL_EVENT"
+#define VIEW_CONFIRM_EVENT @"VIEW_CONFIRM_EVENT"
+
+#define TDF_ROOT_NAVIGATION_CONTROLLER (UINavigationController *)[[UIApplication sharedApplication].delegate window].rootViewController
+
+//宏定义 表格Cell定义.
+#define NavigatorCellIdentifier @"NavigatorCellIdentifier"
+#define SecondMenuCellIdentifier @"SecondMenuCellIdentifier"
+#define SingleCheckCellIdentifier @"SingleCheckCellIdentifier"
+
+#define MultiCheckMasterCellIdentifier @"MultiCheckMasterCellIdentifier"
+#define MultiNameValueCellIdentifier @"MultiNameValueCellIdentifier"
+#define ActionHeadCellIdentifier @"ActionHeadCellIdentifier"
+#define OptionSelectItemCellIdentifier @"OptionSelectItemCellIdentifier"
+#define OptionSelectCell44Identifier @"OptionSelectCell44Identifier"
+#define SampleMenuCellIdentifier @"SampleMenuCellIdentifier"
+
+#define NameValueDetailIdentifier @"NameValueDetailIdentifier"
+#define BackupPrinterCellIdentifier @"BackupPrinterCellIdentifier"
+#define NameValueCell44Identifier @"NameValueCell44Identifier"
+#define TreeNodeCellIdentifier @"TreeNodeCellIdentifier"
+#define SeatItemCellIndentifier @"SeatItemCellIndentifier"
+#define SignBillDetailItemCellIndentifier @"SignBillDetailItemCellIndentifier"
+
+#define MenuItemCellIndentifier @"MenuItemCellIndentifier"
+#define MenuItemTopCellIdentifier @"MenuItemTopCellIdentifier"
+#define EmployeeItemCellIndentifier @"EmployeeItemCellIndentifier"
+#define OrderItemCellIndentifier @"OrderItemCellIndentifier"
+
+#define OrderNullItemCellIndentifier @"OrderNullItemCellIndentifier"
+
+#define SelectAreaCellIndentifier @"SelectAreaCellIndentifier"
+#define SuitMenuItemIndentifier @"SuitMenuItemIndentifier"
+#define RoleActionCellIndentifier @"RoleActionCellIndentifier"
+#define BigImageCellIndentifier @"BigImageCellIndentifier"
+#define KabawMenuItemCellIndentifier @"KabawMenuItemCellIndentifier"
+#define SelectMenuItemIndentifier @"SelectMenuItemIndentifier"
+
+#define NoPrintMenuItemIndentifier @"NoPrintMenuItemIndentifier"
+#define NoPrintHeadItemIndentifier @"NoPrintHeadItemIndentifier"
+#define NavigateMenuCellIndentifier @"NavigateMenuCellIndentifier"
+#define NavigateMenuFristCellIndentifier @"NavigateMenuFristCellIndentifier"
+#define NavigateMenuEndCellIndentifier @"NavigateMenuEndCellIndentifier"
+
+#define MenuTimepriceCellIndentifier @"MenuTimepriceCellIndentifier"
+#define MenuTimeFooterCellIndentifier @"MenuTimeFooterCellIndentifier"
+
+
+#define InfoDetailCellIndentifier @"InfoDetailCellIndentifier"
+#define InstanceItemCellIndentifier @"InstanceItemCellIndentifier"
+
+#define SuitMenuDetailHeadIndentifier @"SuitMenuDetailHeadIndentifier"
+#define ActionTableHeadIndentifier @"ActionTableHeadIndentifier"
+
+#define GridNVCellIndentifier @"GridNVCellIndentifier"
+#define GridNVCell2Indentifier @"GridNVCell2Indentifier"
+#define GridFooterCell44Indentifier @"GridFooterCell44Indentifier"
+#define TimeArrangeCellIndentifier @"TimeArrangeCellIndentifier"
+#define KindPayCellIndentifier @"KindPayCellIndentifier"
+#define ZeroCellIndentifier @"ZeroCellIndentifier"
+#define TailDealCellIndentifier @"TailDealCellIndentifier"
+#define SignerHeadCellIndentifier @"SignerHeadCellIndentifier"
+#define SignerCellIndentifier @"SignerCellIndentifier"
+#define GridEditCellIndentifier @"GridEditCellIndentifier"
+#define LinkCellIndentifier @"LinkCellIndentifier"
+
+#define ZmTableCellIndentifier @"ZmTableCellIndentifier"
+#define ZmTableHeadIndentifier @"ZmTableHeadIndentifier"
+#define ZmTableViewCellIndentifier @"ZmTableViewCellIndentifier"
+#define MultiHeadCellIndentifier @"MultiHeadCellIndentifier"
+
+#define SignBillItemCellIndentifier @"SignBillItemCellIndentifier"
+#define SignBillNoPayItemCellIndentifier @"SignBillNoPayItemCellIndentifier"
+#define SignBillRecordItemCellIndentifier @"SignBillRecordItemCellIndentifier"
+
+//UI常数定义
+#define RELOGIN_VIEW 1
+#define LOGIN_VIEW 2
+#define SHOP_INIT_VIEW 3
+#define MAIN_VIEW 4
+#define INDEX_VIEW 6
+#define MOBILE_VIEW 7
+#define VALIDATE_VIEW 8
+#define REGISTER_VIEW 9
+#define FIND_PWD_VIEW 10
+#define USER_INFO_VIEW 11
+#define CHANGE_PWD_VIEW 12
+#define AUTO_LOGIN_VIEW 13
+#define PASSWORD_SETTING_VIEW 14
+//UI-通用部分.
+#define SINGLE_CHECK_VIEW 1000     //单选页
+#define NAME_VALUE_VIEW 1001       //键值对列表.
+#define TABLE_EDIT_VIEW 1002       //表格编辑页.
+#define MULTI_CHECK_VIEW 1003     //多选页.
+#define TREENODE_SORT_VIEW 1004     //节点树排序页面.
+#define SECOND_MENU_VIEW 1005  //主界面.
+#define MULTI_HEAD_CHECK_VIEW 1006  //多选带管理页（有类别）.
+#define MULTI_CHECK_MANAGER_VIEW 1007  //多选带管理页(无类别).
+#define MULTI_DETAIL_VIEW 1008 //多选的详细介绍页.
+#define MUNU_DETAIL_VIEW  1009//标签详情页
+#define SORT_TABLE_EDIT_VIEW 1011       //表格编辑页.
+
+//UI-设置普通部分.
+#define SYS_PARA_EDIT_VIEW 2  //系统参数
+#define SHOP_BASE_VIEW 4     //店家信息.
+#define OPEN_TIME_PLAN_VIEW 5 //营业结束时间
+#define KIND_PAY_LIST_VIEW 6  //付款类型列表.
+#define KIND_PAY_EDIT_VIEW 7 //付款类型编辑页面.
+#define TIMEARRANGE_LIST_VIEW 8  //营业班次列表.
+#define TIMEARRANGE_EDIT_VIEW 9  //营业班次编辑页面.
+#define SHOPTEMPLATE_LIST_VIEW 10    //打印单据模板列表.
+#define SHOPTEMPLATE_EDIT_VIEW 11    //打印单据模板编辑页.
+#define LINKMAN_LIST_VIEW 12    //短信联系人列表.
+#define LINKMAN_EDIT_VIEW 13    //短信联系人编辑页.
+#define PRINTERPARAS_EDIT_VIEW 14 //收银打印编辑页.
+#define KINDMENUSTYLE_LIST_VIEW 15   //商品分类排版.
+#define KINDMENUSTYLE_EDIT_VIEW 16   //商品分类编辑界面.
+#define ZEROPARAS_MENU_VIEW 17   //零头处理管理页
+#define ZEROPARAS_EDIT_VIEW 18   //结账零头处理页.
+#define TAILDEAL_LIST_VIEW 19   //尾数处理列表页
+#define TAILDEAL_EDIT_VIEW 20   //尾数处理编辑页.
+#define DICITEM_LIST_VIEW 21   //字典项列表页
+#define DICITEM_EDIT_VIEW 22   //字典项编辑页.
+#define SPECIALREASON_LIST_VIEW 23 //特殊原因列表页.
+#define FEEPLAN_LIST_VIEW 24   //附加费列表页
+#define FEEPLAN_EDIT_VIEW 25   //附加费编辑页.
+#define DISCOUNTPLAN_LIST_VIEW 26 //打折方案列表页.
+#define DISCOUNTPLAN_EDIT_VIEW 27 //打折方案编辑页.
+#define DISCOUNTDETAIL_EDIT_VIEW 28 //打折方案分类打折编辑页.
+#define DISCOUNTD_MENU_ETAIL_EDIT_VIEW 200 //打折方案商品打折编辑页.
+#define SIGNBILL_MENU_VIEW 29 //挂账管理页.
+#define SIGNBILL_LIST_VIEW 30 //挂账详细的列表页.
+#define SIGNBILL_EDIT_VIEW 31 //挂账的编辑页.
+#define DATA_CLEAR_VIEW 32 //数据清理页.
+#define CANCEL_BIND_VIEW 33 //更换收银机页.
+#define CUSTOMER_LIST_VIEW 34 //客单备注页.
+#define SIGNBILL_DETAIL_EDIT_VIEW 35 //挂账详细的编辑页.
+#define SIGNER_EDIT_VIEW 36 //本店签字人.
+#define CANCEL_QUEU_VIEW 37 //更换收银机
+#define HELP_VIDEO_VIEW 38  //帮助视频
+#define FUNCTION_VIEW 39 //功能大全
+#define ADD_NEW_COUPONS 40 //新增代金券
+//UI-桌位部分界面.
+#define SEAT_LIST_VIEW 1   //桌位列表页面.
+#define SEAT_EDIT_VIEW 2   //桌位编辑页面.
+#define AREA_LIST_VIEW 3   //区域列表页面.
+#define AREA_EDIT_VIEW 4   //区域编辑页面.
+
+//UI-员工部分界面.
+#define EMPLOYEE_LIST_VIEW 1   //员工列表页面.
+#define EMPLOYEE_EDIT_VIEW 2   //员工编辑页面.
+#define ROLE_LIST_VIEW 3   //员工列表页面.
+#define ROLE_EDIT_VIEW 4   //员工编辑页面.
+#define EDIT_PASS_VIEW 5   //编辑密码.
+
+//UI-商品部分界面.
+#define MENU_LIST_VIEW 1   //商品列表页面.
+#define MENU_EDIT_VIEW 2   //商品编辑页面.
+#define KINDMENU_LIST_VIEW 3   //商品分类列表页面.
+#define KINDMENU_EDIT_VIEW 4   //商品分类编辑页面.
+#define UNIT_LIST_VIEW 5   //商品单位列表页面.
+#define UNIT_EDIT_VIEW 6   //商品单位编辑页面.
+#define MAKE_LIST_VIEW 7   //商品做法列表页面.
+#define MAKE_EDIT_VIEW 8   //商品做法编辑页面.
+#define SPEC_LIST_VIEW 9   //商品规格列表页面.
+#define SPEC_EDIT_VIEW 10   //商品规格编辑页面.
+//#define TASTE_LIST_VIEW 11   //商品备注列表页面.
+
+#define TASTE_EDIT_VIEW 12   //商品备注编辑页面.
+#define BATCH_MULTI_MENU_VIEW 13  //商品批量选择
+#define MENU_KABAW_EDIT_VIEW 14 //卡包菜肴编辑页.
+#define KINDTASTE_EDIT_VIEW 15 //备注分类.
+
+#define ADDITION_LIST_VIEW 17  //加料列表.
+#define MENUADDITION_EDIT_VIEW 18  //加料编辑页.
+#define KINDADDITION_EDIT_VIEW 19  //加料类别编辑页.
+#define MENUMAKE_EDIT_VIEW 20  //商品做法编辑视图.
+#define SELECT_SPEC_VIEW 21 //选择商品规格视图.
+#define MENUSPECDETAIL_EDIT_VIEW 22 //商品规格详细编辑页.
+#define MENU_CODE_VIEW 23 //菜肴二维码
+
+
+//UI-卡包界面
+#define RESERVESET_EDIT_VIEW 7  //预定设置
+
+#define TAKEOUT_EDIT_VIEW 16 //外卖设置
+#define SENDER_LIST_VIEW 17 //送货人列表页.
+#define SENDER_EDIT_VIEW 18 //送货人编辑页.
+#define TAKEOUTTIME_LIST_VIEW 19 //可外送时段列表页.
+#define TAKEOUTTIME_EDIT_VIEW 20 //可外送时段编辑页
+#define SHOP_EDIT_VIEW 21 //店家信息编辑页.
+#define BELL_EDIT_VIEW 33  //服务铃页面.
+
+#define SHOP_CODE_VIEW 24 //微店营销编辑页.
+#define BASE_SETTING_VIEW 25 //基础设置
+
+#define MONEYRULE_MENU_VIEW 26    //充值优惠卡列表.
+#define SHOP_MEMBER_VIEW 40   //门店会员管理
+#define MONEYRULE_LIST_VIEW 27    //充值优惠列表.
+#define MONEYRULE_EDIT_VIEW 28    //充值优惠编辑页.
+#define QUEU_KIND_LIST_VIEW 29     //排队桌位管理
+#define SPECIAL_TAG_LIST_VIEW 30     //标签管理
+#define SPECIAL_TAG_EDIT_VIEW 31     //标签管理
+#define SHOP_BLACK_LIST_VIEW  32     //黑名单列表
+#define MAP_LOCATION_VIEW  35    //地图定位
+#define SHOP_SALES_RANK_VIEW 39 //本店销量排行榜
+#define MENUS_RANK_LIST_VIEW 47 //参与排行的菜品
+
+//UI-传菜界面
+//#define PANTRY_LIST_VIEW 1 //传菜方案列表页.
+#define PANTRY_EDIT_VIEW 2 //传菜方案编辑页.
+#define PANTRY_MENU_VIEW 3 //传菜选菜页面.
+#define PANTRY_MULTI_MENU_VIEW 4 //传菜多选菜页面.
+//#define TRANS_MENU_VIEW 5 //传菜方案菜单页.backupPrinterListView
+#define TRANS_NOPRINT_LIST_VIEW 6 //不出单商品打印页.
+#define TRANS_SECOND_VIEW 7 //传菜的二级菜单
+
+#define BACKUP_PRINTER_LIST_VIEW 8 //备用打印机列表页
+#define BACKUP_PRINTER_EDIT_VIEW 9 //备用打印机编辑页
+
+#define MENUAREA_PRINTER_LIST_VIEW 10 //点菜单分区域打印列表页
+#define MENUAREA_PRINTER_EDIT_VIEW 11 //点菜单分区域打印编辑页
+
+//UI-账单优化页面
+#define BILLMOD_SECOND_VIEW 1 //账单优化的二级菜单
+#define BILLMOD_START_DATE 2 //选择开始日期
+#define BILLMOD_END_DATE 3 //选择结束日期
+#define BILL_MODIFY_TYPE 4 //选择优化的账单类型
+#define BILL_TURNOVER_PER 5 //账单占营业额的百分比
+#define BILL_ALL_PER 10  //账单占总账的百分比
+#define BILL_EVE_AUTO 6 // 每天自动优化账单
+#define BILL_AUTO_DAY 7 //自动优化的天数
+#define BILLMOD_HANDLE_VIEW 8 //手工优化账单
+#define BILLMOD_AUTO_VIEW 9//自动优化账单
+
+
+//UI-Sms短信
+#define SMS_LIST_VIEW 2 //短信列表视图.
+#define SMS_EDIT_VIEW 3 //短信发送页面.
+#define SMS_TEMPLATE_VIEW  49 //短信模板选择页面
+#define SMS_RECHARGE_VIEW 4 //短信充值页面.
+#define SMS_ORDER_CONFIRM_VIEW 5 //短信订单确认页面.
+#define SMS_RECIEVER_LIST_VIEW 6 //短信接收人列表页面.
+
+//UI-Evaluate评价
+#define EVALUATE_NAVIGATE_VIEW 1 //评价导航页面
+#define SHOP_EVALUATE_VIEW 2     //店家评价页面
+#define TOTAL_EVALUATE_VIEW 3    //综合评价页面
+#define WAITER_EVALUATE_VIEW 4   //服务生评价页面
+#define WAITER_DETAIL_VIEW 5     //服务生评价详情页面
+
+//UI-商品促销
+#define MENUTIME_LIST_VIEW 7 //商品促销列表页.
+#define MENUTIME_EDIT_VIEW 8 //商品促销编辑页.
+#define MENUTIMEPRICE_LIST_VIEW 9 //促销商品列表页.
+#define MENUTIMEPRICE_EDIT_VIEW 10 //促销商品编辑页.
+#define MENUTIME_SELECT_MENU 11 //选择商品.
+#define MENUTIME_SELECT_MUTILI_LIST_VIEW 12 //商品多选
+
+//UI-微信支付
+#define ORDER_PAY_DETAIL_LIST_VIEW 11
+#define PAYMENT_NOTE_VIEW 3
+#define ORDER_PAY_LIST_VIEW 8
+#define ORDER_PAY_DETAIL_VIEW 9
+#define PAYMENT_EDIT_VIEW 10
+#define PAYMENT_ORDER_LIST_VIEW 20
+#define PAYMENT_TYPE_VIEW 21
+
+//UI-红包
+#define ENVELOPE_LIST_VIEW 23
+#define ENVELOPE_EDIT_VIEW 24
+#define ENVELOPE_DETAIL_VIEW 25
+
+//UI-生活圈信息
+#define LIFE_INFO_LIST_VIEW 26
+#define LIFE_INFO_EDIT_VIEW 27
+
+//UI-会员管理
+
+
+//连锁 总店
+#define CHAIN_BUSINESS_VIEW  1
+#define CHAIN_BUSINESSINFO_VIEW 2//连锁信息
+
+//连锁 门店
+#define STORES_VIEW 1
+#define STORES_MANAGER_VIEW 2
+
+//连锁 品牌
+#define BRAND_MANAGER_VIEW 1
+#define ADD_BRAND_VIEW 2
+#define EDIT_BRAND_VIEW 3
+
+//连锁 员工
+#define CHAIN_EMPLOYEES_VIEW 3
+#define CHAIN_SELECT_LIST_VIEW 2
+#define CHAIN_EMPLOYEE_LIST_VIEW 1
+#define CHAIN_ROLE_LIST_VIEW 4
+#define CHAIN_ROLE_EDIT_VIEW 5
+#define CHAIN_EDIT_PASS_VIEW 6
+#define CHAIN_LIST_SEARCH_VIEW 7
+
+//连锁 分公司
+#define CHAIN_BRANCHACOMPANY_LIST_VIEWCONTROLLER 1
+#define CHAIN_BRANCHACOMPANY_EDIT_VIEWCONTROLLER 2
+//智能点餐
+#define SMART_ORDER_LIST_VIEW 1
+#define SMART_ORDER_SET_VIEW 2
+#define SMART_ORDER_DETAIS_VIEW 3
+#define SMARAT_ORDER_RECOMMEND_VIEW 4
+#define SMARAT_ORDER_RDDETAIL_VITE 5
+#define SMARAT_ORDER_REMAIND_VIEW 6
+#define SMART_ORDER_SET_REACT_VIEW 7
+
+#define GIFT_LIST_VIEW 51    //短信联系人列表.
+#define GIFT_EDIT_VIEW 41    //短信联系人编辑页.
+
+#define MEMBER_PUBLISH_VIEW 11
+#define MEMBER_SWITCH_VIEW  12
+#define MEMBER_RECORD_DAY_VIEW 13
+#define MENBER_INFO_LIST_VIEW 43
+//#define MEMBER_MEMBER_CARDS_VIEW 103
+
+
+#define MEMBER_SEARCH_VIEW 108
+#define MEMBER_SOTRE_VALUE 109
+#define MEMBER_COUPON_VIEW  111 //优惠券
+#define MEMBER_COUPON_EDIT_VIEW 112 //优惠券编辑页面
+#define MEMBER_COUPON_PLANT_VIEW 113 //优惠方案
+#define MEMBER_PLANT_EDIT_VIEW 114 //优惠方案编辑页面
+#define MEMBER_CUSTOMER_EDIT_VIEW  115//商品编辑页面
+#define MEMBER_RESUCE_LIST_VIEW 116 //不接受预订日期页面
+#define MEMBER_BOOK_VIEW  117   //不接受预定日期编辑界面
+#define MEMBER_CHECK_VIEW 118 //查看优惠详情页面界面
+#define MEMBER_DISCOUNT_DETAIL_VIEW  119 //查看分类折扣页面
+//UI-套餐
+
+#define SUITMENU_EDIT_VIEW 10001 //套餐商品编辑页.
+#define MENUDETAIL_EDIT_VIEW 10002 //套餐分组编辑页.
+#define SUITMENU_SELECTMENU_VIEW 10003 //套菜选菜页面.
+#define SUITMENUCHANGE_EDIT_VIEW 10004 //套菜子菜编辑页.
+#define SUITMENUKIND_EDIT_VIEW 10006 //套餐分类编辑信息.
+#define SUITMENUTASTE_LIST_VIEW 10007 //备注列表信息.
+#define SUITMENUTASTE_EDIT_VIEW 10008 //备注编辑信息.
+#define SUITMENU_KINDTASTE_EDIT_VIEW 10009 //备注编辑信息.
+#define SUITUNIT_LIST_VIEW 10010 //套餐单位列表信息.
+#define SUITUNIT_EDIT_VIEW 10011 //套餐单位编辑信息.
+#define SUITMENU_CODE_VIEW 10013 //套餐卡包编辑信息.
+
+#define SIGN_BILL_VIEW 1 //挂账处理列表页面.
+#define SIGN_BILL_DETAIL_VIEW 2 //挂账处理详细页面.
+#define SIGN_BILL_DATE_VIEW 3 //挂账日期设置页面.
+#define SIGN_BILL_CONFIRM_VIEW 4 //挂账单确认界面
+#define SIGN_BILL_PAY_VIEW 5 //挂账单还款界面
+#define SIGN_BILL_RECORD_VIEW 6 //已还款挂账单
+#define SIGN_BILL_PAY_DETAIL_VIEW 7 //还款详情单
+#define SIGN_BILL_ORDER_VIEW 8 //挂账单
+#define SIGN_ORDER_LIST_VIEW 10 //会员消费列表
+
+//UI-店家
+#define SHOP_LIST_HIDEALL 0
+#define SHOP_LIST_VIEW 1
+#define SHOP_ATTACH_VIEW 2
+#define SHOP_INFO_VIEW 3
+#define SHOP_ENTRY_VIEW 4
+#define SHOP_SELECTSHOP_VIEW 5
+
+
+//3dTouch
+#define Notification_3DTouch @"Notification_3DTouch"
+
+//主页和左侧栏数据改变
+#define Notification_AllDataSourceChange @"Notification_AllDataSourceChange"
+#define Notification_LeftDataSourceChange @"Notification_LeftDataSourceChange"
+#define Notification_HomeDataSourceChange @"Notification_HomeDataSourceChange"
+
+//UI通知
+
+
+#define Notification_UI_SysParaEditView_Change @"Notification_UI_SysParaEditView_Change"  //系统设置.
+#define Notification_UI_ShopBaseView_Change @"Notification_UI_ShopBaseView_Change"  //店家信息.
+#define Notification_UI_AddBrandView_Change @"Notification_UI_AddBrandView_Change"  //添加品牌
+#define Notification_UI_ChainBusinessView_Change @"Notification_UI_ChainBusinessView_Change"  //连锁信息.
+#define Notification_UI_TDFAddChainPriceFormatViewControllert_Change @"Notification_UI_TDFAddChainPriceFormatViewControllert_Change"  //连锁价格方案
+#define Notification_UI_TDFShopPowerEditViewController_Change @"Notification_UI_TDFShopPowerEditViewController_Change"  //连锁门店权限
+#define Notification_UI_EditBrandView_Change @"Notification_UI_EditBrandView_Change"  //修改信息.
+#define Notification_UI_StoresManagerView_Change @"Notification_UI_StoresManagerView_Change"  //门店信息.
+#define Notification_UI_BranchCompanyEditViewController_Change @"Notification_UI_BranchCompanyEditViewController_Change"  //分公司信息变更.
+#define Notification_UI_OpenTimePlanView_Change @"Notification_UI_OpenTimePlanView_Change"  //营业结束时间.
+#define Notification_UI_KindPayEditView_Change @"Notification_UI_KindPayEditView_Change"  //付款方式编辑.
+#define Notification_UI_TimeArrangeEditView_Change @"Notification_UI_TimeArrangeEditView_Change"  //营业班次编辑.
+#define Notification_UI_LinkManEditView_Change @"Notification_UI_LinkManEditView_Change" //短信联系人.
+#define Notification_UI_ShopTemplateEditView_Change @"Notification_UI_ShopTemplateEditView_Change" //打印单据模板.
+#define Notification_UI_PrinterParasEditView_Change @"Notification_UI_PrinterParasEditView_Change" //收银打印参数.
+#define Notification_UI_ZeroParasEditView_Change @"Notification_UI_ZeroParasEditView_Change" //零头处理方式.
+#define Notification_UI_TailDealEditView_Change @"Notification_UI_TailDealEditView_Change" //尾数处理方式.
+#define Notification_UI_DicItemEditView_Change @"Notification_UI_DicItemEditView_Change" //字典项.
+#define Notification_UI_FeePlanEditView_Change @"Notification_UI_FeePlanEditView_Change" //附加费.
+#define Notification_UI_DiscountPlanEditView_Change @"Notification_UI_DiscountPlanEditView_Change" //打折方案.
+#define Notification_UI_KindPayDetailOptionEditView_Change @"Notification_UI_KindPayDetailOptionEditView_Change" //挂账设置.
+
+#define Notification_UI_SignerEditView_Change @"Notification_UI_SignerEditView_Change" //签字人信息.
+
+#define SeatModule_Data_Change @"SeatModule_Data_Change"  //区域，桌位数据变化.
+#define SeatModule_Area_Change @"SeatModule_Area_Change" //区域数据变化.
+#define Notification_UI_SeatEditView_Change @"Notification_UI_SeatEditView_Change"  //桌位信息编辑.
+#define Notification_UI_AreaEditView_Change @"Notification_UI_AreaEditView_Change"  //区域变化.
+
+#define EmployeeModule_Data_Change @"EmployeeModule_Data_Change"  //员工数据变化.
+#define EmployeeModule_Role_Change @"EmployeeModule_Role_Change" //角色数据变化.
+#define UPDATE_HOMEPAGE_AND_LEFT_MENU @"UPDATE_HOMEPAGE_AND_LEFT_MENU" // 需要刷新首页的通知
+#define UPDATE_LEFT_MENU @"UPDATE_LEFT_MENU" // 需要刷新左侧栏的通知
+#define Notification_UI_EmployeeEditView_Change @"Notification_UI_EmployeeEditView_Change"  //员工信息编辑.
+#define Notification_UI_EditPassView_Change @"Notification_UI_EditPassView_Change"  //密码修改信息编辑.
+#define Notification_UI_RoleEditView_Change @"Notification_UI_RoleEditView_Change"  //角色变化.
+#define  Notification_UI_OrderDetailView_Change @"Notification_UI_OrderDetailView_Change " //商品标签设置页
+
+#define MenuModule_Data_Select @"MenuModule_Data_Select"  //选择商品数据变化(单选).
+#define MenuModule_Kind_Select @"MenuModule_Kind_Select" //选择商品分类数据变化(末级分类，单选).
+
+#define MenuModule_Batch_Kind_Select @"MenuModule_Batch_Kind_Select"  //选择商品数据变化(批量).
+#define MenuModule_Batch_Menu_Select @"MenuModule_Batch_Menu_Select"  //选择商品数据变化(批量).
+
+#define MenuModule_Data_Multi_Select @"MenuModule_Data_Multi_Select"  //选择商品数据变化(多选).
+#define MenuModule_Kind_Multi_Select @"MenuModule_Kind_Multi_Select" //选择商品分类数据变化(末级分类，多选).
+
+#define MenuModule_Data_Change @"MenuModule_Data_Change"  //商品数据变化.
+#define MenuModule_Kind_Change @"MenuModule_Kind_Change" //商品分类数据变化(末级分类).
+#define MenuModule_ALLKind_Change @"MenuModule_ALLKind_Change" //商品分类数据变化.
+#define MenuModule_Menu_Change @"MenuModule_Menu_Change" //商品自己的数据变化(删除排序触发).
+#define MenuModule_Menu_EDIT_Change @"MenuModule_Menu_EDIT_Change" //商品自己的数据变化(新增修改触发).
+#define MenuModule_Menu_Batch_Change @"MenuModule_Menu_Batch_Change" //商品批量的数据变化(批量删除，换分类).
+#define Notification_UI_MenuKabawEditView_Change @"Notification_UI_MenuKabawEditView_Change" //商品
+#define Notification_UI_MenuEditView_Change @"Notification_UI_MenuEditView_Change"  //商品信息编辑.
+#define Notification_UI_KindMenuEditView_Change @"Notification_UI_KindMenuEditView_Change"  //商品分类变化.
+
+#define KabawModule_Kind_Change @"KabawModule_Kind_Change"   //卡包分类数据变化.
+#define KabawModule_Data_Change @"KabawModule_Data_Change"  //卡包商品数据变化.
+#define KabawModule_Menu_Change @"KabawModule_Menu_Change" //商品自己的数据变化(删除排序触发).
+#define KabawModule_Menu_EDIT_Change @"KabawModule_Menu_EDIT_Change" //卡包商品自己的数据变化(新增修改触发).
+
+#define MakeModule_Data_Change @"MakeModule_Data_Change"  //商品做法数据变化.
+#define MenuMakeModule_Data_Change @"MenuMakeModule_Data_Change"  //商品做法数据变化.
+#define Notification_UI_MakeEditView_Change @"Notification_UI_MakeEditView_Change"  //做法编辑变化.
+#define Notification_UI_MenuMakeEditView_Change @"Notification_UI_MenuMakeEditView_Change"  //做法编辑变化.
+
+#define SpecModule_Data_Change @"SpecModule_Data_Change"  //商品规格数据变化.
+#define MenuSpecDetailModule_Data_Change @"MenuSpecDetailModule_Data_Change" //商品规格数据变化.
+#define Notification_UI_SpecEditView_Change @"Notification_UI_SpecEditView_Change"  //规格编辑变化.
+#define Notification_UI_MenuSpecEditView_Change @"Notification_UI_MenuSpecEditView_Change"  //商品规格编辑变化.
+
+#define TasteModule_Data_Change @"TasteModule_Data_Change"  //商品备注数据变化.
+#define MenuKindTasteModule_Data_Change @"MenuKindTasteModule_Data_Change" //商品备注关联数据变化.
+#define Notification_UI_TasteEditView_Change @"Notification_UI_TasteEditView_Change"  //备注编辑变化.
+#define Notification_UI_KindTasteEditView_Change @"Notification_UI_KindTasteEditView_Change"  //备注分类编辑变化.
+
+#define Notification_UI_KindAdditionEditView_Change @"Notification_UI_KindAdditionEditView_Change"  //加料分类编辑变化.
+#define Notification_UI_MenuAdditionEditView_Change @"Notification_UI_MenuAdditionEditView_Change"  //加料编辑变化.
+#define Notification_UI_PaymentEditView_Change @"Notification_UI_PaymentEditView_Change"//收款信息
+#define Notification_UI_SETTINGEditView_Change @"Notification_UI_SETTINGEditView_Change"//基础设置
+#define Notification_UI_BellEditView_Change @"Notification_UI_BellEditView_Change" //服务铃理方式.
+
+#define Notification_UI_MemberInfoView_Change @"Notification_UI_MemberInfoView_Change " //会员信息
+#define Notification_UI_ReserveSetEditView_Change @"Notification_UI_ReserveSetEditView_Change" //预定设置.
+#define Notification_UI_ReserveTimeEditView_Change @"Notification_UI_ReserveTimeEditView_Change" //可预订时段设置.
+#define Notification_UI_ReserveSeatEditView_Change @"Notification_UI_ReserveSeatEditView_Change" //可预订桌位设置.
+#define Notification_UI_ReserveBandEditView_Change @"Notification_UI_ReserveBandEditView_Change" //不接受预订日期
+#define Notification_UI_SpecialEditView_Change @"Notification_UI_SpecialEditView_Change" //优惠方案
+#define Notification_UI_TakeOutEditView_Change @"Notification_UI_TakeOutEditView_Change" //外卖设置.
+#define Notification_UI_TakeOutTimeEditView_Change @"Notification_UI_TakeOutTimeEditView_Change" //可送外卖时段设置.
+#define Notification_UI_SenderEditView_Change @"Notification_UI_SenderEditView_Change" //送货人编辑页面.
+#define Notification_UI_ShopDetailEditView_Change @"Notification_UI_ShopDetailEditView_Change" //店家信息编辑页面.
+#define Notification_UI_KabawMenuEditView_Change @"Notification_UI_KabawMenuEditView_Change" //商品
+
+#define Notification_UI_EnvelopeEditView_Change @"Notification_UI_EnvelopeEditView_Change" //红包发布页面
+#define  Notification_UI_OrderRdEditView_Change  @"Notification_UI_OrderRdEditView_Change"//用餐提醒与推荐
+
+
+#define Notification_UI_PantryEditView_Change @"Notification_UI_PantryEditView_Change" //传菜方案.
+#define Notification_UI_AutoBillView_Change @"Notification_UI_AutoBillView_Change" //自动优化菜单.
+
+#define Notification_UI_AreaPantryEditView_Change @"Notification_UI_AreaPantryEditView_Change" //区域打印设置
+
+#define Notification_UI_BackupEditView_Change @"Notification_UI_BackupEditView_Change" //备用打印机
+
+#define Notification_UI_MenuTimeEditView_Change @"Notification_UI_MenuTimeEditView_Change" //商品促销.
+#define Notification_UI_MenuTimePriceEditView_Change @"Notification_UI_MenuTimePriceEditView_Change" //商品促销-商品.
+
+#define Notification_UI_SpecialTagEditView_Change @"Notification_UI_SpecialTagEditView_Change"  //特色标签编辑变化.
+
+#define Notification_SpecialTagData_Change @"Notification_SpecialTagData_Change"  //特色标签数据变化.
+
+#define TransModule_Data_Select @"TransModule_Data_Select"  //选择商品数据变化.
+#define TransModule_Kind_Select @"TransModule_Kind_Select" //选择商品分类数据变化(末级分类).
+
+#define LOAD_BUSINESS_NOTIFICATION @"LOAD_BUSINESS_NOTIFICATION"      //加载营业数据.
+//其他
+
+#define UI_NAVIGATE_SHOW_NOTIFICATION @"UI_NAVIGATE_SHOW_NOTIFICATION"      //导航
+#define LODATA @"LOADDATA"
+#define UI_NAVIGATE_HIDDEN_NOTIFICATION @"UI_NAVIGATE_HIDDEN_NOTIFICATION"
+
+#define UI_CHANGE_USER @"UI_CHANGE_USER"
+#define UI_OTHER_ABOUT_NOTIFICATION @"UI_OTHER_ABOUT_NOTIFICATION"    //关于
+#define UI_OTHER_BGCHANGE_NOTIFICATION @"UI_OTHER_BGCHANGE_NOTIFICATION"    //更换背景图
+#define UI_OTHER_EDITPASS_NOTIFICATION @"UI_OTHER_EDITPASS_NOTIFICATION"    //修改密码
+
+#define Notification_UI_OtherEditPassView_Change @"Notification_UI_OtherEditPassView_Change"  //密码修改信息编辑.
+
+//主界面（统计数量)
+#define UI_COUNTDATA_INIT @"UI_COUNTDATA_INIT"  //数据统计登录后的初始化.
+
+//套餐模块
+#define SuitMenuModule_Kind_Change @"SuitMenuModule_Kind_Change"   //套餐分类数据变化.
+#define SuitMenuModule_ALLKind_Change @"SuitMenuModule_ALLKind_Change" //套餐分类变化.
+#define SuitMenuModule_Data_Change @"SuitMenuModule_Data_Change"  //套餐商品数据变化.
+#define SuitMenuModule_DataNum_Change @"SuitMenuModule_DataNum_Change"  //套餐商品数量的变化.
+#define SuitMenuModule_Menu_Change @"SuitMenuModule_Menu_Change" //套餐自己的数据变化(删除排序触发).
+#define SuitModule_Menu_EDIT_Change @"SuitModule_Menu_EDIT_Change" //套餐卡包商品自己的数据变化(新增修改触发).
+#define Notification_UI_SuitMenuKabawEditView_Change @"Notification_UI_SuitMenuKabawEditView_Change" //套餐商品卡包设置.
+
+
+#define SuitModule_Detail_Kind_Change @"SuitModule_Detail_Kind_Change" //套餐分组组的变化(新增修改删除触发).
+#define SuitModule_Detail_Menu_Change @"SuitModule_Detail_Menu_Change" //套餐分组组内的商品(新增修改删除商品触发).
+
+#define Notification_UI_SuitMenuEditView_Change @"Notification_UI_SuitMenuEditView_Change"  //套餐编辑UI变化.
+#define Notification_UI_SuitMenuDetailEditView_Change @"Notification_UI_SuitMenuDetailEditView_Change"  //套餐分组编辑变化.
+#define Notification_UI_SuitMenuChangeEditView_Change @"Notification_UI_SuitMenuChangeEditView_Change"  //套餐分组子菜编辑变化.
+#define Notification_UI_SuitMenu_KindMenuEditView_Change @"Notification_UI_SuitMenu_KindMenuEditView_Change"  //套餐商品分类变化.
+
+#define Notification_UI_Suit_TasteEditView_Change @"Notification_UI_Suit_TasteEditView_Change"  //备注编辑变化.
+#define Notification_UI_Suit_KindTasteEditView_Change @"Notification_UI_Suit_KindTasteEditView_Change"  //备注分类编辑变化.
+
+#define Notification_UI_Member_ConponEditView_Change  @"Notification_UI_Member_ConponEditView_Change"//会员优惠券变化
+
+//微信登陆
+#define USER_WX_ID @"weixinId"
+#define USER_WX_NAME @"weixinName"
+#define USER_WX_IMGULR @"imgUrl"
+#define USER_WX_SEX  @"sex"
+#define USER_MEMBERID @"memberId"
+#define USER_PHONE @"mobile"
+
+//店家模块
+#define ShopInfoModule_Kind_Change @"ShopInfoModule_Kind_Change" //店家
+#define ShopInfoModule_Data_Change @"ShopInfoModule_Data_Change" //店家信息变化
+#define ShopSelectModule_Kind_Change @"ShopSelectModule_Kind_Change"
+#define ShopSelectModule_Data_Change @"ShopSelectModule_Data_Change"
+
+//------------供应链新增---------------------------------------------------
+
+// 原料列表Item
+#define RawItemCellIndentifier @"RawItemCellIndentifier"
+
+// 单位Item
+#define RawUnitCellIndentifier @"RawUnitCellIndentifier"
+
+// 辅单位Item
+#define RawSubUnitCellIndentifier @"RawSubUnitCellIndentifier"
+
+// 配比列表Item
+#define MatchingItemCellIndentifier @"MatchingItemCellIndentifier"
+
+// 加工原料cell
+#define MatchingRawCellIndentifier @"MatchingRawCellIndentifier"
+
+// 配比原料选择cell
+#define MatchingRawSelectCellIndentifier @"MatchingRawSelectCellIndentifier"
+
+// UI-原料管理
+#define RAW_CONTROL_VIEW 1 // 原料的二级菜单
+#define RAW_GOODS_LIST_VIEW 2 // 原料(商品)列表页
+#define MATCHING_LIST_VIEW 3 // 原料商品配比列表页
+#define KINDRAW_LIST_VIEW 4   // 原料分类列表页面.
+#define KINDRAW_EDIT_VIEW 5   // 原料分类编辑页面.
+#define RAW_EDIT_VIEW 6   // 原料分类编辑页面.
+#define RAW_UNIT_LIST_VIEW 7   // 原料单位列表页面.
+#define RAW_UNIT_EDIT_VIEW 8   // 原料单位编辑页面.
+#define RAW_SUBUNIT_EDIT_VIEW 9   // 辅助单位编辑页面.
+#define MATCHING_RAW_SELECT_VIEW 10   // 商品原料配比原料选择页面.
+#define MATCHING_EDIT_VIEW 11   // 商品原料配比编辑页面.
+#define MATCHING_RAW_EDIT_VIEW 12   // 商品原料配比原料编辑页面.
+
+#define BATCH_MULTI_RAW_VIEW 13  // 原料批量选择.
+
+#define RAW_SCAN_VIEW 14 // 原料扫一扫页
+
+// 原料数据变化.
+#define RawModule_Data_Change @"RawModule_Data_Change"
+
+// 原料分类数据变化(末级分类).
+#define RawModule_Kind_Change @"RawModule_Kind_Change"
+
+// 原料分类数据变化.
+#define RawModule_ALLKind_Change @"RawModule_ALLKind_Change"
+
+// 选择原料数据变化(批量).
+#define RawModule_Batch_Raw_Select @"RawModule_Batch_Raw_Select"
+
+// 选择原料种类数据变化(批量).
+#define RawModule_Batch_Kind_Select @"RawModule_Batch_Kind_Select"
+
+//原料批量的数据变化(批量删除，换分类).
+#define RawModule_Raw_Batch_Change @"RawModule_Raw_Batch_Change"
+
+// 原料自己的数据变化
+#define RawModule_Raw_Change @"RawModule_Raw_Change"
+
+// 原料自己的数据变化(新增修改触发).
+#define RawModule_Raw_EDIT_Change @"RawModule_Raw_EDIT_Change"
+
+// 原料单位数据变化.
+#define RawModule_RawUnit_Change @"RawModule_RawUnit_Change"
+
+// 原料编辑页面重新获取单位数据
+#define RawModule_RawEdit_RawUnit_Change @"RawModule_RawEdit_RawUnit_Change"
+
+// 原料
+#define Notification_UI_RawKabawEditView_Change @"Notification_UI_RawKabawEditView_Change"
+
+// 原料信息编辑.
+#define Notification_UI_RawEditView_Change @"Notification_UI_RawEditView_Change"
+
+// 原料信息编辑.
+#define Notification_UI_MatchingEditView_Change @"Notification_UI_MatchingEditView_Change"
+
+// 原料分类变化.
+#define Notification_UI_KindRawEditView_Change @"Notification_UI_KindRawEditView_Change"
+
+// 原料单位数据变化.
+#define Notification_UI_RawUnit_Change @"Notification_UI_RawUnit_Change"
+
+// 原料单位数据变化.
+#define Notification_UI_SubRawUnit_Change @"Notification_UI_SubRawUnit_Change"
+
+// 选择原料数据变化(批量).
+#define SupplyModule_Raw_Select @"SupplyModule_Raw_Select"
+
+//Supply 选择原料种类数据变化(批量).
+#define SupplyModule_Kind_Select @"SupplyModule_Kind_Select"
+
+//Supply 原料批量的数据变化(批量删除，换分类).
+#define SupplyModule_Row_Change @"SupplyModule_Row_Change"
+
+// 原料单位数据变化.
+#define Notification_UI_MatchingRawEditView_Change @"Notification_UI_MatchingRawEditView_Change"
+
+// 原料分类数据变化(末级分类).
+#define RawModule_RawSelect_Kind_Change @"RawModule_RawSelect_Kind_Change"
+
+// 原料数据变化.
+#define RawModule_RawSelect_Data_Change @"RawModule_RawSelect_Data_Change"
+
+//---------------------------------------------------------------
+
+// 供应商数据变化.
+#define SupplyModule_SupplyData_Change @"SupplyModule_SupplyData_Change"
+
+// 供应商分类数据变化.
+#define SupplyModule_SupplyKind_Change @"SupplyModule_SupplyKind_Change"
+
+// 供应商息编辑.
+#define Notification_UI_SupplyEditView_Change @"Notification_UI_SupplyEditView_Change"
+
+// 供应商供应原料变化.
+#define SupplyModule_RawOfSupply_Change @"SupplyModule_RawOfSupply_Change"
+
+// 供应商类别变化.
+#define SupplyModule_SupplyType_Change @"SupplyModule_SupplyType_Change"
+
+// 供应商类别编辑页面变化.
+#define Notification_UI_SupplyType_Change @"Notification_UI_SupplyType_Change"
+
+//---------------------------------------------------------------
+
+#define Matching_Data_Change @"Matching_Data_Change" //传菜方案.
+
+#define Matching_Kind_Change @"Matching_Kind_Change" //传菜方案.
+
+
+//---------------------------------------------------------------
+
+//-----------------物流-----------------------
+
+#define RawPaperCellIndentifier @"RawPaperCellIndentifier"
+#define HistoryListCellIndentifier @"HistoryListCellIndentifier"
+#define RawDetailCellIndentifier @"RawDetailCellIndentifier"
+#define AuditRecordDetailCellIndentifier @"AuditRecordDetailCellIndentifier"
+#define BranchWarehouseCellIndentifier @"BranchWarehouseCellIndentifier"
+#define BranchWarehouseCell2Indentifier @"BranchWarehouseCell2Indentifier"
+#define SelectMutiRawItemIndentifier @"SelectMutiRawItemIndentifier"
+#define SupplierCheckCellindentifier @"SupplierCheckCellindentifier"
+#define GridEditCellIndentifier2 @"GridEditCellIndentifier2"
+
+#define SupplyListCellIndentifier @"SupplyListCellIndentifier"
+#define SupplyRawListCellIndentifier @"SupplyRawListCellIndentifier"
+#define SupplyRawHeadIndentifier @"SupplyRawHeadIndentifier"
+#define SupplyRawFootIndentifier @"SupplyRawFootIndentifier"
+#define StockQueryCellIndentifier @"StockQueryCellIndentifier"
+#define SelectMultiPaperItemIndentifier @"SelectMultiPaperItemIndentifier"
+#define SelectMultiRawItemIndentifier @"SelectMultiRawItemIndentifier"
+
+//UI物流
+#define BATCH_SELECT_SCAN_VIEW 48 //扫描页面
+#define BATCH_SELECT_KIND_VIEW 49 //原料分类选择页面
+#define BATCH_SELECT_RAW_LIST_VIEW 50 //原料批量添加页面
+
+#define LOGISTIC_SECOND_VIEW 1 //物流二级菜单.
+#define PAPER_LIST_VIEW 2
+#define HISTORY_LIST_VIEW 3 //历史收货单页面.
+#define RAW_PAPER_EDIT_VIEW 4 //叫货单详情页面.
+#define AUDIT_RECORD_VIEW 5 //审核记录页面.
+#define RAW_DETAIL_EDIT_VIEW 6 //原料详情页面.
+#define BRANCH_WAREHOUSE_VIEW 7 //添加分库.
+#define SELECT_LIST_VIEW 8 //筛选页面
+#define SUPPLIER_CHECK_LIST_VIEW 9 //供应商选择页面.
+#define RETURN_PAPER_EDIT_VIEW 10 //退货单详情编辑页.
+#define ALLOCATE_PAPER_EDIT_VIEW 11 //内部调拨单详情编辑页.
+#define ALLOCATE_RAW_EDIT_VIEW 12 //内部调拨单原料详情.
+#define RETURN_REASON_LIST_VIEW 13         //原因列表页
+#define RETURN_REASON_EDIT_VIEW 14  //原因添加页
+#define LOGISTIC_FILTRATE_LIST_VIEW 15 //导出筛选页
+#define PAPER_EXPORT_LIST_VIEW 16 //单据导出列表页
+
+//UI供应商
+#define SUPPLIER_LIST_VIEW 20       //供应商
+#define SUPPLIER_EDIT_VIEW 21      //供应商添加界面
+#define SUPPLIER_KIND_LIST_VIEW 22  //供应商类别管理
+#define SUPPLIER_KIND_EDIT_VIEW 23     //供应商类别管理编辑
+#define SUPPLIER_RAW_LIST_VIEW 24      //供应原料
+#define RETURN_PAPER_LIST_VIEW 25 //退货一览(列表).
+#define RETURN_PAPER_EDIT_VIew 26 //退货单详情编辑页.
+
+//物流库存Action常数
+#define ACTION_SELECT_LIST 99 //筛选列表.
+#define ACTION_RAW_PAPER_LIST 100    //收货单列表.
+#define ACTION_RAW_PAPER_ADD 101     //添加收货单.
+#define ACTION_RAW_PAPER_EDIT 102    //编辑、查看收货单详情.
+#define ACTION_H_RAW_PAPER_IMP 103   //历史收货单导入.
+
+#define ACTION_RETURN_PAPER_LIST 104 //退货单列表.
+#define ACTION_RETURN_PAPER_ADD 105   //添加退货单.
+#define ACTION_RETURN_PAPER_EDIT 106  //编辑、查看货单详情.
+#define ACTION_H_RETURN_PAPER_IMP 107 //历史退货单导入.
+
+#define ACTION_ALLOCATE_PAPER_LIST 108 //调拨单列表.
+#define ACTION_ALLOCATE_PAPER_ADD 109  //添加调拨单.
+#define ACTION_ALLOCATE_PAPER_EDIT 110 //编辑、查看调拨单详情.
+
+#define ACTION_STOCK_ADJUST_LIST 111 //库存调整列表.
+#define ACTION_STOCK_ADJUST_ADD 112  //添加库存调整单.
+#define ACTION_STOCK_ADJUST_EDIT 113 //编辑查看库存调整单详情.
+
+#define ACTION_STOCK_CHECK_LIST 114 //盘库单列表.
+#define ACTION_STOCK_CHECK_ADD 115 //盘库单添加.
+#define ACTION_STOCK_CHECK_EDIT 116 //盘库单修改.
+#define ACTION_STOCK_CHECK_IMP 117 //历史盘库单列表.
+
+//-----------------库存-----------------------
+#define STOCK_SECOND_VIEW 1       //库存二级菜单.
+#define STOCK_SEARCH_LIST_VIEW 2  //查询一栏.
+#define STOCK_ADJUST_LIST_VIEW 3  //调整一栏.
+#define STOCK_CHECK_LIST_VIEW 4   //盘点一栏.
+#define STOCK_SEARCH_VIEW 5       //查询条件画面.
+
+#define STOCK_ADJUST_EDIT_VIEW 6 //库存调整单详情.
+#define STOCK_RAW_EDIT_VIEW 7 //库存调整原料详情编辑.
+
+#define STOCK_QUERY_VIEW 8
+#define STOCK_QUERY_LIST_VIEW 19
+#define STOCK_QUERY_SCAN_VIEW 9
+#define STOCK_STOREHOUSE_LIST_VIEW 10 // 仓库一览页面.
+#define STOCK_STOREHOUSE_EDIT_VIEW 11 // 仓库编辑页面.
+#define STOCK_STOREHOUSE_MENU_SELECT_VIEW 12 // 商品选择页面.
+#define STOCK_STOREHOUSE_KINDMENU_SELECT_VIEW 13 // 商品分类选择页面.
+
+#define STOCK_CHECK_EDIT_VIEW 14 //盘存单详情.
+#define STOCK_CHECK_RAW_EDIT_VIEW 15 //盘存原料详情.
+
+#define STOCK_ADJUST_REASON_LIST_VIEW 16         //原因列表页
+#define STOCK_ADJUST_REASON_EDIT_VIEW 17  //原因添加页
+#define STOCK_RAW_SELECT_VIEW 18 //库存原料选择
+#define STOCK_RAW_CATEGORY_VIEW 20  //库存原料分类
+#define STOCK_FILTRATE_LIST_VIEW 21 //导出筛选页面
+#define STOCK_EXPORT_LIST_VIEW 22 //导出单据列表页
+///屏幕宏
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+//UI通知
+#define Notification_UI_PaperDetailEditView_Change @"Notification_UI_PaperDetailEditView_Change"
+//#define Notification_UI_RawPaperDetailView_Change @"Notification_UI_RawPaperDetailView_Change"      //收货单详情
+//#define Notification_UI_ReturnPaperEditView_Change @"Notification_UI_ReturnPaperEditView_Change"    //退货单详情
+//#define Notification_UI_AllocatePaperEditView_Change @"Notification_UI_AllocatePaperEditView_Change"//调拨单详情
+#define Notification_UI_RawDetailView_Change @"Notification_UI_RawDetailView_Change" //原料详情页面
+
+#define Notification_UI_StockAdjustEditView_Change @"Notification_UI_StockAdjustEditView_Change" //库存调整详情
+#define Notification_UI_StockRawEditView_Change @"Notification_UI_StockRawEditView_Change"      //库存调整原料详情
+#define Notification_UI_StockCheckEditView_Change @"Notification_UI_StockCheckEditView_Change"  //库存盘存详情
+#define Notification_UI_StockCheckRawEditView_Change @"Notification_UI_StockCheckRawEditView_Change"    //库存盘存原料详情
+#define Notification_UI_ReturnReasonEditView_Change @"Notification_UI_ReturnReasonEditView_Change"
+#define Notification_UI_StockAdjustReasonEditView_Change @"Notification_UI_StockAdjustReasonEditView_Change" //原因编辑
+
+// 仓库数据变化.
+#define RawModule_StoreHouse_Change @"RawModule_StoreHouse_Change"
+
+
+#define CANCELTHEUNSUBSCRIBESUCCESS @"CANCELTHEUNSUBSCRIBESUCCESS"  //点券账户取消退订成功
+#define THEUNSUBSCRIBESUCCESS @"THEUNSUBSCRIBESUCCESS"  //点券账户退订成功
+#define OPENSUCCESS @"OPENSUCCESS"  //点券账户开通成功
+#define FORMMAINRECHARGEACCOUNT @"FORMMAINRECHARGEACCOUNT"  //从点券账户首页进入
+#define FORMMODULEDETAIL @"FORMMODULEDETAIL"  //从模块开通页面进入
+#define FORMMSHOPMANAGER @"FORMMSHOPMANAGER"  //从开通分店管理页面进入
+
+
+// 仓库编辑页面UI变化.
+#define Notification_UI_StoreHouseEditView_Change @"Notification_UI_StoreHouseEditView_Change"
+
+#import "Platform.h"
+#define isnavigatemenupush [Platform Instance].tdf_isnavigatemenupush//判断是否从左侧导航栏返回
+
+
+// 仓库数据变化.
+#define ALL_CODE_ACTION @"AllCodeAction" //所有模块
+#endif
+
+#define RGBA(r,g,b,a)  [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
+#if RELEASE
+#define NSLog(...) {}
+#endif
+

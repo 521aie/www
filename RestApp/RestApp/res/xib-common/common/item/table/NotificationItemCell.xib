@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardItem"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CardItemIndentifier" selectionStyle="default" indentationWidth="10" rowHeight="466" id="zAB-Ef-2vh" customClass="NotificationItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="376"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAB-Ef-2vh" id="I1V-11-vhx">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view autoresizesSubviews="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mme-97-eGG">
+                        <rect key="frame" x="0.0" y="1" width="320" height="375"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-rs-lV2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="376"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Mme-97-eGG" firstAttribute="leading" secondItem="I1V-11-vhx" secondAttribute="leading" id="5Se-aR-XDf"/>
+                    <constraint firstAttribute="bottom" secondItem="xbj-rs-lV2" secondAttribute="bottom" constant="-1" id="Auj-Qq-WT5"/>
+                    <constraint firstAttribute="bottom" secondItem="Mme-97-eGG" secondAttribute="bottom" constant="-1" id="G1a-L1-Yo9"/>
+                    <constraint firstItem="xbj-rs-lV2" firstAttribute="leading" secondItem="I1V-11-vhx" secondAttribute="leading" id="NpG-fw-Tsc"/>
+                    <constraint firstItem="xbj-rs-lV2" firstAttribute="top" secondItem="I1V-11-vhx" secondAttribute="top" id="dYF-RH-ZBm"/>
+                    <constraint firstAttribute="trailing" secondItem="Mme-97-eGG" secondAttribute="trailing" id="o59-p8-vK0"/>
+                    <constraint firstItem="Mme-97-eGG" firstAttribute="top" secondItem="I1V-11-vhx" secondAttribute="top" constant="1" id="oS0-by-bkd"/>
+                    <constraint firstAttribute="trailing" secondItem="xbj-rs-lV2" secondAttribute="trailing" id="r3o-tl-F9h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="container" destination="xbj-rs-lV2" id="S5y-W2-1QT"/>
+                <outlet property="containerBg" destination="Mme-97-eGG" id="dZd-2U-7tR"/>
+            </connections>
+            <point key="canvasLocation" x="538" y="399"/>
+        </tableViewCell>
+    </objects>
+</document>

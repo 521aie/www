@@ -1,0 +1,131 @@
+source 'git@git.2dfire-inc.com:ios/cocoapods-spec.git'
+
+inhibit_all_warnings!
+
+platform :ios, '8.0'
+
+target 'RestApp' do
+
+end
+
+#公共
+
+pod 'MJRefresh'
+pod 'YYModel'
+pod 'Mantle'
+pod 'libextobjc'
+pod 'Masonry'
+pod 'JSONKit'
+pod 'OCTWebViewBridge'
+pod 'MBProgressHUD'
+pod 'SDWebImage','4.0.0'
+pod 'TBXML'
+pod 'RegexKitLite'
+pod 'QRCodeGenerator'
+pod 'PinYin4Objc'
+pod 'DACircularProgress'
+pod 'RTLabel'
+pod "JPush-iOS-SDK", '3.0.1'
+pod 'SVPullToRefresh'
+pod 'GCDiscreetNotificationView'
+pod 'CocoaSecurity'
+pod 'SwipeView'
+pod 'IQKeyboardManager'
+pod 'NullSafe'
+
+#指向tag
+
+pod 'UMengUShare/UI'
+pod 'UMengUShare/Social/WeChat'
+pod 'UMengUShare/Social/ReducedQQ'
+pod 'UMengUShare/Social/ReducedSina'
+pod 'UMengUShare/Social/AlipayShare'
+pod 'JSBadgeView', '1.4.2'
+pod "UMengAnalytics-NO-IDFA"
+pod 'CocoaAsyncSocket/RunLoop', '7.4.3'
+pod 'AMapFrameworks', '0.0.2'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.6.beta'
+pod "TDFAppInitConfigServiceKit", "0.0.4"
+pod "TDFNetworkActivityLogger"
+pod "TDFKeyboard"
+pod 'TDFReportWebViewKit', "0.0.1"
+
+pod "TDFModuleRecharge",'0.2.0'
+pod 'TDFLogger', "0.0.3"
+pod "TDFDataCenterKit", "0.0.13"
+pod 'TDFCutCircleView', '0.3.7'
+pod 'TDFNetworkEnvironmentSwitcher','0.1.2'
+pod 'TDFAsync'
+pod 'TDFMapLocationViewController'
+pod 'TDFNetworking' , '0.3.4'
+pod 'TDFAPIHUDPresenter', '1.0.2'
+pod 'TDFPickerProxy','1.0.5'
+pod 'TDFHistogramKit', '0.1.5'
+#pod 'TDFIssueCenterModule','0.0.13’
+pod 'ESExchangeSkin', '0.0.6'
+pod 'UnitSettingForRestApp', '0.0.1'
+
+#pod 'TDFLoginModule', '0.1.3'
+pod 'TDFResources'
+pod "TDFLoginPod", '1.0.7'
+pod 'TDFLoginAssistant', '1.5.5', :configurations => ['Debug']
+pod 'TDFDateFormatKit', '1.0.0'
+pod 'TDFCollectionViewKit', '0.1.4'
+pod 'TDFCollectionCellKit', '0.1.5'
+pod 'TDFOldSystemService', '0.1.3'
+pod 'TDFOldBaseUtil', '0.1.3'
+
+
+#pod 'TDFMemberPod','0.3.3'
+pod 'TDFBaseSettingModule', '1.0.6'
+pod 'TDFPagingDataLoader', '1.0.5'
+pod 'TDFMediatorKit', '0.5.5'
+pod 'TDFComponents', '1.4.0'
+
+
+#pod 'TDFMemberPod',:git => 'git@git.2dfire-inc.com:ios/TDFMemberPod.git',                   :branch => 'Daily0531'
+#pod 'TDFBaseSettingModule', :git => 'git@git.2dfire-inc.com:ios/TDFBaseSettingModule.git',  :branch => 'Daily0531'
+#pod 'TDFPagingDataLoader', :git => 'git@git.2dfire-inc.com:ios/TDFPagingDataLoader.git',    :branch => 'DailyQ2'
+#pod 'TDFMediatorKit', :git => 'git@git.2dfire-inc.com:ios/TDFMediatorKit.git',              :branch => 'DailyQ2-2'
+#pod 'TDFComponents', :git => 'git@git.2dfire-inc.com:ios/TDFComponents.git',                :branch => 'dailyQ2-2'
+
+#pod 'TDFMemberPod',         :path=> '../../TDFMemberPod'
+#pod 'TDFBaseSettingModule', :path=> '../../TDFBaseSettingModule'
+#pod 'TDFPagingDataLoader',  :path=> '../../TDFPagingDataLoader'
+#pod 'TDFMediatorKit',       :path=> '../../TDFMediatorKit'
+#pod 'ActivityForRestApp',    :path=> '../../ActivityForRestApp'
+
+
+#指向分支
+pod 'TDFLoginModule', :git => 'http://git.2dfire-inc.com/ios/TDFLoginModule.git',:branch => 'master'
+pod 'TDFMemberPod', :git => 'http://git.2dfire-inc.com/ios/TDFMemberPod.git',:branch => 'feature/ActivityLottery'
+pod 'TDFIssueCenterModule', :git => 'http://git.2dfire-inc.com/ios/TDFIssueCenterModule.git',:branch => 'master'
+pod 'ActivityForRestApp', :git => 'git@git.2dfire-inc.com:2ye-iOS/ActivityForRestApp.git' ,:branch => 'feature/v0.0.1'
+#pod 'UnitSettingForRestApp', :git => 'http://git.2dfire-inc.com/2ye-iOS/UnitSettingForRestApp.git' ,:branch => 'feature/v0.0.1'
+#pod 'TDFMemberPod', :git => 'http://git.2dfire-inc.com/ios/TDFMemberPod.git',:branch => 'feature/ActivityLottery'
+
+pod 'FRWChart', :git => 'http://git.2dfire-inc.com/2ye-iOS/FRWChart.git', :branch => "feature/0.1.0"
+
+#pod 'TDFNetworkEnvironmentSwitcher',:git => 'http://git.2dfire-inc.com/ios/TDFNetworkEnvironmentSwitcher.git' ,:branch => 'feature/ActivityLottery'
+#pod 'TDFOldBaseUtil',:git => 'http://git.2dfire-inc.com/ios/TDFOldBaseUtil.git' ,:branch => 'ActivityLottery'
+#pod 'TDFMediatorKit',:git => 'http://git.2dfire-inc.com/ios/TDFMediatorKit.git', :branch => 'feature/ActivityLottery'
+
+######################################ReactNative#########################################
+
+pod 'CodePush',:podspec =>'http://git.2dfire-inc.com/wangyou/CodePush/raw/master/CodePush.podspec'
+
+pod 'React', :podspec => 'http://git.2dfire-inc.com/wangyou/React/raw/master/React.podspec', :subspecs => [
+    'Core',
+    'RCTText',
+    'RCTActionSheet',
+    'RCTWebSocket',
+    'RCTAdSupport',
+    'RCTAnimation',
+    'RCTCameraRoll',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTPushNotification',
+    'RCTSettings',
+    'RCTVibration',
+    'RCTLinkingIOS',
+]

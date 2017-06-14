@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MenuRankListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76p-tq-6tq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9y-TR-KxL">
+                        <rect key="frame" x="15" y="10" width="24" height="24"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="53l-Io-qb9"/>
+                            <constraint firstAttribute="height" constant="24" id="fcK-NV-MDV"/>
+                        </constraints>
+                        <state key="normal" image="ico_uncheck.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年年鱿鱼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-qo-p2t">
+                        <rect key="frame" x="55" y="12" width="163" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="163" id="GvA-a2-OSp"/>
+                            <constraint firstAttribute="height" constant="21" id="bNW-gi-Ork"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999份" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-DW-Qj7">
+                        <rect key="frame" x="195" y="12" width="110" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="10q-HV-35M"/>
+                            <constraint firstAttribute="width" constant="110" id="cV7-ey-IGU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c56-D8-8EX">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="a1b-QI-GDW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="76p-tq-6tq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Mc-iX-hMF"/>
+                    <constraint firstItem="h9y-TR-KxL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="7IX-kO-Exh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fZh-DW-Qj7" secondAttribute="trailing" constant="7" id="D5M-PY-bB3"/>
+                    <constraint firstItem="c56-D8-8EX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FZx-og-NdS"/>
+                    <constraint firstItem="76p-tq-6tq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J5V-ii-kHs"/>
+                    <constraint firstItem="xxG-qo-p2t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="KDk-H3-oh8"/>
+                    <constraint firstItem="fZh-DW-Qj7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="Q7z-QS-7az"/>
+                    <constraint firstItem="xxG-qo-p2t" firstAttribute="leading" secondItem="h9y-TR-KxL" secondAttribute="trailing" constant="16" id="SRU-At-J7q"/>
+                    <constraint firstAttribute="trailing" secondItem="76p-tq-6tq" secondAttribute="trailing" id="X4g-OD-Iis"/>
+                    <constraint firstAttribute="trailing" secondItem="c56-D8-8EX" secondAttribute="trailing" id="ZVt-BU-HKk"/>
+                    <constraint firstAttribute="bottom" secondItem="c56-D8-8EX" secondAttribute="bottom" constant="-0.5" id="sp4-ny-DeA"/>
+                    <constraint firstAttribute="bottom" secondItem="76p-tq-6tq" secondAttribute="bottom" constant="-0.5" id="tLw-M3-iIR"/>
+                    <constraint firstItem="h9y-TR-KxL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="uDm-eb-1li"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="counts" destination="fZh-DW-Qj7" id="IzG-2q-WRq"/>
+                <outlet property="menuName" destination="xxG-qo-p2t" id="vkq-za-Rvg"/>
+                <outlet property="selectBtn" destination="h9y-TR-KxL" id="bUl-Hn-0OX"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="216"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_uncheck.png" width="44" height="44"/>
+    </resources>
+</document>

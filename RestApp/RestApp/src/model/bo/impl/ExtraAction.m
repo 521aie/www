@@ -1,0 +1,18 @@
+//
+//  ExtraAction.m
+//  RestApp
+//
+//  Created by zxh on 14-4-30.
+//  Copyright (c) 2014年 杭州迪火科技有限公司. All rights reserved.
+//
+
+#import "ExtraAction.h"
+
+@implementation ExtraAction
+
++(id) extraActionOptions_class{
+    return NSClassFromString(@"ExtraActionOption");
+}
+
+
+@end

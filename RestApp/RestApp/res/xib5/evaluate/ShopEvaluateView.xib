@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopEvaluateView">
+            <connections>
+                <outlet property="contentTip" destination="0Wv-ys-SfH" id="8pe-qQ-va2"/>
+                <outlet property="mainGrid" destination="lo3-PO-enh" id="kpR-qM-vBq"/>
+                <outlet property="noDataTip" destination="muD-q8-h9d" id="K4Q-GT-V2O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muD-q8-h9d" userLabel="NoDataTip">
+                    <rect key="frame" x="0.0" y="44" width="375" height="351"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_nobill.png" translatesAutoresizingMaskIntoConstraints="NO" id="O01-NV-8n5">
+                            <rect key="frame" x="128" y="24" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="1jx-aG-FQq"/>
+                                <constraint firstAttribute="width" constant="120" id="x2b-Sg-o30"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有顾客评价" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPR-c0-bWy">
+                            <rect key="frame" x="141" y="160" width="93" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="4oY-bT-eZk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-ys-SfH" userLabel="contentTip">
+                            <rect key="frame" x="10" y="209" width="355" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="O01-NV-8n5" firstAttribute="centerX" secondItem="muD-q8-h9d" secondAttribute="centerX" id="0K6-Bg-VZn"/>
+                        <constraint firstItem="TPR-c0-bWy" firstAttribute="centerX" secondItem="muD-q8-h9d" secondAttribute="centerX" id="4X1-Ak-kDt"/>
+                        <constraint firstAttribute="trailing" secondItem="0Wv-ys-SfH" secondAttribute="trailing" constant="10" id="B2e-HP-Rtb"/>
+                        <constraint firstAttribute="height" constant="351" id="HL1-I6-GMY"/>
+                        <constraint firstItem="TPR-c0-bWy" firstAttribute="top" secondItem="O01-NV-8n5" secondAttribute="bottom" constant="16" id="ZIb-zO-dRX"/>
+                        <constraint firstItem="O01-NV-8n5" firstAttribute="top" secondItem="muD-q8-h9d" secondAttribute="top" constant="24" id="Zvt-Xd-xio"/>
+                        <constraint firstItem="0Wv-ys-SfH" firstAttribute="leading" secondItem="muD-q8-h9d" secondAttribute="leading" constant="10" id="dUe-9r-0nq"/>
+                        <constraint firstItem="0Wv-ys-SfH" firstAttribute="top" secondItem="TPR-c0-bWy" secondAttribute="bottom" constant="9" id="ny7-H2-q19"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lo3-PO-enh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lo3-PO-enh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8fG-H1-Jw7"/>
+                <constraint firstAttribute="trailing" secondItem="muD-q8-h9d" secondAttribute="trailing" id="DEk-V6-Hdq"/>
+                <constraint firstAttribute="bottom" secondItem="lo3-PO-enh" secondAttribute="bottom" id="Wal-7X-P4g"/>
+                <constraint firstItem="muD-q8-h9d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b3P-dJ-Qyx"/>
+                <constraint firstItem="muD-q8-h9d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="exW-ri-tcw"/>
+                <constraint firstAttribute="trailing" secondItem="lo3-PO-enh" secondAttribute="trailing" id="hfe-CD-tXB"/>
+                <constraint firstItem="lo3-PO-enh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xME-rg-k7W"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="503" y="408"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_nobill.png" width="240" height="240"/>
+    </resources>
+</document>

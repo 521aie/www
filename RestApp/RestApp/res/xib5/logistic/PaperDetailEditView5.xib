@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaperDetailEditView">
+            <connections>
+                <outlet property="baseTitle" destination="3Cb-Ev-BIY" id="dNc-J3-zU3"/>
+                <outlet property="btnCheckAudit" destination="wRC-Ql-cZ6" id="ieF-te-2jy"/>
+                <outlet property="btnConfirm" destination="00G-As-HUh" id="Tai-ic-TJK"/>
+                <outlet property="btnDel" destination="dXQ-xg-kbx" id="Wqu-58-Mew"/>
+                <outlet property="btnRefuse" destination="tL0-Gt-wCk" id="cWJ-Ow-Gwf"/>
+                <outlet property="btnSave" destination="qOi-6x-3CO" id="bMO-DI-UmN"/>
+                <outlet property="btnSaveSub" destination="LzP-2t-NYR" id="rJh-SF-dQs"/>
+                <outlet property="btnSub" destination="y9h-1H-Lkr" id="Byk-5q-QWD"/>
+                <outlet property="checkAuditView" destination="GWL-X7-vhr" id="bAU-jd-09N"/>
+                <outlet property="container" destination="FOy-DS-8cS" id="IvM-S2-zen"/>
+                <outlet property="delView" destination="Tq8-VP-i21" id="lmm-3W-QSd"/>
+                <outlet property="lsAuditRecord" destination="3vL-hg-Ae0" id="vQj-Wf-LuG"/>
+                <outlet property="lsExpandContext" destination="ZaB-fd-zYf" id="uQx-h9-ZcG"/>
+                <outlet property="lsHistoryPaper" destination="57l-zF-yj0" id="T02-7l-PHN"/>
+                <outlet property="lsSupplierKind" destination="jEz-rL-7nY" id="fcA-45-2Y1"/>
+                <outlet property="lsWarehouse" destination="dfI-jj-emk" id="VXQ-YT-Uea"/>
+                <outlet property="lsWarehousingDate" destination="hb0-pd-Ong" id="nK8-U8-BFI"/>
+                <outlet property="lsWarehousingTime" destination="jmh-vI-Lg5" id="AzO-ge-5Pb"/>
+                <outlet property="materialGrid" destination="BAa-Bd-AGo" id="IbJ-6a-zVr"/>
+                <outlet property="materialTitle" destination="FW6-hf-xVz" id="hQE-pq-Gxa"/>
+                <outlet property="saveSubView" destination="0w2-5l-iT9" id="GUO-UY-mmA"/>
+                <outlet property="saveView" destination="ftV-RS-5Zs" id="Ssj-TX-pHy"/>
+                <outlet property="scrollView" destination="LUX-MO-0b2" id="7bM-zM-vB9"/>
+                <outlet property="stockView" destination="dCD-xg-aIU" id="0mG-zl-gVz"/>
+                <outlet property="subView" destination="dfI-hU-Cl1" id="A9o-fi-uPb"/>
+                <outlet property="sumView" destination="EV1-iy-0AJ" id="4bE-Kf-OO5"/>
+                <outlet property="titleDiv" destination="NQG-5o-Llt" id="lCS-WD-1ub"/>
+                <outlet property="txtPaperNo" destination="nvA-yx-yFA" id="LSN-wI-ryN"/>
+                <outlet property="txtRemark" destination="goy-DW-nHm" id="g8U-bH-1xq"/>
+                <outlet property="txtSupplierKind" destination="Mz8-Zw-ua9" id="0f9-HK-f9W"/>
+                <outlet property="txtWarehouse" destination="xHa-OA-ivm" id="I6S-gO-bpd"/>
+                <outlet property="txtWarehousingDate" destination="62u-PD-Gei" id="H2L-8l-raQ"/>
+                <outlet property="txtWarehousingTime" destination="0vE-T1-ICD" id="knK-Lc-PYv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="O0a-0K-e3o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" id="iAS-LV-rZT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="NQG-5o-Llt">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.94901967050000002" green="0.02745098248" blue="0.1176470667" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LUX-MO-0b2">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="FOy-DS-8cS">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" id="57l-zF-yj0" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="3Cb-Ev-BIY" customClass="SmallTitle">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view userInteractionEnabled="NO" contentMode="scaleToFill" id="nvA-yx-yFA" customClass="EditItemText">
+                                    <rect key="frame" x="0.0" y="60" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="jEz-rL-7nY" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="108" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="Mz8-Zw-ua9" customClass="EditItemText">
+                                    <rect key="frame" x="0.0" y="126" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="dfI-jj-emk" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="156" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.1960784495" green="0.58823531870000001" blue="0.35294118520000001" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="xHa-OA-ivm" customClass="EditItemText">
+                                    <rect key="frame" x="0.0" y="228" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="hb0-pd-Ong" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="204" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="62u-PD-Gei" customClass="EditItemText">
+                                    <rect key="frame" x="0.0" y="228" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="jmh-vI-Lg5" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="252" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.78823536630000002" green="0.69411766529999996" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="0vE-T1-ICD" customClass="EditItemText">
+                                    <rect key="frame" x="0.0" y="228" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="3vL-hg-Ae0" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="228" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.78823536630000002" green="0.69411766529999996" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="goy-DW-nHm" customClass="EditItemText">
+                                    <rect key="frame" x="0.0" y="228" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="fB0-eC-rZX">
+                                    <rect key="frame" x="0.0" y="276" width="320" height="10"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="FW6-hf-xVz" customClass="SmallTitle">
+                                    <rect key="frame" x="0.0" y="300" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="ZaB-fd-zYf" customClass="EditItemList">
+                                    <rect key="frame" x="0.0" y="360" width="320" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.78823536630000002" green="0.69411766529999996" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="BAa-Bd-AGo" customClass="AddRawTable">
+                                    <rect key="frame" x="0.0" y="126" width="320" height="252"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="dCD-xg-aIU">
+                                    <rect key="frame" x="0.0" y="50" width="320" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="00G-As-HUh">
+                                            <rect key="frame" x="10" y="20" width="145" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="确认收货" backgroundImage="btn_full_g.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnConfirmClick:" destination="-1" eventType="touchUpInside" id="LY3-nc-dTx"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tL0-Gt-wCk">
+                                            <rect key="frame" x="165" y="20" width="145" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="拒绝收货" backgroundImage="btn_full_r.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnRefuseClick:" destination="-1" eventType="touchUpInside" id="ReF-4h-Sew"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="ftV-RS-5Zs">
+                                    <rect key="frame" x="0.0" y="214" width="320" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qOi-6x-3CO">
+                                            <rect key="frame" x="10" y="16" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="保存并确认收货" backgroundImage="btn_full_g.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnSaveClick:" destination="-1" eventType="touchUpInside" id="3pK-ir-eVH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="dfI-hU-Cl1">
+                                    <rect key="frame" x="0.0" y="230" width="320" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y9h-1H-Lkr">
+                                            <rect key="frame" x="10" y="16" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="提交" backgroundImage="btn_full_g.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnSubClick:" destination="-1" eventType="touchUpInside" id="Yd8-KA-vCM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="Tq8-VP-i21">
+                                    <rect key="frame" x="0.0" y="284" width="320" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dXQ-xg-kbx">
+                                            <rect key="frame" x="10" y="5" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="删除" backgroundImage="btn_full_r.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnDelClick:" destination="-1" eventType="touchUpInside" id="P5P-vc-ohA"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="GWL-X7-vhr">
+                                    <rect key="frame" x="0.0" y="350" width="320" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wRC-Ql-cZ6">
+                                            <rect key="frame" x="10" y="16" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="反确认" backgroundImage="btn_full_r.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnCheckAuditClick:" destination="-1" eventType="touchUpInside" id="NSq-pE-kCY"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="0w2-5l-iT9">
+                                    <rect key="frame" x="0.0" y="300" width="320" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LzP-2t-NYR">
+                                            <rect key="frame" x="10" y="16" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="保存并提交" backgroundImage="btn_full_g.png">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnSaveSubClick:" destination="-1" eventType="touchUpInside" id="GSK-44-xIz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <view contentMode="scaleToFill" id="EV1-iy-0AJ" customClass="SumItemView">
+                    <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="416" y="408"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_full_g.png" width="620" height="88"/>
+        <image name="btn_full_r.png" width="620" height="88"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

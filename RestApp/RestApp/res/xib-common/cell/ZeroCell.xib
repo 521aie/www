@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ZeroCellIndentifier" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZeroCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-Vg-VHS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="零头处理方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGQ-As-kGu">
+                        <rect key="frame" x="10" y="11" width="257" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="bsa-lX-4On"/>
+                            <constraint firstAttribute="width" constant="257" id="ynw-O3-JGH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扣减额:1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-Mk-m9e">
+                        <rect key="frame" x="154" y="11" width="129" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="129" id="Uge-QL-b4o"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.53333333329999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="Swd-GI-kX7">
+                        <rect key="frame" x="286" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="JzU-Hm-rlZ"/>
+                            <constraint firstAttribute="height" constant="22" id="M5t-9N-g8B"/>
+                        </constraints>
+                    </imageView>
+                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-Zn-Wxb">
+                        <rect key="frame" x="10" y="43" width="300" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="W4d-Zn-Wxb" firstAttribute="top" secondItem="Swd-GI-kX7" secondAttribute="bottom" constant="10" id="3t0-IO-Vni"/>
+                    <constraint firstAttribute="trailing" secondItem="fh6-Vg-VHS" secondAttribute="trailing" id="6Xu-mz-zB6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pxI-Mk-m9e" secondAttribute="trailing" constant="29" id="Aag-PW-3gC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Swd-GI-kX7" secondAttribute="trailing" constant="4" id="E4v-bL-mlJ"/>
+                    <constraint firstItem="fh6-Vg-VHS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="E8O-Ss-Szp"/>
+                    <constraint firstItem="pxI-Mk-m9e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="FQg-be-fsT"/>
+                    <constraint firstItem="W4d-Zn-Wxb" firstAttribute="top" secondItem="pxI-Mk-m9e" secondAttribute="bottom" constant="11" id="ajW-JL-6YJ"/>
+                    <constraint firstAttribute="bottom" secondItem="W4d-Zn-Wxb" secondAttribute="bottom" constant="-1" id="e4a-xy-Z9o"/>
+                    <constraint firstItem="DGQ-As-kGu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="ffF-WV-U84"/>
+                    <constraint firstAttribute="bottom" secondItem="fh6-Vg-VHS" secondAttribute="bottom" id="gD2-At-d78"/>
+                    <constraint firstAttribute="trailing" secondItem="W4d-Zn-Wxb" secondAttribute="trailing" constant="10" id="lYN-2h-T41"/>
+                    <constraint firstItem="W4d-Zn-Wxb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="mee-4d-EJx"/>
+                    <constraint firstItem="fh6-Vg-VHS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sTt-ns-cLS"/>
+                    <constraint firstItem="Swd-GI-kX7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="yOW-vd-nh6"/>
+                    <constraint firstItem="DGQ-As-kGu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="z2G-0K-W4i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="lblName" destination="DGQ-As-kGu" id="hDu-PR-Aok"/>
+                <outlet property="lblVal" destination="pxI-Mk-m9e" id="rUO-cQ-VnZ"/>
+                <outlet property="lblVarRightConstraint" destination="Aag-PW-3gC" id="Ux0-Yc-6eZ"/>
+                <outlet property="nextIcon" destination="Swd-GI-kX7" id="bDb-Nr-jMb"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_next_down.png" width="44" height="44"/>
+    </resources>
+</document>

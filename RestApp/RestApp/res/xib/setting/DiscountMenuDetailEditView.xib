@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscountMenuDetailEditView">
+            <connections>
+                <outlet property="dhListPanel1" destination="CPP-6y-TNC" id="L5E-IH-Xlh"/>
+                <outlet property="settingBtn" destination="zVL-9H-Qae" id="QRX-yK-7HV"/>
+                <outlet property="titleDiv" destination="m5u-Sq-1aN" id="Trt-Bh-gGb"/>
+                <outlet property="view" destination="mol-ew-F2P" id="HCq-2c-zOX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mol-ew-F2P">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5u-Sq-1aN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="fbD-ur-0Ak"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPP-6y-TNC" customClass="MySelectMultiMenuListPanel">
+                    <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zVL-9H-Qae">
+                    <rect key="frame" x="295" y="651" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="QGY-Ky-mWJ"/>
+                        <constraint firstAttribute="width" constant="80" id="o6p-jI-tiz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                    <state key="normal" backgroundImage="ico_rnd_red2.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="settingBtnClick:" destination="-1" eventType="touchUpInside" id="P0G-Yc-zTn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="m5u-Sq-1aN" firstAttribute="leading" secondItem="mol-ew-F2P" secondAttribute="leading" id="2Ha-2U-nGj"/>
+                <constraint firstItem="CPP-6y-TNC" firstAttribute="top" secondItem="m5u-Sq-1aN" secondAttribute="bottom" id="6PN-iN-NxA"/>
+                <constraint firstItem="CPP-6y-TNC" firstAttribute="leading" secondItem="mol-ew-F2P" secondAttribute="leading" id="HaH-5U-4tj"/>
+                <constraint firstAttribute="trailing" secondItem="m5u-Sq-1aN" secondAttribute="trailing" id="Zdi-mR-vSp"/>
+                <constraint firstAttribute="bottom" secondItem="zVL-9H-Qae" secondAttribute="bottom" constant="-64" id="bpT-BF-OkC"/>
+                <constraint firstItem="m5u-Sq-1aN" firstAttribute="top" secondItem="mol-ew-F2P" secondAttribute="top" id="jTJ-QL-ENM"/>
+                <constraint firstAttribute="bottom" secondItem="CPP-6y-TNC" secondAttribute="bottom" constant="-64" id="nb3-YS-XHu"/>
+                <constraint firstAttribute="trailing" secondItem="CPP-6y-TNC" secondAttribute="trailing" id="qWG-Xn-orZ"/>
+                <constraint firstAttribute="trailing" secondItem="zVL-9H-Qae" secondAttribute="trailing" id="tLg-ur-zaW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="103" y="-246"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_rnd_red2.png" width="108" height="108"/>
+    </resources>
+</document>

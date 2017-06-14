@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<device id="retina4_0" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<objects>
+<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="autoModify">
+<connections>
+<outlet property="autoday" destination="ILf-tc-zuw" id="1mh-J5-o3X"/>
+<outlet property="billPer" destination="qtX-h3-gPv" id="6Va-mR-EVf"/>
+<outlet property="billType" destination="vIA-pr-zYY" id="5OA-cD-StI"/>
+<outlet property="container" destination="jRF-1T-0ao" id="HTl-Jz-xNr"/>
+<outlet property="doauto" destination="L89-2e-hX1" id="a93-I8-M0R"/>
+<outlet property="scrollView" destination="uzx-2z-em4" id="y6m-T4-EuH"/>
+<outlet property="titleDiv" destination="fh1-RM-Ztk" id="mUV-qP-RVd"/>
+<outlet property="view" destination="fae-1Z-lRK" id="Khy-aP-cN4"/>
+</connections>
+</placeholder>
+<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fae-1Z-lRK">
+<rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<view alpha="0.69999998807907104" contentMode="scaleToFill" misplaced="YES" id="tF6-OQ-NRy">
+<rect key="frame" x="0.0" y="0.0" width="320" height="632"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+<view contentMode="scaleToFill" id="fh1-RM-Ztk">
+<rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+<color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+<scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="uzx-2z-em4">
+<rect key="frame" x="0.0" y="64" width="320" height="568"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<view contentMode="scaleToFill" misplaced="YES" id="jRF-1T-0ao">
+<rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<view contentMode="scaleToFill" id="L89-2e-hX1" customClass="EditItemRadio">
+<rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+<view contentMode="scaleToFill" id="ILf-tc-zuw" customClass="EditItemList">
+<rect key="frame" x="0.0" y="55" width="320" height="48"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+<view contentMode="scaleToFill" id="vIA-pr-zYY" customClass="EditItemList">
+<rect key="frame" x="0.0" y="92" width="320" height="48"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+<view contentMode="scaleToFill" id="qtX-h3-gPv" customClass="EditItemList">
+<rect key="frame" x="0.0" y="141" width="320" height="48"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+</subviews>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+</subviews>
+</scrollView>
+</subviews>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+<point key="canvasLocation" x="502" y="493"/>
+</view>
+</objects>
+<simulatedMetricsContainer key="defaultSimulatedMetrics">
+<simulatedStatusBarMetrics key="statusBar"/>
+<simulatedOrientationMetrics key="orientation"/>
+<simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+</simulatedMetricsContainer>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<objects>
+<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChainBusinessView">
+<connections>
+<outlet property="container" destination="tpE-8b-9eq" id="aZQ-wz-Vl8"/>
+<outlet property="txtAddreess" destination="bTy-53-tik" id="Yex-9I-GIw"/>
+<outlet property="txtLinker" destination="fQg-wG-7dn" id="akV-L2-dp1"/>
+<outlet property="txtMobile" destination="oGm-I8-u9Q" id="6uR-Q9-S3G"/>
+<outlet property="txtShopName" destination="xVc-25-gUM" id="P5Q-Ql-HWf"/>
+<outlet property="view" destination="17U-jh-6Go" id="p9p-tM-ekc"/>
+</connections>
+</placeholder>
+<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<view autoresizesSubviews="NO" contentMode="scaleToFill" id="17U-jh-6Go">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<subviews>
+<view autoresizesSubviews="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saf-sl-TEK">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpE-8b-9eq">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<subviews>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVc-25-gUM" customClass="EditItemText">
+<rect key="frame" x="0.0" y="6" width="375" height="48"/>
+<color key="backgroundColor" red="1" green="1" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="height" constant="48" id="8VH-kR-Jhj"/>
+</constraints>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-wG-7dn" customClass="EditItemText">
+<rect key="frame" x="0.0" y="57" width="375" height="48"/>
+<color key="backgroundColor" red="1" green="1" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="height" constant="48" id="OJC-YZ-ju3"/>
+</constraints>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGm-I8-u9Q" customClass="EditItemText">
+<rect key="frame" x="0.0" y="108" width="375" height="48"/>
+<color key="backgroundColor" red="0.28803357759999998" green="1" blue="0.3929422246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="height" constant="48" id="4Qx-EI-te8"/>
+</constraints>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTy-53-tik" customClass="EditItemText">
+<rect key="frame" x="0.0" y="159" width="375" height="48"/>
+<color key="backgroundColor" red="0.28803357759999998" green="1" blue="0.3929422246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="height" constant="48" id="uxR-c2-pbm"/>
+</constraints>
+</view>
+</subviews>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="trailing" secondItem="fQg-wG-7dn" secondAttribute="trailing" id="0Re-H0-Ojm"/>
+<constraint firstItem="oGm-I8-u9Q" firstAttribute="top" secondItem="fQg-wG-7dn" secondAttribute="bottom" constant="3" id="2C4-TS-iuS"/>
+<constraint firstItem="fQg-wG-7dn" firstAttribute="leading" secondItem="tpE-8b-9eq" secondAttribute="leading" id="4jE-WE-Il6"/>
+<constraint firstItem="bTy-53-tik" firstAttribute="top" secondItem="oGm-I8-u9Q" secondAttribute="bottom" constant="3" id="5ek-eD-Dqw"/>
+<constraint firstAttribute="trailing" secondItem="bTy-53-tik" secondAttribute="trailing" id="BTC-nz-DZy"/>
+<constraint firstItem="bTy-53-tik" firstAttribute="leading" secondItem="tpE-8b-9eq" secondAttribute="leading" id="Dgy-XQ-A48"/>
+<constraint firstItem="xVc-25-gUM" firstAttribute="leading" secondItem="tpE-8b-9eq" secondAttribute="leading" id="F3o-Uq-UvB"/>
+<constraint firstItem="xVc-25-gUM" firstAttribute="top" secondItem="tpE-8b-9eq" secondAttribute="top" constant="6" id="IQD-0b-k76"/>
+<constraint firstItem="fQg-wG-7dn" firstAttribute="top" secondItem="xVc-25-gUM" secondAttribute="bottom" constant="3" id="NAk-B1-PzZ"/>
+<constraint firstAttribute="trailing" secondItem="oGm-I8-u9Q" secondAttribute="trailing" id="RRa-8S-Hc7"/>
+<constraint firstItem="oGm-I8-u9Q" firstAttribute="leading" secondItem="tpE-8b-9eq" secondAttribute="leading" id="jam-dF-g8W"/>
+<constraint firstAttribute="trailing" secondItem="xVc-25-gUM" secondAttribute="trailing" id="nyN-yJ-Cxd"/>
+</constraints>
+</view>
+</subviews>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="bottom" secondItem="tpE-8b-9eq" secondAttribute="bottom" id="CYE-23-Ls2"/>
+<constraint firstItem="tpE-8b-9eq" firstAttribute="leading" secondItem="17U-jh-6Go" secondAttribute="leading" id="Htz-Gd-OKu"/>
+<constraint firstItem="saf-sl-TEK" firstAttribute="top" secondItem="17U-jh-6Go" secondAttribute="top" id="W3M-vj-cgf"/>
+<constraint firstItem="tpE-8b-9eq" firstAttribute="top" secondItem="17U-jh-6Go" secondAttribute="top" id="Y4P-eC-Xf1"/>
+<constraint firstAttribute="trailing" secondItem="tpE-8b-9eq" secondAttribute="trailing" id="ZsB-RR-Esr"/>
+<constraint firstAttribute="trailing" secondItem="saf-sl-TEK" secondAttribute="trailing" id="lgg-cl-une"/>
+<constraint firstItem="saf-sl-TEK" firstAttribute="leading" secondItem="17U-jh-6Go" secondAttribute="leading" id="m5j-fq-4QZ"/>
+<constraint firstAttribute="bottom" secondItem="saf-sl-TEK" secondAttribute="bottom" id="w7x-9b-QNP"/>
+</constraints>
+<nil key="simulatedStatusBarMetrics"/>
+<point key="canvasLocation" x="33" y="66"/>
+</view>
+</objects>
+</document>
