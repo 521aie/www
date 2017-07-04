@@ -16,6 +16,7 @@
 #import "PropertyList.h"
 #import "UIView+Sizes.h"
 #import "AlertBox.h"
+#import "UIImage+TDFQRCode.h"
 #define MENU_CODE_EMAIL @"MENU_CODE_EMAIL"
 @interface MenuCodeView ()
 @property (nonatomic, assign)MenuKind menuKind;
@@ -123,17 +124,18 @@
 
 -(UIImage *)menuCodeImage:(NSDictionary *)dict{
 
-    UIImage *img = [QRCodeGenerator qrImageForString:[dict objectForKey:@"shortUrl"] imageSize:self.imgCode.bounds.size.width];
-    CGSize finalSize=CGSizeMake(400, 400);
+//    UIImage *img = [QRCodeGenerator qrImageForString:[dict objectForKey:@"shortUrl"] imageSize:self.imgCode.bounds.size.width];
+    UIImage *img = [UIImage creatNonInterpolatedUIImageFormCIImage:[UIImage creatCIQRCodeImage:dict[@"shortUrl"]] withSize:self.imgCode.bounds.size.width];
+    CGSize finalSize=CGSizeMake(200, 200);
     UIGraphicsBeginImageContext(finalSize);
-    [img drawInRect:CGRectMake(25,25,350,350)];
+    [img drawInRect:CGRectMake(25,25,150,150)];
     NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
     paragraphStyle.alignment = NSTextAlignmentCenter;
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     
     NSString *menuName = self.menuKind == Kind_Menu?[dict objectForKey:@"menuName"]
 :[NSString stringWithFormat:NSLocalizedString(@"%@(套餐)", nil),[dict objectForKey:@"menuName"]];
-    [menuName drawInRect:CGRectMake(0, 10, 400, 40) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:25],NSParagraphStyleAttributeName:paragraphStyle}];
+    [menuName drawInRect:CGRectMake(0, 5, 200, 200) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15],NSParagraphStyleAttributeName:paragraphStyle}];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
 
     UIGraphicsEndImageContext();

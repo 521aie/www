@@ -83,7 +83,6 @@
         label.textAlignment = NSTextAlignmentCenter;
         label.bounds = CGRectMake(0, 0, 15, 9);
         label.font = [UIFont systemFontOfSize:9];
-        label.textColor = [UIColor blackColor];
         CGFloat labelCenterY = (self.radius * 0.75) *sin(([_dataArray[i] floatValue] / total) * M_PI + startAngle) + self.radius;
         CGFloat labelCenterX = (self.radius * 0.75) *cos(([_dataArray[i] floatValue] / total) * M_PI + startAngle) + self.radius;
         label.center = CGPointMake(labelCenterX, labelCenterY);

@@ -53,10 +53,10 @@ static NSString *kTDFBossAppScheme = @"tdf-manager";
     } else if ([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
         return [[TDFMediator sharedInstance] TDFMediator_reportWebViewControllerWithURL:urlString];
     } else {
-        return @(NO);
+        return nil;
     }
     
-    return @(NO);
+    return nil;
 }
 
 

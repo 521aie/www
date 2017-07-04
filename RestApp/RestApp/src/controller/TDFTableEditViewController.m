@@ -469,9 +469,8 @@
     } else {
         if (self.nameItem.textValue.length > 0)
         {
-            unsigned long encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-            if ([self.nameItem.textValue dataUsingEncoding:encode].length > 12) {
-                *error = [NSError errorWithDomain:@"com.2dfire.form.empty" code:4004 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"桌位名称不能超过12个字符!", nil)}];
+            if (self.nameItem.textValue.length > 12) {
+                *error = [NSError errorWithDomain:@"com.2dfire.form.empty" code:4004 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"桌位名称不能超过12个字!", nil)}];
             }else{
                 self.tempSeat = [self.seat copy];
                 self.tempSeat.areaId = self.areaPickerItem.requestValue;

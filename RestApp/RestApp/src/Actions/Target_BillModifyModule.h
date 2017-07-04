@@ -17,4 +17,11 @@
 
 ///自动优化
 -(UIViewController *)Action_nativeAutoModifyViewController:(NSDictionary *)params;
+
+//收银数据优化
+- (UIViewController *)Action_nativeCashierDataOptimizeController:(NSDictionary *)params;
+
+//报表数据优化
+- (UIViewController *)Action_nativeTableDataOptimizeController:(NSDictionary *)params;
+
 @end

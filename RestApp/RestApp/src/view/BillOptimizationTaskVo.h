@@ -20,4 +20,8 @@
 @property (nonatomic, assign) int billQuantityPercent;//账单数量百分比
 @property (nonatomic, assign) long createTime;
 @property (nonatomic, assign) int dateOffSet;//自动隐藏的日期偏移
+
+
+
+
 @end

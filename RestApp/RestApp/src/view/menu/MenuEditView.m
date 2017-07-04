@@ -225,6 +225,7 @@
     [self.goodPic initLabel:NSLocalizedString(@"商品图片", nil) delegate:self];
     self.goodPic.model = 1;
     [self.goodPic initImgList:nil];
+    self.goodPic.allowGif = YES;
     [UIHelper refreshPos:self.container scrollview:self.scrollView];
     [UIHelper clearColor:self.container];
     
@@ -1594,14 +1595,38 @@
     }
 }
 
--(void)getPicWithImage:(UIImage *)imageData target:(EditImageBox *)target
+- (void)imageBox:(EditImageBox *)box finishSelectGif:(NSData *)gif target:(EditImageBox *)target {
+    self.imagedata = gif;
+    self.boxdata = target;
+    self.isupdateMenu = YES;
+    if ([UIHelper currChange:self.container]) {
+        [self presave];
+    } else {
+        if ([self isValid]) {   //解决原先版本的商品标签未设置的BUG
+            [self getPicWithImage:gif target:target];
+        }
+    }
+}
+
+-(void)getPicWithImage:(id)imageData target:(EditImageBox *)target
 {
     NSString *entityId = [[Platform Instance] getkey:ENTITY_ID];
-    NSString *filePath = [NSString stringWithFormat:@"%@/menu/%@.png", entityId, [NSString getUniqueStrByUUID]];
-    self.imgFilePathTemp = filePath;
     
     [self showProgressHudWithText:NSLocalizedString(@"正在上传", nil)];
-    [systemService uploadImage:filePath image:imageData width:1280 heigth:1280 Target:self Callback:@selector(uploadImgFinsh:)];
+    if ([imageData isKindOfClass:[UIImage class]]) {
+        NSString *filePath = [NSString stringWithFormat:@"%@/menu/%@.png", entityId, [NSString getUniqueStrByUUID]];
+        self.imgFilePathTemp = filePath;
+        [systemService uploadImage:filePath image:imageData width:1280 heigth:1280 Target:self Callback:@selector(uploadImgFinsh:)];
+    } else {
+        NSString *filePath = [NSString stringWithFormat:@"%@/menu/%@.gif", entityId, [NSString getUniqueStrByUUID]];
+        self.imgFilePathTemp = filePath;
+        NSMutableDictionary *param = @{}.mutableCopy;
+        param[@"path"] = filePath;
+        
+        NSString *serverPath = [Platform Instance].fileServerPath;
+        NSString *url = [NSString stringWithFormat:FILE_SERVER_URL, serverPath];
+        [systemService basePostFile:url param:param NSData:imageData target:self callback:@selector(uploadImgFinsh:)];
+    }
 }
 //移除图片
 - (void)startRemoveImage:(id<IImageData>)imageData target:(EditImageBox *)targat

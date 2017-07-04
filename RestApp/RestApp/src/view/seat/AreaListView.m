@@ -24,6 +24,7 @@
 #import "UIViewController+HUD.h"
 #import "TDFMediator+SeatModule.h"
 #import "TDFMediator+SettingModule.h"
+#import "TDFRootViewController+FooterButton.h"
 
 @implementation AreaListView
 
@@ -43,8 +44,9 @@
     [self initNotification];
     NSArray* arr=[[NSArray alloc] initWithObjects:@"add",@"del",@"sort", nil];
     [self initDelegate:self event:@"area" title:NSLocalizedString(@"区域", nil) foots:arr];
-    self.footView.frame = CGRectMake(0,SCREEN_HEIGHT-15+64, SCREEN_WIDTH, 60);
-    self.footView.view.frame = CGRectMake(0,0, SCREEN_WIDTH, 60);
+
+    self.footView.hidden = YES;
+    [self generateFooterButtonWithTypes:TDFFooterButtonTypeAdd | TDFFooterButtonTypeSort | TDFFooterButtonTypeHelp];
 
     [self configLeftNavigationBar:Head_ICON_CANCEL leftButtonName:NSLocalizedString(@"关闭", nil)];
     [self loadAreas];
@@ -83,6 +85,19 @@
 {
     if ([event isEqualToString:@"sort"]) {
     }
+}
+
+- (void)footerAddButtonAction:(UIButton *)sender {
+    [self showAddEvent:nil];
+}
+
+- (void)footerHelpButtonAction:(UIButton *)sender {
+    [HelpDialog show:@"seatarea"];
+}
+
+- (void)footerSortButtonAction:(UIButton *)sender {
+    UIViewController *viewController = [[TDFMediator sharedInstance] TDFMediator_TableEditView:self event:@"sort"  action:ACTION_CONSTANTS_SORT title:NSLocalizedString(@"排序", nil) dataTemps:[self.datas mutableCopy] error:nil needHideOldNavigationBar:YES];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)showAddEvent:(NSString*)event

@@ -508,7 +508,7 @@ static MainModule *instance;
     if (self.billModifyModule) {
        self.billModifyModule.view.hidden = NO;
     }else {
-        self.billModifyModule = [[BillModifyModule alloc] initWithNibName:@"BillModifyModule"bundle:nil parent:self];
+        self.billModifyModule = [[BillModifyModule alloc] init];
         [self.mainContainer addSubview:self.billModifyModule.view];
     }
 //    [self.billModifyModule loadDatas];

@@ -45,7 +45,7 @@
     [addBtn addTarget:self action:@selector(showAddEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addBtn];
     self.footView.hidden = YES;
-    self.titleBox.title = @"单位库管理";
+    self.title = @"单位库管理";
     
 //    NSArray* arr=[[NSArray alloc] initWithObjects:@"add", nil];
     self.defaultList=[DEFAULT_MENU_UNITS componentsSeparatedByString:@"|"];

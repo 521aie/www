@@ -10,9 +10,21 @@
 #import "TDFFunctionKindVo.h"
 #import "TDFNavigateView.h"
 #import "TDFFunctionVo.h"
-
+#import "Masonry.h"
+#import "TDFLeftHandSectionHeaderView.h"
 
 #define sectionHeaderHeight 20;
+
+@implementation TDFNavigateSectionModel
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"forwardCells" : [TDFHomeGroupForwardChildCellModel class]
+             };
+}
+
+@end
+
 @interface TDFNavigateView ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 {
     BOOL _searchStatus;
@@ -55,7 +67,7 @@
 {
     if (!_footerView) {
         _footerView = [UIView new];
-        for (int i = 0; i < 2; i ++) {
+        for (int i = 0; i < 1; i ++) {
             UIControl *controll = [[UIControl alloc] initWithFrame:CGRectMake(i * self.bounds.size.width/2.0, 0, self.bounds.size.width/2.0, 49)];
             controll.tag = 20 + i;
             [controll addTarget:self action:@selector(footerClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -261,17 +273,40 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    [self initTableViewSectionViewWith:section];
-    if (section < self.headerViewArray.count) {
-        UIView *sectionView = self.headerViewArray[section];
-        UILabel *label = [sectionView viewWithTag:10];
-        if (section < _searchStatus? self.searchDataArray.count:self.dataArray.count) {
-            TDFFunctionKindVo *function = _searchStatus? self.searchDataArray[section]:self.dataArray[section];
-            label.text = function.name;
-        }
-        return sectionView;
+//    [self initTableViewSectionViewWith:section];
+//    if (section < self.headerViewArray.count) {
+//        UIView *sectionView = self.headerViewArray[section];
+//        UILabel *label = [sectionView viewWithTag:10];
+//        if (section < _searchStatus? self.searchDataArray.count:self.dataArray.count) {
+//            TDFNavigateSectionModel *sectionModel = _searchStatus? self.searchDataArray[section]:self.dataArray[section];
+//            label.text = sectionModel.title;
+//            
+//            if (sectionModel.index == 2) {
+//                UIButton *button = [sectionView viewWithTag:110];
+//                [button setTitle:sectionModel.clickTitle forState:UIControlStateNormal];
+//            }
+//        }
+//        return sectionView;
+//    }
+//    return nil;
+    
+    TDFLeftHandSectionHeaderView *headerView = [[TDFLeftHandSectionHeaderView alloc] initWithFrame:CGRectZero];
+    
+    if (section < _searchStatus? self.searchDataArray.count:self.dataArray.count) {
+        TDFNavigateSectionModel *sectionModel = _searchStatus? self.searchDataArray[section]:self.dataArray[section];
+        
+        [headerView configureViewWithTitle:sectionModel.title more:sectionModel.clickTitle clickUrl:sectionModel.clickUrl];
+        
+        @weakify(self);
+        headerView.clickedBlock = ^(NSString *clickUrl) {
+            @strongify(self);
+            if (self.delegate) {
+                [self.delegate goNextWithUrlString:clickUrl];
+            }
+        };
     }
-    return nil;
+
+    return headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -303,6 +338,20 @@
         make.bottom.equalTo(sectionView.mas_bottom);
         make.height.equalTo(@1);
     }];
+    
+    UIButton *moreButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    [moreButton addTarget:self action:@selector(moreButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    moreButton.titleLabel.font = [UIFont systemFontOfSize:11];
+    [moreButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    moreButton.tag = 110;
+    
+    [sectionView addSubview:moreButton];
+    [moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(sectionView.mas_right).offset(-10);
+        make.bottom.equalTo(sectionView.mas_bottom).with.offset(-10);
+        make.height.equalTo(@11);
+    }];
+    
     [self.headerViewArray addObject:sectionView];
 }
 
@@ -314,8 +363,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section < _searchStatus? self.searchDataArray.count:self.dataArray.count) {
-        TDFFunctionKindVo *function = _searchStatus? self.searchDataArray[section]:self.dataArray[section];
-        return function.functionVoList.count;
+        TDFNavigateSectionModel *sectionModel = _searchStatus? self.searchDataArray[section]:self.dataArray[section];
+        return sectionModel.forwardCells.count;
     }
     return 0;
 }
@@ -331,24 +380,56 @@
         cell.selectedBackgroundView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.font = [UIFont systemFontOfSize:14.];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+        label.font = [UIFont systemFontOfSize:10];
+        label.tag = 110;
+        label.hidden = YES;
+        label.textColor = [UIColor whiteColor];
+        
         [cell.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(cell.textLabel.mas_left).offset(-8);
             make.centerY.equalTo(cell.contentView.mas_centerY);
             make.width.equalTo(@18);
             make.height.equalTo(@18);
         }];
+        
+        [cell addSubview:label];
+        [label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).offset(20);
+            make.centerY.equalTo(cell.contentView.mas_centerY);
+            make.width.equalTo(@30);
+            make.height.equalTo(@14);
+        }];
+        
         [cell.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell.contentView.mas_left).offset(55);
             make.centerY.equalTo(cell.contentView.mas_centerY);
         }];
     }
     if (indexPath.section < _searchStatus? self.searchDataArray.count:self.dataArray.count) {
-        TDFFunctionKindVo *function = _searchStatus? self.searchDataArray[indexPath.section]:self.dataArray[indexPath.section];
-        if (indexPath.row < function.functionVoList.count) {
-            TDFFunctionVo *functionModel = function.functionVoList[indexPath.row];
-            cell.textLabel.text = functionModel.actionName;
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:functionModel.iconImageUrl.sUrl] placeholderImage:[UIImage imageNamed:@"ico_leftsliderplaceImage.png"] options:SDWebImageRefreshCached];
-            if (functionModel.isLock) {
+        TDFNavigateSectionModel *sectionModel = _searchStatus? self.searchDataArray[indexPath.section]:self.dataArray[indexPath.section];
+        if (indexPath.row < sectionModel.forwardCells.count) {
+            TDFHomeGroupForwardChildCellModel *childModel = sectionModel.forwardCells[indexPath.row];
+            cell.textLabel.text = childModel.title;
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:childModel.iconUrl] placeholderImage:[UIImage imageNamed:@"ico_leftsliderplaceImage.png"] options:SDWebImageRefreshCached];
+            
+            UILabel *leftLabel = (UILabel *)[cell viewWithTag:110];
+            
+            if (sectionModel.index == 1) {
+                leftLabel.text = @"[指南]";
+                leftLabel.hidden = NO;
+                cell.imageView.hidden = YES;
+            } else if (sectionModel.index == 2) {
+                leftLabel.text = @"[问题]";
+                leftLabel.hidden = NO;
+                cell.imageView.hidden = YES;
+            } else {
+                leftLabel.hidden = YES;
+                cell.imageView.hidden = NO;
+            }
+            
+            if (childModel.isLock) {
                 UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ico_pw_fw.png"]];
                 imageView.bounds = CGRectMake(0, 0, 12, 12);
                 cell.accessoryView = imageView;
@@ -367,15 +448,25 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES]; 
     [_searchBar endEditing:YES];
     if (indexPath.section < _searchStatus? self.searchDataArray.count:self.dataArray.count) {
-        TDFFunctionKindVo *function = _searchStatus? self.searchDataArray[indexPath.section]:self.dataArray[indexPath.section];
-        if (indexPath.row < function.functionVoList.count) {
-            TDFFunctionVo *functionModel = function.functionVoList[indexPath.row];
-            if (self.delegate && [self.delegate respondsToSelector:@selector(switchToViewController:)]) {
-                [self.delegate switchToViewController:functionModel];
+        TDFNavigateSectionModel *sectionModel = _searchStatus? self.searchDataArray[indexPath.section]:self.dataArray[indexPath.section];
+        if (indexPath.row < sectionModel.forwardCells.count) {
+            TDFHomeGroupForwardChildCellModel *childModel = sectionModel.forwardCells[indexPath.row];
+            if (self.delegate) {
+                if (sectionModel.index == 0) {
+                    [self.delegate switchToViewControllerWithCode:childModel.actionCode isLock:childModel.isLock actionName:childModel.title];
+                } else if (sectionModel.index == 1 || sectionModel.index == 2) {
+                    [self.delegate goNextWithUrlString:childModel.clickUrl];
+                }
+
             }
         }
     }
 
+}
+
+- (void)moreButtonClicked:(UIButton *)button
+{
+    
 }
 
 #pragma mark --UIScrollViewDelegate
@@ -415,23 +506,6 @@
     if ([self.delegate respondsToSelector:@selector(navigateView:didSearchWithKeyword:)]) {
         [self.delegate navigateView:self didSearchWithKeyword:searchBar.text];
     }
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"actionName contains %@",searchBar.text];
-//    if (self.searchDataArray) {
-//        [self.searchDataArray removeAllObjects];
-//    }else
-//    {
-//        self.searchDataArray = [NSMutableArray array];
-//    }
-//    for (TDFFunctionKindVo *kindVo in self.allSearchDataArray) {
-//        NSArray *array = [kindVo.functionVoList filteredArrayUsingPredicate:predicate];
-//        if (array.count > 0) {
-//            TDFFunctionKindVo *temp = [kindVo copy];
-//            temp.functionVoList = array;
-//            [self.searchDataArray addObject:temp];
-//        }
-//    }
-//    
-//    [self.tableView reloadData];
 }
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
     searchBar.showsCancelButton = YES;

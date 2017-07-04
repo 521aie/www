@@ -8,6 +8,7 @@
 
 #import "TDFSunOfKitchenViewController.h"
 #import "UIColor+Hex.h"
+#import "AFNetworkReachabilityManager.h"
 #import "TDFSunOfKitchenVideoController.h"
 #import "TDFSunOfKitchenCell.h"
 #import "TDFSunofKitchenService.h"

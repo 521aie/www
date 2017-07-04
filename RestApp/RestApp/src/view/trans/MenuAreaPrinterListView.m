@@ -127,7 +127,7 @@
     cell.lblVal.text=[item obtainItemValue];
     cell.lblVal.hidden=tableView.editing;
     cell.img.hidden=tableView.editing;
-    [cell initSubViewsWithLeft:13 right:130];
+    [cell initSubViewsWithLeft:13 right:SCREEN_WIDTH-170];
     cell.backgroundColor=[UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

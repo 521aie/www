@@ -48,6 +48,8 @@
 		2114FB841E4D9BD900544888 /* TDFLimitedShopSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2114FB831E4D9BD900544888 /* TDFLimitedShopSelectViewController.m */; };
 		211A3D4B1E46C48E007C136D /* TDFWechatNotificationSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 211A3D4A1E46C48E007C136D /* TDFWechatNotificationSettingViewController.m */; };
 		2145F01D1E9CCD470015D04A /* TDFLeftMenuDisplayAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2145F01C1E9CCD470015D04A /* TDFLeftMenuDisplayAPI.m */; };
+		219F57981EF21C2300814922 /* TDFHomeBossCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F57971EF21C2300814922 /* TDFHomeBossCenterView.m */; };
+		219F579C1EF2A25700814922 /* TDFLeftHandSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F579B1EF2A25700814922 /* TDFLeftHandSectionHeaderView.m */; };
 		21B49E141ED6A971001536E2 /* TDFHealthCheckNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B49E131ED6A971001536E2 /* TDFHealthCheckNavigationView.m */; };
 		21B49E171ED6BE03001536E2 /* TDFHealthCheckHistoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B49E161ED6BE03001536E2 /* TDFHealthCheckHistoryDetailViewController.m */; };
 		21B49E1A1ED6BFAB001536E2 /* TDFHealthCheckHistoryDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B49E191ED6BFAB001536E2 /* TDFHealthCheckHistoryDetailCell.m */; };
@@ -92,6 +94,12 @@
 		38432B401E7FD160002BDBFD /* TDFOAAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38432B3F1E7FD160002BDBFD /* TDFOAAuthViewController.m */; };
 		3879E78B1E84FE490051B05B /* TDFSenderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3879E78A1E84FE490051B05B /* TDFSenderListViewController.m */; };
 		3884DA0B1E73EF4500982AC9 /* TDFSwitchBottomSubtitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884DA0A1E73EF4500982AC9 /* TDFSwitchBottomSubtitleTableViewCell.m */; };
+		3A3A3ECD1EEEC362001EB704 /* TDFCashierDataOptimizationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A3ECC1EEEC362001EB704 /* TDFCashierDataOptimizationController.m */; };
+		3A83CE611EEF967F00BC11DA /* TDFTableDataOptimizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CE601EEF967F00BC11DA /* TDFTableDataOptimizeController.m */; };
+		3A83CE641EEFE78800BC11DA /* TDFTableDataOptimizePickerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CE631EEFE78800BC11DA /* TDFTableDataOptimizePickerService.m */; };
+		3AC4396A1EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC439691EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.m */; };
+		3AD8ACF11EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8ACF01EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.m */; };
+		3AEA40011EEE84200082F8AD /* BillModifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA40001EEE84200082F8AD /* BillModifyCell.m */; };
 		3B554E3A1AE25B4D008B850D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B554E391AE25B4D008B850D /* CoreMedia.framework */; };
 		3B554E3C1AE25B5D008B850D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B554E3B1AE25B5D008B850D /* CoreVideo.framework */; };
 		3B554E3E1AE25B6B008B850D /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B554E3D1AE25B6B008B850D /* libiconv.dylib */; };
@@ -192,7 +200,6 @@
 		6C9E11621E6ED954008067CE /* beep.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E03F81E6ED950008067CE /* beep.ogg */; };
 		6C9E11B71E6ED954008067CE /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E044D1E6ED950008067CE /* main.js */; };
 		6C9E11B91E6ED954008067CE /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E044F1E6ED950008067CE /* unicode_to_hanyu_pinyin.txt */; };
-		6C9E11BB1E6ED954008067CE /* BillModifyModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E04521E6ED950008067CE /* BillModifyModule.xib */; };
 		6C9E11BD1E6ED954008067CE /* ChainBusDetailBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E04551E6ED950008067CE /* ChainBusDetailBoxView.xib */; };
 		6C9E11BF1E6ED954008067CE /* NavigateLeftItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E04581E6ED951008067CE /* NavigateLeftItem.xib */; };
 		6C9E11C01E6ED954008067CE /* NavigateRightItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E04591E6ED951008067CE /* NavigateRightItem.xib */; };
@@ -402,7 +409,6 @@
 		6C9E12B41E6ED954008067CE /* BatchSelectPanel5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E057A1E6ED951008067CE /* BatchSelectPanel5.xib */; };
 		6C9E12B71E6ED954008067CE /* PaperSampleListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E057D1E6ED951008067CE /* PaperSampleListView.xib */; };
 		6C9E12B81E6ED954008067CE /* PaperSampleListView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E057E1E6ED951008067CE /* PaperSampleListView5.xib */; };
-		6C9E12BA1E6ED954008067CE /* BillModifyModule5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E05811E6ED951008067CE /* BillModifyModule5.xib */; };
 		6C9E12BC1E6ED954008067CE /* ChainBusinessDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E05841E6ED951008067CE /* ChainBusinessDetailView.xib */; };
 		6C9E12BD1E6ED954008067CE /* StoresManagerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E05851E6ED951008067CE /* StoresManagerView.xib */; };
 		6C9E12BE1E6ED954008067CE /* StoresView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9E05861E6ED951008067CE /* StoresView.xib */; };
@@ -1435,7 +1441,6 @@
 		7480D6971EEA526500985D88 /* PaymentNoteView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D6961EEA526500985D88 /* PaymentNoteView5.xib */; };
 		7480D6991EEA527600985D88 /* RawUnitEditView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D6981EEA527600985D88 /* RawUnitEditView5.xib */; };
 		7480D69B1EEA528900985D88 /* AreaEditView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D69A1EEA528900985D88 /* AreaEditView5.xib */; };
-		7480D69D1EEA52CA00985D88 /* SampleListView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D69C1EEA52CA00985D88 /* SampleListView5.xib */; };
 		7480D69F1EEA52DE00985D88 /* OptionSelectView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D69E1EEA52DE00985D88 /* OptionSelectView5.xib */; };
 		7480D6A11EEA540200985D88 /* MenuCodeView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D6A01EEA540200985D88 /* MenuCodeView5.xib */; };
 		7480D6A31EEA541700985D88 /* MenuMakeEditView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480D6A21EEA541700985D88 /* MenuMakeEditView5.xib */; };
@@ -1460,9 +1465,6 @@
 		BE67DE4C1EC593C60047C07A /* TDFImaginaryLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67DE4B1EC593C60047C07A /* TDFImaginaryLineView.m */; };
 		BE67DF411EC9573A0047C07A /* TDFWXOfficialAccountActionPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67DF401EC9573A0047C07A /* TDFWXOfficialAccountActionPath.m */; };
 		BE67DF441EC9599D0047C07A /* TDFWXOfficialAccountRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67DF431EC9599D0047C07A /* TDFWXOfficialAccountRequestModel.m */; };
-		BE67DF4A1EC99FC90047C07A /* TDFCardSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67DF491EC99FC90047C07A /* TDFCardSelectorViewController.m */; };
-		BE67DF4E1EC9A6170047C07A /* TDFCardSelectorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67DF4D1EC9A6170047C07A /* TDFCardSelectorCell.m */; };
-		BE67DF511EC9A6330047C07A /* TDFCardSelectorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67DF501EC9A6330047C07A /* TDFCardSelectorItem.m */; };
 		BE9DFCF51EB3177B00A79AEB /* MBProgressHUD+ThemeCustomize.m in Sources */ = {isa = PBXBuildFile; fileRef = D69D2F631E892FB5002C0D8A /* MBProgressHUD+ThemeCustomize.m */; };
 		BEDC17BA1EC2F26100DB5BF7 /* TDFWCKeywordsAutoreplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDC17B91EC2F26100DB5BF7 /* TDFWCKeywordsAutoreplyViewController.m */; };
 		BEDC17C31EC2F45D00DB5BF7 /* TDFWXKeywordsAutoreplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDC17C21EC2F45D00DB5BF7 /* TDFWXKeywordsAutoreplyCell.m */; };
@@ -1567,6 +1569,7 @@
 		C2DE746E1EC4091000E9D224 /* TDFWXMarketingMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE746D1EC4091000E9D224 /* TDFWXMarketingMenuItem.m */; };
 		C2DE74761EC40A1800E9D224 /* TDFTraderManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE74751EC40A1800E9D224 /* TDFTraderManagerViewController.m */; };
 		C882616B1BE74259003E9744 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882616A1BE74259003E9744 /* MessageUI.framework */; };
+		DC96E38C1F00D6EA00593BF3 /* UIImage+TDFQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC96E38B1F00D6EA00593BF3 /* UIImage+TDFQRCode.m */; };
 		FDCA37BB1E9B57F200031C78 /* TDFLocalDeliveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0FE7991E79542A00EFC8BB /* TDFLocalDeliveryViewController.m */; };
 		FDCA37BC1E9B57FC00031C78 /* TDFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC242761E83E952000D8568 /* TDFMapViewController.m */; };
 /* End PBXBuildFile section */
@@ -1643,6 +1646,10 @@
 		211A3D4A1E46C48E007C136D /* TDFWechatNotificationSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFWechatNotificationSettingViewController.m; sourceTree = "<group>"; };
 		2145F01B1E9CCD470015D04A /* TDFLeftMenuDisplayAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFLeftMenuDisplayAPI.h; sourceTree = "<group>"; };
 		2145F01C1E9CCD470015D04A /* TDFLeftMenuDisplayAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFLeftMenuDisplayAPI.m; sourceTree = "<group>"; };
+		219F57961EF21C2300814922 /* TDFHomeBossCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFHomeBossCenterView.h; sourceTree = "<group>"; };
+		219F57971EF21C2300814922 /* TDFHomeBossCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFHomeBossCenterView.m; sourceTree = "<group>"; };
+		219F579A1EF2A25700814922 /* TDFLeftHandSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFLeftHandSectionHeaderView.h; sourceTree = "<group>"; };
+		219F579B1EF2A25700814922 /* TDFLeftHandSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFLeftHandSectionHeaderView.m; sourceTree = "<group>"; };
 		21B49E121ED6A971001536E2 /* TDFHealthCheckNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFHealthCheckNavigationView.h; sourceTree = "<group>"; };
 		21B49E131ED6A971001536E2 /* TDFHealthCheckNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFHealthCheckNavigationView.m; sourceTree = "<group>"; };
 		21B49E151ED6BE03001536E2 /* TDFHealthCheckHistoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFHealthCheckHistoryDetailViewController.h; sourceTree = "<group>"; };
@@ -1731,6 +1738,18 @@
 		3884DA091E73EF4500982AC9 /* TDFSwitchBottomSubtitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFSwitchBottomSubtitleTableViewCell.h; sourceTree = "<group>"; };
 		3884DA0A1E73EF4500982AC9 /* TDFSwitchBottomSubtitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFSwitchBottomSubtitleTableViewCell.m; sourceTree = "<group>"; };
 		38F45B871E94EAFD00578458 /* RestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RestApp.entitlements; sourceTree = "<group>"; };
+		3A3A3ECB1EEEC362001EB704 /* TDFCashierDataOptimizationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCashierDataOptimizationController.h; sourceTree = "<group>"; };
+		3A3A3ECC1EEEC362001EB704 /* TDFCashierDataOptimizationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCashierDataOptimizationController.m; sourceTree = "<group>"; };
+		3A83CE5F1EEF967F00BC11DA /* TDFTableDataOptimizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFTableDataOptimizeController.h; sourceTree = "<group>"; };
+		3A83CE601EEF967F00BC11DA /* TDFTableDataOptimizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFTableDataOptimizeController.m; sourceTree = "<group>"; };
+		3A83CE621EEFE78800BC11DA /* TDFTableDataOptimizePickerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFTableDataOptimizePickerService.h; sourceTree = "<group>"; };
+		3A83CE631EEFE78800BC11DA /* TDFTableDataOptimizePickerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFTableDataOptimizePickerService.m; sourceTree = "<group>"; };
+		3AC439681EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFTableDataOptimizeViewModel.h; sourceTree = "<group>"; };
+		3AC439691EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFTableDataOptimizeViewModel.m; sourceTree = "<group>"; };
+		3AD8ACEF1EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFTableDataOptimizeStringFormater.h; sourceTree = "<group>"; };
+		3AD8ACF01EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFTableDataOptimizeStringFormater.m; sourceTree = "<group>"; };
+		3AEA3FFF1EEE84200082F8AD /* BillModifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillModifyCell.h; sourceTree = "<group>"; };
+		3AEA40001EEE84200082F8AD /* BillModifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillModifyCell.m; sourceTree = "<group>"; };
 		3B554E391AE25B4D008B850D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3B554E3B1AE25B5D008B850D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		3B554E3D1AE25B6B008B850D /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
@@ -1880,7 +1899,6 @@
 		6C9E03F81E6ED950008067CE /* beep.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.ogg; sourceTree = "<group>"; };
 		6C9E044D1E6ED950008067CE /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		6C9E044F1E6ED950008067CE /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
-		6C9E04521E6ED950008067CE /* BillModifyModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillModifyModule.xib; sourceTree = "<group>"; };
 		6C9E04551E6ED950008067CE /* ChainBusDetailBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChainBusDetailBoxView.xib; sourceTree = "<group>"; };
 		6C9E04581E6ED951008067CE /* NavigateLeftItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigateLeftItem.xib; sourceTree = "<group>"; };
 		6C9E04591E6ED951008067CE /* NavigateRightItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigateRightItem.xib; sourceTree = "<group>"; };
@@ -2090,7 +2108,6 @@
 		6C9E057A1E6ED951008067CE /* BatchSelectPanel5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatchSelectPanel5.xib; sourceTree = "<group>"; };
 		6C9E057D1E6ED951008067CE /* PaperSampleListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaperSampleListView.xib; sourceTree = "<group>"; };
 		6C9E057E1E6ED951008067CE /* PaperSampleListView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaperSampleListView5.xib; sourceTree = "<group>"; };
-		6C9E05811E6ED951008067CE /* BillModifyModule5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillModifyModule5.xib; sourceTree = "<group>"; };
 		6C9E05841E6ED951008067CE /* ChainBusinessDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChainBusinessDetailView.xib; sourceTree = "<group>"; };
 		6C9E05851E6ED951008067CE /* StoresManagerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoresManagerView.xib; sourceTree = "<group>"; };
 		6C9E05861E6ED951008067CE /* StoresView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoresView.xib; sourceTree = "<group>"; };
@@ -3995,7 +4012,6 @@
 		7480D6961EEA526500985D88 /* PaymentNoteView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentNoteView5.xib; sourceTree = "<group>"; };
 		7480D6981EEA527600985D88 /* RawUnitEditView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RawUnitEditView5.xib; sourceTree = "<group>"; };
 		7480D69A1EEA528900985D88 /* AreaEditView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaEditView5.xib; sourceTree = "<group>"; };
-		7480D69C1EEA52CA00985D88 /* SampleListView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleListView5.xib; sourceTree = "<group>"; };
 		7480D69E1EEA52DE00985D88 /* OptionSelectView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionSelectView5.xib; sourceTree = "<group>"; };
 		7480D6A01EEA540200985D88 /* MenuCodeView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCodeView5.xib; sourceTree = "<group>"; };
 		7480D6A21EEA541700985D88 /* MenuMakeEditView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuMakeEditView5.xib; sourceTree = "<group>"; };
@@ -4029,13 +4045,6 @@
 		BE67DF401EC9573A0047C07A /* TDFWXOfficialAccountActionPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFWXOfficialAccountActionPath.m; sourceTree = "<group>"; };
 		BE67DF421EC9599D0047C07A /* TDFWXOfficialAccountRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFWXOfficialAccountRequestModel.h; sourceTree = "<group>"; };
 		BE67DF431EC9599D0047C07A /* TDFWXOfficialAccountRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFWXOfficialAccountRequestModel.m; sourceTree = "<group>"; };
-		BE67DF481EC99FC90047C07A /* TDFCardSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCardSelectorViewController.h; sourceTree = "<group>"; };
-		BE67DF491EC99FC90047C07A /* TDFCardSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCardSelectorViewController.m; sourceTree = "<group>"; };
-		BE67DF4B1EC9A0EE0047C07A /* TDFCardSelectorItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCardSelectorItemProtocol.h; sourceTree = "<group>"; };
-		BE67DF4C1EC9A6170047C07A /* TDFCardSelectorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCardSelectorCell.h; sourceTree = "<group>"; };
-		BE67DF4D1EC9A6170047C07A /* TDFCardSelectorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCardSelectorCell.m; sourceTree = "<group>"; };
-		BE67DF4F1EC9A6330047C07A /* TDFCardSelectorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCardSelectorItem.h; sourceTree = "<group>"; };
-		BE67DF501EC9A6330047C07A /* TDFCardSelectorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCardSelectorItem.m; sourceTree = "<group>"; };
 		BEDC17B81EC2F26100DB5BF7 /* TDFWCKeywordsAutoreplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFWCKeywordsAutoreplyViewController.h; sourceTree = "<group>"; };
 		BEDC17B91EC2F26100DB5BF7 /* TDFWCKeywordsAutoreplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFWCKeywordsAutoreplyViewController.m; sourceTree = "<group>"; };
 		BEDC17C11EC2F45D00DB5BF7 /* TDFWXKeywordsAutoreplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFWXKeywordsAutoreplyCell.h; sourceTree = "<group>"; };
@@ -4241,6 +4250,8 @@
 		C882616A1BE74259003E9744 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D69D2F621E892FB5002C0D8A /* MBProgressHUD+ThemeCustomize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ThemeCustomize.h"; sourceTree = "<group>"; };
 		D69D2F631E892FB5002C0D8A /* MBProgressHUD+ThemeCustomize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ThemeCustomize.m"; sourceTree = "<group>"; };
+		DC96E38A1F00D6EA00593BF3 /* UIImage+TDFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TDFQRCode.h"; sourceTree = "<group>"; };
+		DC96E38B1F00D6EA00593BF3 /* UIImage+TDFQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TDFQRCode.m"; sourceTree = "<group>"; };
 		EF2FC76D6B3EE7B0B5BDE9A5 /* Pods-RestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestApp/Pods-RestApp.release.xcconfig"; sourceTree = "<group>"; };
 		F11DE63EE3BD195EC2B12AE6 /* Pods-RestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestApp/Pods-RestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FD0FE7981E79542A00EFC8BB /* TDFLocalDeliveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFLocalDeliveryViewController.h; sourceTree = "<group>"; };
@@ -4492,6 +4503,15 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		219F57991EF2A1C200814922 /* leftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				219F579A1EF2A25700814922 /* TDFLeftHandSectionHeaderView.h */,
+				219F579B1EF2A25700814922 /* TDFLeftHandSectionHeaderView.m */,
+			);
+			name = leftMenu;
+			sourceTree = "<group>";
+		};
 		21C76A651EA0B28100EC7C63 /* homeModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -4580,6 +4600,7 @@
 		21C76A851EA0B28100EC7C63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				219F57991EF2A1C200814922 /* leftMenu */,
 				21C76A861EA0B28100EC7C63 /* homePage */,
 				21C76A9F1EA0B28100EC7C63 /* TDFMemberHistogramView.h */,
 				21C76AA01EA0B28100EC7C63 /* TDFMemberHistogramView.m */,
@@ -4604,6 +4625,8 @@
 				21C76A9E1EA0B28100EC7C63 /* TDFMemberLevelView.m */,
 				2102A0C91EA70D2C0055ADD5 /* TDFCommonInfoListView.h */,
 				2102A0CA1EA70D2C0055ADD5 /* TDFCommonInfoListView.m */,
+				219F57961EF21C2300814922 /* TDFHomeBossCenterView.h */,
+				219F57971EF21C2300814922 /* TDFHomeBossCenterView.m */,
 			);
 			path = homePage;
 			sourceTree = "<group>";
@@ -4666,6 +4689,21 @@
 				21E771271EE941DD00E66AA1 /* TDFHealthCheckLineImageCell.m */,
 			);
 			name = new;
+			sourceTree = "<group>";
+		};
+		3AC4396B1EF00CB000C064D1 /* tableOptimize */ = {
+			isa = PBXGroup;
+			children = (
+				3A83CE5F1EEF967F00BC11DA /* TDFTableDataOptimizeController.h */,
+				3A83CE601EEF967F00BC11DA /* TDFTableDataOptimizeController.m */,
+				3AC439681EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.h */,
+				3AC439691EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.m */,
+				3A83CE621EEFE78800BC11DA /* TDFTableDataOptimizePickerService.h */,
+				3A83CE631EEFE78800BC11DA /* TDFTableDataOptimizePickerService.m */,
+				3AD8ACEF1EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.h */,
+				3AD8ACF01EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.m */,
+			);
+			name = tableOptimize;
 			sourceTree = "<group>";
 		};
 		533792791E7245AE004AD14E /* model */ = {
@@ -4830,7 +4868,6 @@
 			isa = PBXGroup;
 			children = (
 				7480D65A1EEA48DF00985D88 /* autoModify.xib */,
-				6C9E04521E6ED950008067CE /* BillModifyModule.xib */,
 				6C9E04531E6ED950008067CE /* chain */,
 				6C9E04571E6ED951008067CE /* common */,
 				6C9E04721E6ED951008067CE /* employee */,
@@ -5433,7 +5470,6 @@
 			isa = PBXGroup;
 			children = (
 				7480D67C1EEA4DFD00985D88 /* autoModify5.xib */,
-				6C9E05811E6ED951008067CE /* BillModifyModule5.xib */,
 				6C9E05821E6ED951008067CE /* chain */,
 				6C9E05871E6ED951008067CE /* common */,
 				6C9E05A61E6ED951008067CE /* employee */,
@@ -5539,7 +5575,6 @@
 		6C9E059C1E6ED951008067CE /* SampleListView */ = {
 			isa = PBXGroup;
 			children = (
-				7480D69C1EEA52CA00985D88 /* SampleListView5.xib */,
 			);
 			path = SampleListView;
 			sourceTree = "<group>";
@@ -5947,6 +5982,8 @@
 				6C9E069A1E6ED951008067CE /* UIImage+TDF_fixOrientation.m */,
 				6C9E069B1E6ED951008067CE /* UIImage+TDFColor.h */,
 				6C9E069C1E6ED951008067CE /* UIImage+TDFColor.m */,
+				DC96E38A1F00D6EA00593BF3 /* UIImage+TDFQRCode.h */,
+				DC96E38B1F00D6EA00593BF3 /* UIImage+TDFQRCode.m */,
 				D69D2F621E892FB5002C0D8A /* MBProgressHUD+ThemeCustomize.h */,
 				D69D2F631E892FB5002C0D8A /* MBProgressHUD+ThemeCustomize.m */,
 			);
@@ -6067,6 +6104,9 @@
 				6C9E06FE1E6ED951008067CE /* TDFTextEditViewController.m */,
 				6C9E06FF1E6ED951008067CE /* WXOfficialAccountController.h */,
 				6C9E07001E6ED951008067CE /* WXOfficialAccountController.m */,
+				3A3A3ECB1EEEC362001EB704 /* TDFCashierDataOptimizationController.h */,
+				3A3A3ECC1EEEC362001EB704 /* TDFCashierDataOptimizationController.m */,
+				3AC4396B1EF00CB000C064D1 /* tableOptimize */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -6685,6 +6725,8 @@
 				6C9E093B1E6ED952008067CE /* BaseView */,
 				6C9E09401E6ED952008067CE /* BillModifyModule.h */,
 				6C9E09411E6ED952008067CE /* BillModifyModule.m */,
+				3AEA3FFF1EEE84200082F8AD /* BillModifyCell.h */,
+				3AEA40001EEE84200082F8AD /* BillModifyCell.m */,
 				6C9E09421E6ED952008067CE /* BillOptimizationTaskVo.h */,
 				6C9E09431E6ED952008067CE /* BillOptimizationTaskVo.m */,
 				6C9E09441E6ED952008067CE /* branchcompany */,
@@ -8523,13 +8565,6 @@
 		BE67DE431EC45B610047C07A /* SelectReplayCard */ = {
 			isa = PBXGroup;
 			children = (
-				BE67DF481EC99FC90047C07A /* TDFCardSelectorViewController.h */,
-				BE67DF491EC99FC90047C07A /* TDFCardSelectorViewController.m */,
-				BE67DF4B1EC9A0EE0047C07A /* TDFCardSelectorItemProtocol.h */,
-				BE67DF4C1EC9A6170047C07A /* TDFCardSelectorCell.h */,
-				BE67DF4D1EC9A6170047C07A /* TDFCardSelectorCell.m */,
-				BE67DF4F1EC9A6330047C07A /* TDFCardSelectorItem.h */,
-				BE67DF501EC9A6330047C07A /* TDFCardSelectorItem.m */,
 				BEECE5971ECBEBD7003DA386 /* TDFWXSyncedCardSelectorDelegate.h */,
 				BEECE5981ECBEBD7003DA386 /* TDFWXSyncedCardSelectorDelegate.m */,
 				BEECE59A1ECBEBF8003DA386 /* TDFWXSyncedCouponSelectorDelegate.h */,
@@ -9612,7 +9647,6 @@
 				6C9E12481E6ED954008067CE /* HelpVideoViewCell.xib in Resources */,
 				6C9E123F1E6ED954008067CE /* PantryEditView.xib in Resources */,
 				6C9E12E61E6ED954008067CE /* ReserveBandEditView.xib in Resources */,
-				7480D69D1EEA52CA00985D88 /* SampleListView5.xib in Resources */,
 				6C9E12CB1E6ED954008067CE /* MultiHeadCheckView.xib in Resources */,
 				6C9E12701E6ED954008067CE /* WaiterEvaluateDetailCell.xib in Resources */,
 				6C9E124F1E6ED954008067CE /* MultiHeadCell.xib in Resources */,
@@ -9774,7 +9808,6 @@
 				7480D6631EEA4A4F00985D88 /* BusinesssOrderView.xib in Resources */,
 				6C9E12D31E6ED954008067CE /* EditPassView.xib in Resources */,
 				6C9E167A1E6ED956008067CE /* OrderDetailMoreCell.xib in Resources */,
-				6C9E11BB1E6ED954008067CE /* BillModifyModule.xib in Resources */,
 				6C9E122B1E6ED954008067CE /* KindMenuStyleEditView.xib in Resources */,
 				6C9E13501E6ED954008067CE /* LinkManEditView5.xib in Resources */,
 				6C9E129B1E6ED954008067CE /* GridEditCell2.xib in Resources */,
@@ -9954,7 +9987,6 @@
 				6C9E125F1E6ED954008067CE /* SecondMenuCell.xib in Resources */,
 				6C9E135D1E6ED954008067CE /* ZeroDealEditView5.xib in Resources */,
 				6C9E12741E6ED954008067CE /* ZmTableHead.xib in Resources */,
-				6C9E12BA1E6ED954008067CE /* BillModifyModule5.xib in Resources */,
 				6C9E11D61E6ED954008067CE /* HomeView.xib in Resources */,
 				6C9E12991E6ED954008067CE /* AuditRecordDetailCell.xib in Resources */,
 				7480D6A31EEA541700985D88 /* MenuMakeEditView5.xib in Resources */,
@@ -10102,7 +10134,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E4D9BC47EC41B24B7B6DAD86 /* [CP] Copy Pods Resources */ = {
@@ -10203,11 +10235,13 @@
 				C220DFCA1E24D72900F01460 /* TDFAuditingView.m in Sources */,
 				C2ACB3031E484BB500882E37 /* TDFOfficialAccountLayout.m in Sources */,
 				C220DFC61E24D56700F01460 /* TDFTraderAuditModel.m in Sources */,
+				219F57981EF21C2300814922 /* TDFHomeBossCenterView.m in Sources */,
 				C258CAFD1E2783FB00AADD68 /* NSString+Sino.m in Sources */,
 				2114FB7F1E4D944C00544888 /* TDFWechatAuthorizationListViewController.m in Sources */,
 				6C9E140E1E6ED955008067CE /* MenuMake.m in Sources */,
 				6C9E14001E6ED955008067CE /* Entity.m in Sources */,
 				6C9E15C91E6ED956008067CE /* TDFHealthCheckBarChartView.m in Sources */,
+				219F579C1EF2A25700814922 /* TDFLeftHandSectionHeaderView.m in Sources */,
 				617AD04E1E727D3D007F4063 /* TDFSignBillController.m in Sources */,
 				6C9E168A1E6ED956008067CE /* OrderListView.m in Sources */,
 				6C9E149D1E6ED955008067CE /* ChainService.m in Sources */,
@@ -10245,6 +10279,7 @@
 				6C9E16B91E6ED956008067CE /* NavigateMenuModel.m in Sources */,
 				6C9E159E1E6ED956008067CE /* RoleActionCell.m in Sources */,
 				6C9E14F21E6ED955008067CE /* TDFShopPowerEditViewController.m in Sources */,
+				3A83CE611EEF967F00BC11DA /* TDFTableDataOptimizeController.m in Sources */,
 				6C9E171B1E6ED957008067CE /* SignBillListView.m in Sources */,
 				C27A46F21E7283DA003F4F6A /* main.m in Sources */,
 				6C9E14A51E6ED955008067CE /* OrderService.m in Sources */,
@@ -10264,6 +10299,7 @@
 				6C9E13A31E6ED954008067CE /* TDFCallVoiceSettingViewController.m in Sources */,
 				6C9E15161E6ED955008067CE /* SignBillItemCell.m in Sources */,
 				6C9E159B1E6ED956008067CE /* EditPassView.m in Sources */,
+				3AD8ACF11EF12DC600A940F9 /* TDFTableDataOptimizeStringFormater.m in Sources */,
 				6C9E14DE1E6ED955008067CE /* ChainBusDetailBoxView.m in Sources */,
 				6C9E137F1E6ED954008067CE /* Target_EvaluateModule.m in Sources */,
 				6C9E14041E6ED955008067CE /* FeeDetail.m in Sources */,
@@ -10517,6 +10553,7 @@
 				6C9E153B1E6ED955008067CE /* BusinessPayDetailBox.m in Sources */,
 				6C9E16C91E6ED956008067CE /* TDFPaymentVO.m in Sources */,
 				6C9E15E61E6ED956008067CE /* TDFBusinessDetailPanelView.m in Sources */,
+				3AC4396A1EF005AA00C064D1 /* TDFTableDataOptimizeViewModel.m in Sources */,
 				6C9E144F1E6ED955008067CE /* QuickStep.m in Sources */,
 				6C9E16A61E6ED956008067CE /* SmartOrderModel.m in Sources */,
 				531E89CB1ECEE67B006485C6 /* TDFMenuListPanel.m in Sources */,
@@ -10758,6 +10795,7 @@
 				6C9E14BE1E6ED955008067CE /* TDFShopInfoService.m in Sources */,
 				6C9E13A81E6ED954008067CE /* TDFFoodSelectedModel.m in Sources */,
 				6C9E151E1E6ED955008067CE /* TotalEvaluateCell.m in Sources */,
+				3A3A3ECD1EEEC362001EB704 /* TDFCashierDataOptimizationController.m in Sources */,
 				6C9E148F1E6ED955008067CE /* TDFPackingBoxKindVo.m in Sources */,
 				6C9E15FD1E6ED956008067CE /* MenusRankListView.m in Sources */,
 				21C76AAC1EA0B28100EC7C63 /* TDFMemberInfoMonthModel.m in Sources */,
@@ -10789,6 +10827,7 @@
 				6C9E16E71E6ED957008067CE /* AreaListView.m in Sources */,
 				6C9E171A1E6ED957008067CE /* SignBillEditView.m in Sources */,
 				21B49E1D1ED6BFF9001536E2 /* TDFHealthCheckHistoryDetailItem.m in Sources */,
+				3AEA40011EEE84200082F8AD /* BillModifyCell.m in Sources */,
 				6C9E13C81E6ED954008067CE /* BaseAreaFeePlan.m in Sources */,
 				539A01D71ECC7EDF001DA4DA /* TDFNoPrintMenuModel.m in Sources */,
 				6C9E16501E6ED956008067CE /* MenuCodeView.m in Sources */,
@@ -10845,6 +10884,7 @@
 				6C9E14871E6ED955008067CE /* SimPleShop.m in Sources */,
 				C2DE746E1EC4091000E9D224 /* TDFWXMarketingMenuItem.m in Sources */,
 				6C9E13E91E6ED955008067CE /* BaseSpec.m in Sources */,
+				DC96E38C1F00D6EA00593BF3 /* UIImage+TDFQRCode.m in Sources */,
 				6C9E17111E6ED957008067CE /* OpenTimePlanRender.m in Sources */,
 				6C9E16E81E6ED957008067CE /* SeatItem.m in Sources */,
 				6C9E15391E6ED955008067CE /* ActionDetailTable.m in Sources */,
@@ -10986,9 +11026,9 @@
 				612956DE1EACAFD9007D83E1 /* TDFShopImgStaticItem.m in Sources */,
 				6C9E17611E6ED957008067CE /* SuitUnitEditView.m in Sources */,
 				6C9E14011E6ED955008067CE /* ExtraAction.m in Sources */,
-				BE67DF511EC9A6330047C07A /* TDFCardSelectorItem.m in Sources */,
 				21C76AA91EA0B28100EC7C63 /* TDFHomeGroupForwardItem.m in Sources */,
 				6C9E165A1E6ED956008067CE /* MenuRender.m in Sources */,
+				3A83CE641EEFE78800BC11DA /* TDFTableDataOptimizePickerService.m in Sources */,
 				6C9E16F61E6ED957008067CE /* CustomerListView.m in Sources */,
 				6C9E15921E6ED956008067CE /* SampleListView.m in Sources */,
 				6C9E14B31E6ED955008067CE /* TDFGoodsRequestModel.m in Sources */,
@@ -11064,7 +11104,6 @@
 				6C9E14FD1E6ED955008067CE /* Calendar.m in Sources */,
 				6C9E14081E6ED955008067CE /* KindPayDetail.m in Sources */,
 				6C9E15DF1E6ED956008067CE /* BusinessDetailPanel.m in Sources */,
-				BE67DF4A1EC99FC90047C07A /* TDFCardSelectorViewController.m in Sources */,
 				6C9E14CB1E6ED955008067CE /* TDFOptionSelectCell.m in Sources */,
 				7415A1411E800BFA0011C813 /* TDFWXNotificationPromotionCell.m in Sources */,
 				6C9E146A1E6ED955008067CE /* KindPayDayStatMainVO.m in Sources */,
@@ -11100,7 +11139,6 @@
 				6C9E16911E6ED956008067CE /* OrderRecommendPlantData.m in Sources */,
 				6C9E16CB1E6ED956008067CE /* PaymentNoteView.m in Sources */,
 				6C9E15061E6ED955008067CE /* InfoDetailCell.m in Sources */,
-				BE67DF4E1EC9A6170047C07A /* TDFCardSelectorCell.m in Sources */,
 				21B49E171ED6BE03001536E2 /* TDFHealthCheckHistoryDetailViewController.m in Sources */,
 				2112873F1EDEB190007D9AB5 /* TDFHealthCheckLineChartCell.m in Sources */,
 				6C9E14201E6ED955008067CE /* SysNotification.m in Sources */,

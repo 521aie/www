@@ -32,6 +32,7 @@
 #import "TDFIsOpen.h"
 #import "SystemNotePanel.h"
 #import "TDFMediator+HomeModule.h"
+#import "TDFHomeBossCenterView.h"
 
 // old logic
 #import "ShopReviewCenter.h"
@@ -93,7 +94,6 @@ static CGFloat notificationSectionHeight = 45;//系统通知高度
 
 @property (nonatomic, strong) NSDate *backgroundDate; // 进入后台时间
 
-
 @end
 
 @implementation TDFHomePageViewController
@@ -116,9 +116,7 @@ static CGFloat notificationSectionHeight = 45;//系统通知高度
     [self addRefresh];
     
     //    [self fetchData];
-    //没有数据,暂时阳光餐厅入口
 }
-
 
 - (void)viewWillAppearByHand
 {
@@ -385,9 +383,11 @@ static CGFloat notificationSectionHeight = 45;//系统通知高度
         
         if ([sectionStyle isEqualToString:@"section_twoInLine_style"]) {
             NSArray<TDFHomeTwoInLineCellModel *> *cellModelList = [NSArray<TDFHomeTwoInLineCellModel *> yy_modelArrayWithClass:[TDFHomeTwoInLineCellModel class] json:sectionDict[@"sectionModel"]];
-            
-            TDFHomeTwoInLineView *twoInLineView = [[TDFHomeTwoInLineView alloc] initWithFrame:CGRectMake(0, 150, 200, 100)];
+        
+            @weakify(self);
+            TDFHomeTwoInLineView *twoInLineView = [[TDFHomeTwoInLineView alloc] initWithFrame:CGRectMake(0, 150, SCREEN_WIDTH, 100)];
             twoInLineView.clickAction = ^ (TDFHomeTwoInLineCellModel *model) {
+                @strongify(self);
                 [self goNextWithCode:model.actionCode isLock:model.isLock isOpen:model.isOpen functionId:model._id actionName:model.title];
             };
             
@@ -402,9 +402,11 @@ static CGFloat notificationSectionHeight = 45;//系统通知高度
         }
         
         if ([sectionStyle isEqualToString:@"section_forward_group_style"]) {
-            TDFHomeGroupSectionView *groupView = [[TDFHomeGroupSectionView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+            @weakify(self);
+            TDFHomeGroupSectionView *groupView = [[TDFHomeGroupSectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
             
             groupView.clickAction = ^(TDFHomeGroupForwardChildCellModel *model) {
+                @strongify(self);
                 [self goNextWithCode:model.actionCode isLock:model.isLock isOpen:model.isOpen functionId:model._id actionName:model.title];
             };
             
@@ -459,6 +461,25 @@ static CGFloat notificationSectionHeight = 45;//系统通知高度
                 }];
                 [self.memberExtensionApi start];
             };
+            
+            [self.manager addSection:section];
+        }
+        
+        if ([sectionStyle isEqualToString:@"section_notify_oneInLine_style"]) {
+            TDFHomeBossCenterView *bossCenterView = [[TDFHomeBossCenterView alloc] initWithFrame:CGRectZero];
+            
+            TDFHomeBossCenterModel *model = [TDFHomeBossCenterModel yy_modelWithDictionary:sectionDict[@"sectionModel"]];
+            
+            [bossCenterView configureViewWithModel:model];
+            @weakify(self);
+            bossCenterView.clickBlock = ^void (NSString *url) {
+                @strongify(self);
+                [self goNextWithUrlString:url];
+            };
+            
+            DHTTableViewSection *section = [DHTTableViewSection section];
+            section.headerView = bossCenterView;
+            section.headerHeight = [TDFHomeBossCenterView heightForView];
             
             [self.manager addSection:section];
         }

@@ -391,7 +391,7 @@
         
         for (ShopVO *shop in branch.shopVoList) {
             
-            if (shop.isSelected == YES) {
+            if (shop.isSelected == YES && shop.status == TDFShopStatusPurchased) {
                 
                 [array addObject:shop];
             }

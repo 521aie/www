@@ -28,6 +28,8 @@
 #import "TDFSwitchTool.h"
 //#import "TDFAlertAPIHUDPresenter.h"
 #import "TDFRetryHUDPresenter.h"
+#import "TDFPermissionHelper.h"
+#import "TDFRouter.h"
 
 
 @interface TDFNavigateMenuViewController ()<TDFNavigateViewDelegate>
@@ -114,6 +116,7 @@
             
             NSString *sectionStyle = sectionDict[@"sectionStyle"];
             
+            NSMutableArray<TDFNavigateSectionModel *> *sectionList = [NSMutableArray<TDFNavigateSectionModel *> array];
             if ([sectionStyle isEqualToString:@"section_left_forward_group_style"]) {
                 NSDictionary *sectionModel = sectionDict[@"sectionModel"];
                 
@@ -121,9 +124,19 @@
                 self.navigateView.title = title;
                 
                 NSArray *cellList = sectionModel[@"cells"];
-                self.navigateView.dataArray = [self transformCellListToDataList:cellList];
-                //                self.navigateView.dataArray = [Platform Instance].allLeftFunctionArray;
-                self.navigateView.allSearchDataArray =  [self.navigateView.dataArray copy];
+                
+                for (NSDictionary *cellDict in cellList) {
+                    NSString *cellStyle = cellDict[@"cellStyle"];
+                    
+                    if ([cellStyle isEqualToString:@"cell_left_forward_style"]) {
+                        TDFNavigateSectionModel *cellModel = [TDFNavigateSectionModel yy_modelWithJSON:cellDict[@"cellModel"]];
+
+                        [sectionList addObject:cellModel];
+                    }
+
+                }
+                self.navigateView.dataArray = sectionList;
+                self.navigateView.allSearchDataArray =  [sectionList copy];
                 
                 [self.navigateView reloadData];
             }
@@ -163,29 +176,6 @@
     self.needRefresh = YES;
 }
 
-- (NSArray<TDFFunctionKindVo *> *)transformCellListToDataList:(NSArray *)cellList
-{
-    NSMutableArray<TDFFunctionKindVo *> *kindVoList = [NSMutableArray<TDFFunctionKindVo *> array];
-    
-    for (NSDictionary *cellDict in cellList) {
-        NSString *cellStyle = cellDict[@"cellStyle"];
-        
-//        if ([cellStyle isEqualToString:@"cell_left_forward_style"]) {
-            NSDictionary *cellModel = cellDict[@"cellModel"];
-            
-            NSString *title = cellModel[@"title"];
-            NSArray<TDFHomeGroupForwardChildCellModel *> *forwardModelList = [NSArray<TDFHomeGroupForwardChildCellModel *> yy_modelArrayWithClass:[TDFHomeGroupForwardChildCellModel class] json:cellModel[@"forwardCells"]];
-            
-            TDFFunctionKindVo *kindVo = [[TDFFunctionKindVo alloc] init];
-            kindVo.name = title;
-            kindVo.functionVoList = [self functionVoListWithForwardModelList:forwardModelList];
-            
-            [kindVoList addObject:kindVo];
-//        }
-    }
-    
-    return kindVoList;
-}
 
 - (NSArray<TDFFunctionVo *> *)functionVoListWithForwardModelList:(NSArray<TDFHomeGroupForwardChildCellModel *> *)forwardModelList
 {
@@ -222,22 +212,10 @@
 
 - (void)navigateViewUpdate:(NSNotification *)notification
 {
-//    self.navigateView.dataArray = notification.object;
     self.navigateView.footerView.hidden = [[Platform Instance] isChainOrBranch];
     self.needRefresh = YES;
-//    self.navigateView.titleLabel.text = [[Platform Instance] isChainOrBranch]?@"收银设置":NSLocalizedString(@"店家设置", nil);
 }
 
-//- (void)dealWithFunctionActionWith:(id)data
-//{
-//    NSMutableArray *functionKidnVoListArray = [NSMutableArray array];
-//    NSArray *array = data[@"functionKindVoList"];
-//    for (NSDictionary *dic in array) {
-//        TDFFunctionKindVo *kindVo = [TDFFunctionKindVo yy_modelWithDictionary:dic];
-//        [functionKidnVoListArray addObject:kindVo];
-//    }
-//    self.navigateView.dataArray = functionKidnVoListArray;
-//}
 
 #pragma mark --TDFNavigateViewDelegate
 
@@ -261,13 +239,24 @@
     }
 }
 
-- (void)switchToViewController:(TDFFunctionVo *)functionVO
+- (void)goNextWithUrlString:(NSString *)urlString
 {
-    if (functionVO.isLock) {
-        [AlertBox show:[NSString stringWithFormat:NSLocalizedString(@"您没有[%@]的权限", nil),functionVO.actionName]];
+    UIViewController *vc = [[TDFRouter sharedInstance] routerWithUrlString:urlString];
+    
+    if (vc) {
+        [self.rootViewController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)switchToViewControllerWithCode:(NSString *)actionCode isLock:(BOOL)isLock actionName:(NSString *)actionName
+{
+    if (isLock) {
+        [AlertBox show:[NSString stringWithFormat:NSLocalizedString(@"您没有[%@]的权限", nil), actionName]];
         return ;
     }
-    [[TDFSwitchTool switchTool] pushViewControllerWithCode:functionVO.actionCode andObject:functionVO.lowestActionCode andObject:functionVO.childFunction withViewController:self];
+    NSArray *moduleChargeDeniedList = [[TDFPermissionHelper sharedInstance] allModuleChargeList];
+    NSArray *roleAllowedList = [[TDFPermissionHelper sharedInstance] notLockedActionCodeList];
+    [[TDFSwitchTool switchTool] pushViewControllerWithCode:actionCode andObject:roleAllowedList andObject:moduleChargeDeniedList withViewController:self];
 }
 
 - (void)navigateView:(TDFNavigateView *)navigateView didSearchWithKeyword:(NSString *)keyword
@@ -276,88 +265,15 @@
     self.searchApi.keyword = keyword;
     [self.searchApi setApiSuccessHandler:^(__kindof TDFBaseAPI *api, id response) {
         @strongify(self);
-        NSArray *sectionList = response[@"data"];
-        NSMutableArray<TDFFunctionKindVo *> *kindVoList = [NSMutableArray<TDFFunctionKindVo *> array];
+        NSArray<TDFNavigateSectionModel *> *sectionList = [NSArray<TDFNavigateSectionModel *> yy_modelArrayWithClass:[TDFNavigateSectionModel class] json:response[@"data"]];
         
-        for (NSDictionary *cellModel in sectionList) {
-            NSString *title = cellModel[@"title"];
-            NSArray<TDFHomeGroupForwardChildCellModel *> *forwardModelList = [NSArray<TDFHomeGroupForwardChildCellModel *> yy_modelArrayWithClass:[TDFHomeGroupForwardChildCellModel class] json:cellModel[@"forwardCells"]];
-            
-            TDFFunctionKindVo *kindVo = [[TDFFunctionKindVo alloc] init];
-            kindVo.name = title;
-            kindVo.functionVoList = [self functionVoListWithForwardModelList:forwardModelList];
-            
-            [kindVoList addObject:kindVo];
-        }
-        
-        self.navigateView.searchDataArray = kindVoList;
+        self.navigateView.searchDataArray = [NSMutableArray arrayWithArray:sectionList];
         [self.navigateView reloadData];
 
     }];
     [self.searchApi start];
 }
 
-- (void)pushViewControllerWithCode:(NSString *)actionCode
-                         andObject:(NSArray *)codeArray
-{
-    NSDictionary *switchU = [Platform Instance].allFunctionSwitchDictionary[actionCode];
-    if (switchU[@"mediatorMethod"]) {
-        SEL action = NSSelectorFromString(switchU[@"mediatorMethod"]);
-        if ([[TDFMediator sharedInstance] respondsToSelector:action]) {
-            UIViewController *viewController = [[TDFMediator sharedInstance] performSelector:action withObject:codeArray];
-            
-            if (viewController) {
-                [self.rootViewController pushViewController:viewController animated:YES];
-            }
-            
-            return;
-        }
-    }
-    if ([actionCode isEqualToString:TO_SUPPLY_MANAGE]/*供应链*/) {
-        [self showSupolyManage];
-    }else if ([actionCode isEqualToString:PAD_WEIXIN]/*电子收款明细,时间紧急，有时间看能把这个跳转也写成统一方式*/) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"switchToWeiXin" object:codeArray];
-    }else if ([actionCode isEqualToString:@"PHONE_BRAND_CASH_SWITCH"] ||[actionCode isEqualToString:@"PHONE_CASH_SWITCH"])
-    {
-        [self.rootViewController pushViewController:[[TDFMediator sharedInstance]TDFMediator_nativeViewControllerForCashRegisterSwitchWithStoreType:[[Platform Instance] isChain]?TDFStoreTypeChain:TDFStoreTypeSingle] animated:YES];
-    }else if ([actionCode isEqualToString:@"PHONE_BRAND_CASH_RRINT"] ||[actionCode isEqualToString:@"PAD_CASH_OUTPUT"])
-    {
-        [self.rootViewController pushViewController:[[TDFMediator sharedInstance]TDFMediator_nativeViewControllerForCashierPrinterWithStoreType:[[Platform Instance] isChain]?TDFStoreTypeChain:TDFStoreTypeSingle] animated:YES];
-    }
-}
-
-///供应链
-- (void)showSupolyManage {
-    NSURL *url = [NSURL URLWithString:@"TDFSupplyChainApp://"];
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
-    } else{
-        
-        BOOL showRestApp = [[[NSUserDefaults standardUserDefaults] objectForKey:@"kTDFShowRestApp"] boolValue];
-        
-        if (!showRestApp) return;
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"请安装'二维火供应链'", nil)
-                                                                                 message:NSLocalizedString(@"前往App Store下载二维火供应链", nil)
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleCancel handler:nil];
-        [alertController addAction:cancelAction];
-        
-        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSString *url = @"http://itunes.apple.com/us/app/id1124011735";
-            
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-        }];
-        
-        [alertController addAction:confirmAction];
-        
-        UIViewController *rootViewController = [[UIApplication sharedApplication].delegate window].rootViewController;
-        
-        [rootViewController presentViewController:alertController animated:YES completion:nil];
-    }
-    return;
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

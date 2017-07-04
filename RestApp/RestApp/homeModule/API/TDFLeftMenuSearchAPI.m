@@ -37,7 +37,7 @@
         _requestModel = [[TDFRequestModel alloc] init];
         _requestModel.requestType = TDFHTTPRequestTypePOST;
         _requestModel.serverRoot = kTDFBossAPI;
-        _requestModel.serviceName = @"/homepage/v1/search_function";
+        _requestModel.serviceName = @"/homepage/v2/search_function";
         _requestModel.signType = TDFHTTPRequestSignTypeBossAPI;
         _requestModel.timeout = 8;
     }

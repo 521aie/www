@@ -249,7 +249,7 @@
     if (action==ACTION_CONSTANTS_ADD) {
         self.title = NSLocalizedString(@"添加", nil);
         [self configLeftNavigationBar:Head_ICON_CANCEL leftButtonName:NSLocalizedString(@"取消", nil)];
-        [self configRightNavigationBar:Head_ICON_OK rightButtonName:NSLocalizedString(@"确定", nil)];
+        [self configRightNavigationBar:Head_ICON_OK rightButtonName:NSLocalizedString(@"保存", nil)];
     } else {
 
         self.title = NSLocalizedString(@"点菜单分区域打印", nil);
@@ -264,7 +264,7 @@
             self.areaPantry.paperWidth = [ObjectUtil getShortValue:data key:@"paperWidth"];
             NSMutableArray *areaList = [data objectForKey:@"areaList"];
             self.pantryPlanAreas= [JsonHelper transList:areaList objName:@"Area"];
-            self.areaPantry.areaList = [self.pantryPlanAreas mutableCopy];
+            self.areaPantry.areaList = [JsonHelper transList:areaList objName:@"Area"];
             [self fillModel];
             
         } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
@@ -450,8 +450,13 @@
         }
         self.pantryPlanAreas = newList;
         [self.areaGrid loadData:newList detailCount:newList.count];
-
-        [self.titleBox editTitle:[self hasChanged] act:self.action];
+         if ([self hasChanged]) {
+             [self configLeftNavigationBar:Head_ICON_CANCEL leftButtonName:NSLocalizedString(@"取消", nil)];
+             [self configRightNavigationBar:Head_ICON_OK rightButtonName:NSLocalizedString(@"保存", nil)];
+         }else{
+             [self configLeftNavigationBar:Head_ICON_OK leftButtonName:NSLocalizedString(@"返回", nil)];
+             [self configRightNavigationBar:nil rightButtonName:nil];
+         }
 
         [UIHelper refreshUI:self.container scrollview:self.scrollView];
 
@@ -674,7 +679,10 @@
 
 - (BOOL)hasChanged
 {
-    return  self.lsWidth.isChange || self.lsIP.isChange || self.lsCharCount.isChange || ![self.areaPantry.areaList isEqualToArray:self.pantryPlanAreas] ;
+    if (![self.areaPantry.areaList isEqualToArray:self.pantryPlanAreas]) {
+        return YES;
+    }
+    return  self.lsWidth.isChange || self.lsIP.isChange || self.lsCharCount.isChange;
 }
 #pragma mark 帮助
 - (void)footerHelpButtonAction:(UIButton *)sender {

@@ -12,6 +12,12 @@
 
 @implementation SelectMultiMenuItem
 
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.isChainLbl.hidden = YES;
+}
+
 -(void) loadItem:(SampleMenuVO*)data
 {
     self.line.hidden = YES;

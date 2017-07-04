@@ -7,128 +7,137 @@
 //
 
 #import "BillModifyModule.h"
-#import "SystemUtil.h"
-#import "MainModule.h"
-#import "XHAnimalUtil.h"
-#import "MBProgressHUD.h"
-#import "ServiceFactory.h"
-#import "SecondMenuView.h"
-#import "NavigateTitle2.h"
 #import "ActionConstants.h"
-#import "handleModify.h"
-#import "autoModify.h"
+
+#import "BillModifyCell.h"
+#import "TDFIntroductionHeaderView.h"
+#import "UIMenuAction.h"
 #import "TDFMediator+BillModifyModule.h"
+#import "TDFLoginService.h"
+
+#define CASHIER_DATA_OPTIMIZE   @"CASHIER_DATA_OPTIMIZE"
+#define TABLE_DATA_OPTIMIZW     @"TABLE_DATA_OPTIMIZW"
+
+@interface BillModifyModule() <UITableViewDelegate,UITableViewDataSource>
+{
+    BOOL _isVersionAuth;
+}
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray<UIMenuAction *> *menuItems;
+
+@end
+
+static NSString * const reuseCellID = @"Cell";
 
 @implementation BillModifyModule
 
-- (UINavigationController *)rootController
+
+- (UITableView *)tableView
 {
-    if (!_rootController) {
-        UIViewController* viewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-        if ([viewController isKindOfClass:[UINavigationController class]]) {
-            _rootController = (UINavigationController *)viewController;
-        }else if ([viewController isKindOfClass:[UIViewController class]])
-        {
-            _rootController = viewController.navigationController;
-        }
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.backgroundColor  = [UIColor clearColor];
+        _tableView.delegate         = self;
+        _tableView.dataSource       = self;
+        _tableView.rowHeight        = [BillModifyCell cell_height];
+        _tableView.separatorStyle   = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[BillModifyCell class] forCellReuseIdentifier:reuseCellID];
     }
-    return _rootController;
+    return _tableView;
 }
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil parent:(MainModule *)parent;
+
+- (NSArray *)menuItems
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        mainModule=parent;
-        service=[ServiceFactory Instance].billModifyService;
-        hud=[[MBProgressHUD alloc] initWithView:self.view];
+    if (!_menuItems) {
+        NSMutableArray* menuItems=[NSMutableArray array];
+        UIMenuAction *action=[[UIMenuAction alloc] init:NSLocalizedString(@"报表数据优化", nil) detail:@"可手工或自动报表相关账单数据" img:@"ico_nav_shoudong.png" code:TABLE_DATA_OPTIMIZW];
+        [menuItems addObject:action];
+        
+        action=[[UIMenuAction alloc] init:NSLocalizedString(@"收银机数据优化", nil) detail:@"可以自动优化收银机账单数据" img:@"ico_nav_zidong.png" code:CASHIER_DATA_OPTIMIZE];
+        [menuItems addObject:action];
+        
+        _menuItems = [menuItems copy];
     }
-    return self;
+    return _menuItems;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initModule];
-//    [self loadDatas];
+    
+    self.title = @"账单优化";
+
+    [self configTableView];
+    [self    loadAuth];
+    
 }
 
-- (void) viewWillLayoutSubviews
+- (void)loadAuth {
+    [[[TDFLoginService alloc] init ] cashierVersionWithParams:@{@"cashier_version_key":@"cashVersion4ABZhang"} sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
+        if ([data[@"code"] intValue] == 1 && [data[@"data"] intValue] == 1) {
+            _isVersionAuth = YES;
+        }
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        [AlertBox show:error.localizedDescription];
+    }];
+}
+
+
+- (void)configTableView {
+    [self.view addSubview:self.tableView];
+    UIImage *headerIcon = [UIImage imageNamed:@"BillOptimize"];
+    NSString *description = @"可将报表和收银机的账单数据进行优化，设置优化的规则后，系统会将部分账单设置为隐藏状态。员工查看报表或操作收银机时，如果没有查看隐藏账单的权限，则只显示部分未经隐藏的账单；如果员工有查看隐藏账单的权限，则显示全部账单。";
+    self.tableView.tableHeaderView = [TDFIntroductionHeaderView headerViewWithIcon:headerIcon description:description];
+}
+
+- (void)viewDidLayoutSubviews
 {
-    CGRect frame = self.secondMenuView.view.frame;
-    frame.size.width = SCREEN_WIDTH;
-    self.secondMenuView.view.frame = frame;
+    [super viewDidLayoutSubviews];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.view.mas_top).offset(64);
+    }];
 }
 
--(void) backMenu
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [mainModule backMenuBySelf:self];
+    return self.menuItems.count;
 }
-
--(void)backNavigateMenuView
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [mainModule backMenuBySelf:self];
-    [[NSNotificationCenter defaultCenter] postNotificationName:UI_NAVIGATE_SHOW_NOTIFICATION object:nil] ;
-    [[NSNotificationCenter defaultCenter] postNotificationName:LODATA object:nil];
+    BillModifyCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseCellID forIndexPath:indexPath];
+    cell.img_next.hidden = NO;
+    
+    UIMenuAction *menuItem = self.menuItems[indexPath.row];
+    cell.lblTitle.text= menuItem.name;
+    cell.lblDetail.text = menuItem.detail;
+    
+    return cell;
 }
-
-
-#pragma mart module part.
--(void) initModule
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.title = NSLocalizedString(@"账单优化", nil);
-    self.secondMenuView = [[SecondMenuView alloc] initWithNibName:@"SecondMenuView" bundle:nil delegate:self];
-     self.secondMenuView.titleBox.lblTitle.text=NSLocalizedString(@"账单优化", nil);
-    [self.view addSubview:self.secondMenuView.view];
-}
--(void)loadDatas{
-    [self showView:BILLMOD_SECOND_VIEW];
-}
-
--(void) showView:(int) viewTag
-{
-    if (viewTag ==BILLMOD_SECOND_VIEW) {
-        self.secondMenuView.view.hidden = NO;
-         self.secondMenuView.titleBox.lblTitle.text=NSLocalizedString(@"账单优化", nil);
-         [XHAnimalUtil animal:self type:kCATransitionPush direct:kCATransitionFromRight];
-    }else if (viewTag == BILLMOD_HANDLE_VIEW){
-        UIViewController *handleView =[[TDFMediator sharedInstance]TDFMediator_handleModifyViewController];
-        [self.rootController pushViewController:handleView animated:YES];
-        return;
-    }else if (viewTag == BILLMOD_AUTO_VIEW){
-        UIViewController *autoView =[[TDFMediator sharedInstance]TDFMediator_autoModifyViewController];
-        [self.rootController pushViewController:autoView animated:YES];
-        return;
+    UIMenuAction *menuAction = self.menuItems[indexPath.row];
+    UIViewController *viewController = nil;
+    if ([menuAction.code isEqualToString:TABLE_DATA_OPTIMIZW]) {
+        viewController = [[TDFMediator sharedInstance] TDFMediator_tableDataOptimizeController];
     }
-}
--(void) onMenuSelectHandle:(UIMenuAction *)action
-{
-    if ([action.code isEqualToString:PAD_HANDLE_OPERATION]) {
-            [self showView:BILLMOD_HANDLE_VIEW];
-            [self.handleModify loadDatas];
-    } else if ([action.code isEqualToString:PAD_AUTO_OPERATION]) {
-            [self showView:BILLMOD_AUTO_VIEW];
-            [self.autoModify loadData];
+    else if([menuAction.code isEqualToString:CASHIER_DATA_OPTIMIZE])
+    {
+        if (!_isVersionAuth) {
+            [AlertBox show:@"此功能需配合收银机v5.6.5及以上版本使用。"];
+            return;
+        }
+        viewController = [[TDFMediator sharedInstance] TDFMediator_cashierDataOptimizeController];
     }
-}
-//创建二级菜单
--(NSMutableArray *) createList
-{
-    NSMutableArray* menuItems=[NSMutableArray array];
-    UIMenuAction *action=[[UIMenuAction alloc] init:NSLocalizedString(@"手工优化账单", nil) detail:NSLocalizedString(@"人工处理一段时间内的账单", nil) img:@"ico_nav_shoudong.png" code:PAD_HANDLE_OPERATION];
-    [menuItems addObject:action];
-    action=[[UIMenuAction alloc] init:NSLocalizedString(@"自动优化账单", nil) detail:NSLocalizedString(@"系统每天定时处理指定日的账单", nil) img:@"ico_nav_zidong.png" code:PAD_AUTO_OPERATION];
-    [menuItems addObject:action];
-    return menuItems;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
-#pragma mark - 加载module下的页面
-/*加载主页面*/
-- (void)loadSecondMenuView
-{
-    if (self.secondMenuView) {
-        self.secondMenuView.view.hidden = NO;
-    }else{
-        self.secondMenuView = [[SecondMenuView alloc] initWithNibName:@"SecondMenuView" bundle:nil delegate:self];
-        [self.view addSubview:self.secondMenuView.view];
-    }
-}
 @end
+
+
+
+
+
+
+
+

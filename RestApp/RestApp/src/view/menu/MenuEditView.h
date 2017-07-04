@@ -135,7 +135,7 @@
 @property (nonatomic, strong) MenuProp *menuProp;
 @property (nonatomic, assign) NSInteger action;
 @property (nonatomic, assign) BOOL isContinue;
-@property (nonatomic ,strong) UIImage *imagedata;
+@property (nonatomic ,strong) id imagedata;
 @property (nonatomic ,strong) EditImageBox *boxdata;
 @property (nonatomic ,strong) SampleMenuVO *sampleMenu;
 @property (nonatomic ,strong) NSString *jsonstr;

@@ -10,4 +10,6 @@
 
 @implementation BillOptimizationTaskVo
 
+
+
 @end

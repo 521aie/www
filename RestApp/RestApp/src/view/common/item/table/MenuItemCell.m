@@ -105,7 +105,7 @@
     self.lblDetail.text = [data obtainItemValue];
     self.lblAccount.text = [NSString stringWithFormat:@"/%@",[self.item showUnit]];
     [self.lblDetail sizeToFit];
-    [self.lblAccount setLeft:(self.lblDetail.left+self.lblDetail.width+2)];
+//    [self.lblAccount setLeft:(self.lblDetail.left+self.lblDetail.width+2)];
     [self.lblAccount sizeToFit];
     [self.lblAccount setNeedsDisplay];
     self.kabawView.layer.cornerRadius = 5;

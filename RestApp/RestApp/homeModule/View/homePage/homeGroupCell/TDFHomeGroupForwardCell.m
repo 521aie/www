@@ -171,6 +171,8 @@ CGFloat kCellHeight = 64 + 26;
     [self.spliteView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@(spliteTop));
     }];
+    
+    [self.collectionView reloadData];
 }
 
 + (CGFloat)heightForCellWithItem:(TDFHomeGroupForwardItem *)item
@@ -236,7 +238,7 @@ CGFloat kCellHeight = 64 + 26;
 
 - (CGFloat)intervalBetweenRowCellInCollectionView:(TDFCollectionView *)collectionView
 {
-    CGFloat rowInterval = (self.frame.size.width - kLeading * 2 - kCellWidth * kNumberOfChildPerLine) / (kNumberOfChildPerLine - 1);
+    CGFloat rowInterval = (SCREEN_WIDTH - 20 - kLeading * 2 - kCellWidth * kNumberOfChildPerLine) / (kNumberOfChildPerLine - 1);
     
     return rowInterval;
 }
@@ -283,7 +285,7 @@ CGFloat kCellHeight = 64 + 26;
 - (TDFCollectionView *)collectionView
 {
     if (!_collectionView) {
-        _collectionView = [[TDFCollectionView alloc] initWithFrame:CGRectZero];
+        _collectionView = [[TDFCollectionView alloc] initWithFrame:self.bounds];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.backgroundColor = [UIColor clearColor];

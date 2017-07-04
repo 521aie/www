@@ -138,6 +138,7 @@
         _title.numberOfLines = 0;
         _title.font = [UIFont systemFontOfSize:11];
         _title.textAlignment = NSTextAlignmentCenter;
+        _title.textColor = [UIColor colorWithHexString:@"#666666"];
     }
     return _title;
 }

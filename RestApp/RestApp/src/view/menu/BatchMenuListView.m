@@ -54,7 +54,6 @@
     [super viewDidLoad];
 
     self.title = NSLocalizedString(@"选择商品", nil) ;
-  //  self.titleStr=NSLocalizedString(@"选择商品", nil);
     [self initNavigate];
     [self  initHud];
     [self initGrid];
@@ -368,156 +367,156 @@
         self.batchAction=event;
         if (self.isChain && ![self isBrand]) {
              if(event==0) {  //上架
-                    [UIHelper showHUD:NSLocalizedString(@"正在上架", nil) andView:self.view andHUD:hud];
+                    [self showProgressHudWithText:NSLocalizedString(@"正在上架", nil)];
                     NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                     parma[@"is_self"] = @"1";
                     parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                     @weakify(self);
                     [[TDFMenuService new] updateIsSelfWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                         @strongify(self);
-                        [hud setHidden:YES];
+                        [self.progressHud hideAnimated:YES];
                         [self remoteFinish];
                     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                        [hud setHidden:YES];
+                        [self.progressHud hideAnimated:YES];
                         [AlertBox show:error.localizedDescription];
                     }];
                 } else if(event==1) {   //下架remoteFinish:
-                    [UIHelper showHUD:NSLocalizedString(@"正在下架", nil) andView:self.view andHUD:hud];
+                    [self showProgressHudWithText:NSLocalizedString(@"正在下架", nil)];
                     NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                     parma[@"is_self"] = @"0";
                     parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                     @weakify(self);
                     [[TDFMenuService new] updateIsSelfWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                         @strongify(self);
-                        [hud setHidden:YES];
+                        [self.progressHud hideAnimated:YES];
                         [self remoteFinish];
                     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                        [hud setHidden:YES];
+
+                        [self.progressHud hideAnimated:YES];
                         [AlertBox show:error.localizedDescription];
                     }];
                 }   
         }else{
             if (event==0) {     //删除
-                [UIHelper showHUD:NSLocalizedString(@"正在删除", nil) andView:self.view andHUD:hud];
+                [self showProgressHudWithText:NSLocalizedString(@"正在删除", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] removeMenusWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
                 
             } else if (event==1) {  //换分类
-                [UIHelper showHUD:NSLocalizedString(@"正在提交", nil) andView:self.view andHUD:hud];
+                [self showProgressHudWithText:NSLocalizedString(@"正在提交", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"kind_menu_id"] = self.kindId;
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] changeKindMenuWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             } else if(event==2) {  //上架
-                [UIHelper showHUD:NSLocalizedString(@"正在上架", nil) andView:self.view andHUD:hud];
+                [self showProgressHudWithText:NSLocalizedString(@"正在上架", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_self"] = @"1";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] updateIsSelfWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             } else if(event==3) {   //下架remoteFinish:
-                [UIHelper showHUD:NSLocalizedString(@"正在下架", nil) andView:self.view andHUD:hud];
+                 [self showProgressHudWithText:NSLocalizedString(@"正在下架", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_self"] = @"0";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] updateIsSelfWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             } else if(event==4) { //允许打折
-                [UIHelper showHUD:NSLocalizedString(@"正在允许打折", nil) andView:self.view andHUD:hud];
+                [self showProgressHudWithText:NSLocalizedString(@"正在允许打折", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_ratio"] = @"1";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] updateIsRatioWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             } else if(event==5) { //不允许打折BUG
-                [UIHelper showHUD:NSLocalizedString(@"正在不允许打折", nil) andView:self.view andHUD:hud];
+                 [self showProgressHudWithText:NSLocalizedString(@"正在不允许打折", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_ratio"] = @"0";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] updateIsRatioWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             }else if (event == 6){
-                [UIHelper showHUD:NSLocalizedString(@"正在可作为赠菜", nil) andView:self.view andHUD:hud];
+                [self showProgressHudWithText:NSLocalizedString(@"正在可作为赠菜", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_give"] = @"1";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] updateIsGiveWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             }else if (event == 7){
-                [UIHelper showHUD:NSLocalizedString(@"正在不可作为赠菜", nil) andView:self.view andHUD:hud];
+                [self showProgressHudWithText:NSLocalizedString(@"正在不可作为赠菜", nil)];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_give"] = @"0";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 @weakify(self);
                 [[TDFMenuService new] updateIsGiveWithParam:parma sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
                     @strongify(self);
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [self remoteFinish];
                 } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-                    [hud setHidden:YES];
+                    [self.progressHud hideAnimated:YES];
                     [AlertBox show:error.localizedDescription];
                 }];
             } else if (event == 8) {
-                [UIHelper showHUD:@"正在外卖时可点" andView:self.view andHUD:hud];
-                
+                [self showProgressHudWithText:@"正在外卖时可点"];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_takeout"] = @"1";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
                 [self updateOperateWithParam:parma];
             } else if (event == 9) {
-                [UIHelper showHUD:@"正在外卖时不可点" andView:self.view andHUD:hud];
+                [self showProgressHudWithText:@"正在外卖时不可点"];
                 NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
                 parma[@"is_takeout"] = @"0";
                 parma[@"menu_id_str"] = [self.selectMenuIds yy_modelToJSONString];
@@ -533,10 +532,10 @@
     @weakify(self);
     [[TDFMenuService new] updateIsTakeOutWithParam:param sucess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull data) {
         @strongify(self);
-        [hud setHidden:YES];
+        [self.progressHud hideAnimated:YES];
         [self remoteFinish];
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-        [hud setHidden:YES];
+        [self.progressHud hideAnimated:YES];
         [AlertBox show:error.localizedDescription];
     }];
 }

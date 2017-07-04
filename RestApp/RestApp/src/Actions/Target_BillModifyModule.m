@@ -11,11 +11,14 @@
 #import "BillModifyModule.h"
 #import "handleModify.h"
 #import "autoModify.h"
+#import "TDFCashierDataOptimizationController.h"
+#import "TDFTableDataOptimizeController.h"
 
 @implementation Target_BillModifyModule
 ///账单优化
 -(UIViewController *)Action_nativeBillModifyViewController:(NSDictionary *)params{
-    BillModifyModule *billModify = [[BillModifyModule alloc]initWithNibName:@"BillModifyModule"bundle:nil parent:nil];
+
+    BillModifyModule *billModify = [[BillModifyModule alloc]init];
     billModify.needHideOldNavigationBar = YES;
     return billModify;
     
@@ -35,5 +38,16 @@
     return autoView;
 }
 
+//收银数据优化
+- (UIViewController *)Action_nativeCashierDataOptimizeController:(NSDictionary *)params {
+    TDFCashierDataOptimizationController *controller = [[TDFCashierDataOptimizationController alloc] init];
+    return controller;
+}
+
+//报表数据优化
+- (UIViewController *)Action_nativeTableDataOptimizeController:(NSDictionary *)params {
+    TDFTableDataOptimizeController *controller = [[TDFTableDataOptimizeController alloc] init];
+    return controller;
+}
 
 @end

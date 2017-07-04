@@ -11,7 +11,6 @@
 #import "JSONKit.h"
 #import "TreeNode.h"
 #import "KindMenu.h"
-#import "UIHelper.h"
 #import "AlertBox.h"
 #import "DateUtils.h"
 #import "HelpDialog.h"
@@ -90,6 +89,8 @@
     [[TDFMediator sharedInstance] TDFMediator_showShopKeepConfigurableAlertWithCode:@"PAD_MENU_EDIT"];
 
     [self  loadMenus];
+    [XHAnimalUtil animationMoveOut:selectKindMenuPanel.view backround:self.btnBg];
+    [self animationMoveOut:self.managerButton backround:self.btnBg];
 }
 
 - (void)initMainView
@@ -369,7 +370,7 @@
         if (menuMoudleMap.allKeys.count == 0) {
             [self loadMenus];
         }else{
-            [UIHelper showHUD:NSLocalizedString(@"正在排序", nil) andView:self.view andHUD:self.progressHud ];
+            [self showProgressHudWithText:NSLocalizedString(@"正在排序", nil)];
             NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
             parma[@"kind_menu_str"] = [JsonHelper dictionaryToJson:menuMoudleMap];
             @weakify(self);
@@ -386,7 +387,7 @@
         if (menuMoudleMap.allKeys.count == 0) {
             [self loadMenus];
         }else{
-            [UIHelper showHUD:NSLocalizedString(@"正在排序", nil) andView:self.view andHUD:self.progressHud ];
+            [self showProgressHudWithText:NSLocalizedString(@"正在排序", nil)];
             NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
             param[@"menu_str"] = [JsonHelper dictionaryToJson:menuMoudleMap];
             @weakify(self);
@@ -412,7 +413,7 @@
             [self loadMenus];
             
         }else{
-            [UIHelper showHUD:@"正在排序" andView:self.view andHUD:self.progressHud ];
+           [self showProgressHudWithText:NSLocalizedString(@"正在排序", nil)];
             NSMutableDictionary *parma = [[NSMutableDictionary alloc] init];
             parma[@"kind_menus_str"] = [ids   yy_modelToJSONString];
             @weakify(self);
